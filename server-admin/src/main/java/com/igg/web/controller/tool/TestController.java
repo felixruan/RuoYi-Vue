@@ -39,7 +39,7 @@ public class TestController extends BaseController {
     @ApiOperation("获取用户列表")
     @GetMapping("/list")
     public R<List<UserEntity>> userList() {
-        List<UserEntity> userList = new ArrayList<UserEntity>(users.values());
+        List<UserEntity> userList = new ArrayList<>(users.values());
         return R.ok(userList);
     }
 

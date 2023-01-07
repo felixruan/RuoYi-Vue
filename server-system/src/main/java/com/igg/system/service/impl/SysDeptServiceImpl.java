@@ -66,7 +66,7 @@ public class SysDeptServiceImpl implements ISysDeptService {
      */
     @Override
     public List<SysDept> buildDeptTree(List<SysDept> depts) {
-        List<SysDept> returnList = new ArrayList<SysDept>();
+        List<SysDept> returnList = new ArrayList<>();
         List<Long> tempList = depts.stream().map(SysDept::getDeptId).collect(Collectors.toList());
         for (SysDept dept : depts) {
             // 如果是顶级节点, 遍历该父节点的所有子节点
@@ -283,7 +283,7 @@ public class SysDeptServiceImpl implements ISysDeptService {
      * 得到子节点列表
      */
     private List<SysDept> getChildList(List<SysDept> list, SysDept t) {
-        List<SysDept> tlist = new ArrayList<SysDept>();
+        List<SysDept> tlist = new ArrayList<>();
         Iterator<SysDept> it = list.iterator();
         while (it.hasNext()) {
             SysDept n = (SysDept) it.next();
