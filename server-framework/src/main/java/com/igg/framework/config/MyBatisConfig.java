@@ -59,7 +59,7 @@ public class MyBatisConfig {
                     }
                 }
                 if (result.size() > 0) {
-                    HashSet<String> hashResult = new HashSet<String>(result);
+                    HashSet<String> hashResult = new HashSet<>(result);
                     allResult.addAll(hashResult);
                 }
             }

@@ -251,7 +251,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * @return set集合
      */
     public static final Set<String> str2Set(String str, String sep) {
-        return new HashSet<String>(str2List(str, sep, true, false));
+        return new HashSet<>(str2List(str, sep, true, false));
     }
 
     /**
