@@ -7,12 +7,10 @@ import com.igg.common.exception.base.BaseException;
  * 
  * @author 阮杰辉
  */
-public class FileException extends BaseException
-{
+public class FileException extends BaseException {
     private static final long serialVersionUID = 1L;
 
-    public FileException(String code, Object[] args)
-    {
+    public FileException(String code, Object[] args) {
         super("file", code, args, null);
     }
 

@@ -8,8 +8,7 @@ import com.igg.quartz.domain.SysJobLog;
  * 
  * @author 阮杰辉
  */
-public interface SysJobLogMapper
-{
+public interface SysJobLogMapper {
     /**
      * 获取quartz调度器日志的计划任务
      * 

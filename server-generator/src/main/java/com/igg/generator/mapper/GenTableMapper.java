@@ -8,8 +8,7 @@ import com.igg.generator.domain.GenTable;
  * 
  * @author 阮杰辉
  */
-public interface GenTableMapper
-{
+public interface GenTableMapper {
     /**
      * 查询业务列表
      * 

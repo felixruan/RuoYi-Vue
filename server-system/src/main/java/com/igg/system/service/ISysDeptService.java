@@ -9,8 +9,7 @@ import com.igg.common.core.domain.entity.SysDept;
  * 
  * @author 阮杰辉
  */
-public interface ISysDeptService
-{
+public interface ISysDeptService {
     /**
      * 查询部门管理数据
      * 

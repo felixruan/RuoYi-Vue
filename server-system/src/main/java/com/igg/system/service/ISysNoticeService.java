@@ -8,8 +8,7 @@ import com.igg.system.domain.SysNotice;
  * 
  * @author 阮杰辉
  */
-public interface ISysNoticeService
-{
+public interface ISysNoticeService {
     /**
      * 查询公告信息
      * 

@@ -9,8 +9,7 @@ import com.igg.generator.domain.GenTable;
  * 
  * @author 阮杰辉
  */
-public interface IGenTableService
-{
+public interface IGenTableService {
     /**
      * 查询业务列表
      * 

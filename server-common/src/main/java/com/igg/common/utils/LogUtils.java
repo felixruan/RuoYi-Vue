@@ -5,12 +5,9 @@ package com.igg.common.utils;
  * 
  * @author 阮杰辉
  */
-public class LogUtils
-{
-    public static String getBlock(Object msg)
-    {
-        if (msg == null)
-        {
+public class LogUtils {
+    public static String getBlock(Object msg) {
+        if (msg == null) {
             msg = "";
         }
         return "[" + msg.toString() + "]";

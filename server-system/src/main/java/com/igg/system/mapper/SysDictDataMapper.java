@@ -9,8 +9,7 @@ import com.igg.common.core.domain.entity.SysDictData;
  * 
  * @author 阮杰辉
  */
-public interface SysDictDataMapper
-{
+public interface SysDictDataMapper {
     /**
      * 根据条件分页查询字典数据
      * 

@@ -8,8 +8,7 @@ import com.igg.quartz.domain.SysJob;
  * 
  * @author 阮杰辉
  */
-public interface SysJobMapper
-{
+public interface SysJobMapper {
     /**
      * 查询调度任务日志集合
      * 

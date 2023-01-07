@@ -5,8 +5,7 @@ package com.igg.common.constant;
  * 
  * @author 阮杰辉
  */
-public class HttpStatus
-{
+public class HttpStatus {
     /**
      * 操作成功
      */

@@ -11,22 +11,18 @@ import java.util.regex.Pattern;
  * 
  * @author 阮杰辉
  */
-public class XssValidator implements ConstraintValidator<Xss, String>
-{
+public class XssValidator implements ConstraintValidator<Xss, String> {
     private static final String HTML_PATTERN = "<(\\S*?)[^>]*>.*?|<.*? />";
 
     @Override
-    public boolean isValid(String value, ConstraintValidatorContext constraintValidatorContext)
-    {
-        if (StringUtils.isBlank(value))
-        {
+    public boolean isValid(String value, ConstraintValidatorContext constraintValidatorContext) {
+        if (StringUtils.isBlank(value)) {
             return true;
         }
         return !containsHtml(value);
     }
 
-    public static boolean containsHtml(String value)
-    {
+    public static boolean containsHtml(String value) {
         Pattern pattern = Pattern.compile(HTML_PATTERN);
         Matcher matcher = pattern.matcher(value);
         return matcher.matches();

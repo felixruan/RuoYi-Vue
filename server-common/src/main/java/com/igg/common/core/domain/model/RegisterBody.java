@@ -5,7 +5,6 @@ package com.igg.common.core.domain.model;
  * 
  * @author 阮杰辉
  */
-public class RegisterBody extends LoginBody
-{
+public class RegisterBody extends LoginBody {
 
 }

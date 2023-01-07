@@ -8,8 +8,7 @@ import com.igg.system.domain.SysPost;
  * 
  * @author 阮杰辉
  */
-public interface SysPostMapper
-{
+public interface SysPostMapper {
     /**
      * 查询岗位数据集合
      * 

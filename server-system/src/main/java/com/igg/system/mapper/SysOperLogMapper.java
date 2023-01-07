@@ -8,8 +8,7 @@ import com.igg.system.domain.SysOperLog;
  * 
  * @author 阮杰辉
  */
-public interface SysOperLogMapper
-{
+public interface SysOperLogMapper {
     /**
      * 新增操作日志
      * 

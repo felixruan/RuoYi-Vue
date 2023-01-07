@@ -5,8 +5,7 @@ package com.igg.common.enums;
  * 
  * @author 阮杰辉
  */
-public enum DataSourceType
-{
+public enum DataSourceType {
     /**
      * 主库
      */

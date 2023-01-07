@@ -8,8 +8,7 @@ import com.igg.common.core.domain.entity.SysRole;
  * 
  * @author 阮杰辉
  */
-public interface SysRoleMapper
-{
+public interface SysRoleMapper {
     /**
      * 根据条件分页查询角色数据
      * 

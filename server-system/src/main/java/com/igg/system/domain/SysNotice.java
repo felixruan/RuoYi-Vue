@@ -12,8 +12,7 @@ import com.igg.common.xss.Xss;
  * 
  * @author 阮杰辉
  */
-public class SysNotice extends BaseEntity
-{
+public class SysNotice extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     /** 公告ID */
@@ -31,56 +30,46 @@ public class SysNotice extends BaseEntity
     /** 公告状态（0正常 1关闭） */
     private String status;
 
-    public Long getNoticeId()
-    {
+    public Long getNoticeId() {
         return noticeId;
     }
 
-    public void setNoticeId(Long noticeId)
-    {
+    public void setNoticeId(Long noticeId) {
         this.noticeId = noticeId;
     }
 
-    public void setNoticeTitle(String noticeTitle)
-    {
+    public void setNoticeTitle(String noticeTitle) {
         this.noticeTitle = noticeTitle;
     }
 
     @Xss(message = "公告标题不能包含脚本字符")
     @NotBlank(message = "公告标题不能为空")
     @Size(min = 0, max = 50, message = "公告标题不能超过50个字符")
-    public String getNoticeTitle()
-    {
+    public String getNoticeTitle() {
         return noticeTitle;
     }
 
-    public void setNoticeType(String noticeType)
-    {
+    public void setNoticeType(String noticeType) {
         this.noticeType = noticeType;
     }
 
-    public String getNoticeType()
-    {
+    public String getNoticeType() {
         return noticeType;
     }
 
-    public void setNoticeContent(String noticeContent)
-    {
+    public void setNoticeContent(String noticeContent) {
         this.noticeContent = noticeContent;
     }
 
-    public String getNoticeContent()
-    {
+    public String getNoticeContent() {
         return noticeContent;
     }
 
-    public void setStatus(String status)
-    {
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public String getStatus()
-    {
+    public String getStatus() {
         return status;
     }
 

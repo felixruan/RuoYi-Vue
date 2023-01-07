@@ -8,8 +8,7 @@ import com.igg.system.domain.SysLogininfor;
  * 
  * @author 阮杰辉
  */
-public interface ISysLogininforService
-{
+public interface ISysLogininforService {
     /**
      * 新增系统登录日志
      * 

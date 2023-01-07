@@ -8,8 +8,7 @@ import com.igg.system.domain.SysRoleDept;
  * 
  * @author 阮杰辉
  */
-public interface SysRoleDeptMapper
-{
+public interface SysRoleDeptMapper {
     /**
      * 通过角色ID删除角色和部门关联
      * 

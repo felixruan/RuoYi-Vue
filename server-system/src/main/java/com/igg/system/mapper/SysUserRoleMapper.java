@@ -9,8 +9,7 @@ import com.igg.system.domain.SysUserRole;
  * 
  * @author 阮杰辉
  */
-public interface SysUserRoleMapper
-{
+public interface SysUserRoleMapper {
     /**
      * 通过用户ID删除用户和角色关联
      * 

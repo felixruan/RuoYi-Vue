@@ -5,8 +5,7 @@ package com.igg.common.constant;
  * 
  * @author 阮杰辉
  */
-public class CacheConstants
-{
+public class CacheConstants {
     /**
      * 登录用户 redis key
      */

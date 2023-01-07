@@ -10,8 +10,7 @@ import com.igg.system.domain.SysUserRole;
  * 
  * @author 阮杰辉
  */
-public interface ISysRoleService
-{
+public interface ISysRoleService {
     /**
      * 根据条件分页查询角色数据
      * 

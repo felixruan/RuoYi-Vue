@@ -8,8 +8,7 @@ import com.igg.common.core.domain.entity.SysUser;
  * 
  * @author 阮杰辉
  */
-public interface ISysUserService
-{
+public interface ISysUserService {
     /**
      * 根据条件分页查询用户列表
      * 

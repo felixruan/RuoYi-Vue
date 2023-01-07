@@ -8,8 +8,7 @@ import com.igg.quartz.domain.SysJobLog;
  * 
  * @author 阮杰辉
  */
-public interface ISysJobLogService
-{
+public interface ISysJobLogService {
     /**
      * 获取quartz调度器日志的计划任务
      * 

@@ -5,8 +5,7 @@ package com.igg.common.enums;
  * 
  * @author 阮杰辉
  */
-public enum BusinessType
-{
+public enum BusinessType {
     /**
      * 其它
      */

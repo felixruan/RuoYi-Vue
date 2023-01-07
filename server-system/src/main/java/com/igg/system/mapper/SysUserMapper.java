@@ -9,8 +9,7 @@ import com.igg.common.core.domain.entity.SysUser;
  * 
  * @author 阮杰辉
  */
-public interface SysUserMapper
-{
+public interface SysUserMapper {
     /**
      * 根据条件分页查询用户列表
      * 

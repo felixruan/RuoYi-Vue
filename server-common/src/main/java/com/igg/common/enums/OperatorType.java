@@ -5,8 +5,7 @@ package com.igg.common.enums;
  * 
  * @author 阮杰辉
  */
-public enum OperatorType
-{
+public enum OperatorType {
     /**
      * 其它
      */

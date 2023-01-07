@@ -8,8 +8,7 @@ import com.igg.system.domain.SysConfig;
  * 
  * @author 阮杰辉
  */
-public interface ISysConfigService
-{
+public interface ISysConfigService {
     /**
      * 查询参数配置信息
      * 

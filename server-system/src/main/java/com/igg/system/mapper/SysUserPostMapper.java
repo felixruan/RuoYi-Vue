@@ -8,8 +8,7 @@ import com.igg.system.domain.SysUserPost;
  * 
  * @author 阮杰辉
  */
-public interface SysUserPostMapper
-{
+public interface SysUserPostMapper {
     /**
      * 通过用户ID删除用户和岗位关联
      * 

@@ -5,8 +5,7 @@ package com.igg.common.constant;
  * 
  * @author 阮杰辉
  */
-public class GenConstants
-{
+public class GenConstants {
     /** 单表（增删改查） */
     public static final String TPL_CRUD = "crud";
 

@@ -9,8 +9,7 @@ import com.igg.common.core.domain.entity.SysMenu;
  *
  * @author 阮杰辉
  */
-public interface SysMenuMapper
-{
+public interface SysMenuMapper {
     /**
      * 查询系统菜单列表
      *

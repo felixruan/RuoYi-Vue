@@ -10,8 +10,7 @@ import com.igg.quartz.domain.SysJob;
  * 
  * @author 阮杰辉
  */
-public interface ISysJobService
-{
+public interface ISysJobService {
     /**
      * 获取quartz调度器的计划任务
      * 

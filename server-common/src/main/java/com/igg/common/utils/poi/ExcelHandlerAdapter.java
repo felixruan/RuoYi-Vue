@@ -5,8 +5,7 @@ package com.igg.common.utils.poi;
  * 
  * @author 阮杰辉
  */
-public interface ExcelHandlerAdapter
-{
+public interface ExcelHandlerAdapter {
     /**
      * 格式化
      * 

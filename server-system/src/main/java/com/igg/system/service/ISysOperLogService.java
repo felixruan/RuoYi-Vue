@@ -8,8 +8,7 @@ import com.igg.system.domain.SysOperLog;
  * 
  * @author 阮杰辉
  */
-public interface ISysOperLogService
-{
+public interface ISysOperLogService {
     /**
      * 新增操作日志
      * 

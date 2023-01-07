@@ -5,8 +5,7 @@ package com.igg.common.constant;
  * 
  * @author 阮杰辉
  */
-public class UserConstants
-{
+public class UserConstants {
     /**
      * 平台内系统用户的唯一标志
      */
