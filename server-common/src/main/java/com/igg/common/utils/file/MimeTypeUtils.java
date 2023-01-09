@@ -2,7 +2,7 @@ package com.igg.common.utils.file;
 
 /**
  * 媒体类型工具类
- * 
+ *
  * @author 阮杰辉
  */
 public class MimeTypeUtils {
@@ -15,7 +15,7 @@ public class MimeTypeUtils {
     public static final String IMAGE_BMP = "image/bmp";
 
     public static final String IMAGE_GIF = "image/gif";
-    
+
     public static final String[] IMAGE_EXTENSION = { "bmp", "gif", "jpg", "jpeg", "png" };
 
     public static final String[] FLASH_EXTENSION = { "swf", "flv" };

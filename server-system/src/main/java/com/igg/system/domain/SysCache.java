@@ -4,7 +4,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * 缓存信息
- * 
+ *
  * @author 阮杰辉
  */
 public class SysCache {

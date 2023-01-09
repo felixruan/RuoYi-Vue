@@ -13,7 +13,7 @@ import com.igg.system.service.ISysConfigService;
 
 /**
  * 注册验证
- * 
+ *
  * @author 阮杰辉
  */
 @RestController

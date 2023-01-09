@@ -9,7 +9,7 @@ import com.igg.common.core.domain.entity.SysMenu;
 
 /**
  * Treeselect树结构实体类
- * 
+ *
  * @author 阮杰辉
  */
 public class TreeSelect implements Serializable {

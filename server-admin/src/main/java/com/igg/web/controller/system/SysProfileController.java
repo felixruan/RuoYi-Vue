@@ -26,7 +26,7 @@ import com.igg.system.service.ISysUserService;
 
 /**
  * 个人信息 业务处理
- * 
+ *
  * @author 阮杰辉
  */
 @RestController

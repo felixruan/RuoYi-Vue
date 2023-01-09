@@ -6,7 +6,7 @@ import com.igg.common.utils.spring.SpringUtils;
 
 /**
  * 获取i18n资源文件
- * 
+ *
  * @author 阮杰辉
  */
 public class MessageUtils {

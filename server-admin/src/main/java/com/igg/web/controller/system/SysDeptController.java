@@ -24,7 +24,7 @@ import com.igg.system.service.ISysDeptService;
 
 /**
  * 部门信息
- * 
+ *
  * @author 阮杰辉
  */
 @RestController

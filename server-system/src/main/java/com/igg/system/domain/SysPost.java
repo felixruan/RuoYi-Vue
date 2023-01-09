@@ -11,7 +11,7 @@ import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 岗位表 sys_post
- * 
+ *
  * @author 阮杰辉
  */
 public class SysPost extends BaseEntity {
@@ -92,7 +92,7 @@ public class SysPost extends BaseEntity {
     public void setFlag(boolean flag) {
         this.flag = flag;
     }
-    
+
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)

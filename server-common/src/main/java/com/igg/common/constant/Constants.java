@@ -4,7 +4,7 @@ import io.jsonwebtoken.Claims;
 
 /**
  * 通用常量信息
- * 
+ *
  * @author 阮杰辉
  */
 public class Constants {
@@ -62,7 +62,7 @@ public class Constants {
      * 登录失败
      */
     public static final String LOGIN_FAIL = "Error";
- 
+
     /**
      * 验证码有效期（分钟）
      */

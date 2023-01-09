@@ -2,7 +2,7 @@ package com.igg.common.constant;
 
 /**
  * 缓存的key 常量
- * 
+ *
  * @author 阮杰辉
  */
 public class CacheConstants {

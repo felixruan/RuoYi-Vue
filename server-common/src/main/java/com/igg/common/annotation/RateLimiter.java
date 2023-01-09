@@ -10,7 +10,7 @@ import com.igg.common.enums.LimitType;
 
 /**
  * 限流注解
- * 
+ *
  * @author 阮杰辉
  */
 @Target(ElementType.METHOD)

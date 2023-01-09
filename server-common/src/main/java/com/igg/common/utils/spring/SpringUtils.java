@@ -12,7 +12,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * spring工具类 方便在非spring管理环境中获取bean
- * 
+ *
  * @author 阮杰辉
  */
 @Component
@@ -104,7 +104,7 @@ public final class SpringUtils implements BeanFactoryPostProcessor, ApplicationC
 
     /**
      * 获取aop代理对象
-     * 
+     *
      * @param invoker
      * @return
      */

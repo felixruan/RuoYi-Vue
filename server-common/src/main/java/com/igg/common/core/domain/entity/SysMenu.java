@@ -11,7 +11,7 @@ import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 菜单权限表 sys_menu
- * 
+ *
  * @author 阮杰辉
  */
 public class SysMenu extends BaseEntity {
@@ -52,7 +52,7 @@ public class SysMenu extends BaseEntity {
 
     /** 显示状态（0显示 1隐藏） */
     private String visible;
-    
+
     /** 菜单状态（0正常 1停用） */
     private String status;
 
@@ -199,7 +199,7 @@ public class SysMenu extends BaseEntity {
     public void setChildren(List<SysMenu> children) {
         this.children = children;
     }
-    
+
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)

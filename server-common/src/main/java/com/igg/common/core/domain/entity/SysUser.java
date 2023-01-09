@@ -14,7 +14,7 @@ import com.igg.common.xss.Xss;
 
 /**
  * 用户对象 sys_user
- * 
+ *
  * @author 阮杰辉
  */
 public class SysUser extends BaseEntity {

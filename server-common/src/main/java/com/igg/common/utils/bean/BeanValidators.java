@@ -7,7 +7,7 @@ import javax.validation.Validator;
 
 /**
  * bean对象属性验证
- * 
+ *
  * @author 阮杰辉
  */
 public class BeanValidators {

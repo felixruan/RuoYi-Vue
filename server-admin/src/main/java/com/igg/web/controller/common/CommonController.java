@@ -23,7 +23,7 @@ import com.igg.framework.config.ServerConfig;
 
 /**
  * 通用请求处理
- * 
+ *
  * @author 阮杰辉
  */
 @RestController
@@ -38,7 +38,7 @@ public class CommonController {
 
     /**
      * 通用下载请求
-     * 
+     *
      * @param fileName 文件名称
      * @param delete 是否删除
      */

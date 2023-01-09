@@ -20,7 +20,7 @@ import com.igg.system.service.ISysUserService;
 
 /**
  * 注册校验方法
- * 
+ *
  * @author 阮杰辉
  */
 @Component
@@ -75,7 +75,7 @@ public class SysRegisterService {
 
     /**
      * 校验验证码
-     * 
+     *
      * @param username 用户名
      * @param code 验证码
      * @param uuid 唯一标识

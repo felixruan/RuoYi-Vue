@@ -21,7 +21,7 @@ import com.igg.system.service.ISysOperLogService;
 
 /**
  * 操作日志记录
- * 
+ *
  * @author 阮杰辉
  */
 @RestController

@@ -2,7 +2,7 @@ package com.igg.common.exception;
 
 /**
  * 业务异常
- * 
+ *
  * @author 阮杰辉
  */
 public final class ServiceException extends RuntimeException {

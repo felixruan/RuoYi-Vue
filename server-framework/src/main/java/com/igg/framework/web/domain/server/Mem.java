@@ -4,7 +4,7 @@ import com.igg.common.utils.Arith;
 
 /**
  * 內存相关信息
- * 
+ *
  * @author 阮杰辉
  */
 public class Mem {

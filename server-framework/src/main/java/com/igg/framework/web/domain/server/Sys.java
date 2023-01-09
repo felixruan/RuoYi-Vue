@@ -2,7 +2,7 @@ package com.igg.framework.web.domain.server;
 
 /**
  * 系统相关信息
- * 
+ *
  * @author 阮杰辉
  */
 public class Sys {

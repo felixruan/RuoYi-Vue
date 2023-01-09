@@ -16,7 +16,7 @@ import com.igg.common.enums.HttpMethod;
 
 /**
  * 防止XSS攻击的过滤器
- * 
+ *
  * @author 阮杰辉
  */
 public class XssFilter implements Filter {

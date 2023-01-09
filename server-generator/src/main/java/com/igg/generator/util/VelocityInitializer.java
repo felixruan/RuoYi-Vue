@@ -6,7 +6,7 @@ import com.igg.common.constant.Constants;
 
 /**
  * VelocityEngine工厂
- * 
+ *
  * @author 阮杰辉
  */
 public class VelocityInitializer {

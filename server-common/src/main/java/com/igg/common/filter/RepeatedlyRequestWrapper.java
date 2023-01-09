@@ -14,7 +14,7 @@ import com.igg.common.constant.Constants;
 
 /**
  * 构建可重复读取inputStream的request
- * 
+ *
  * @author 阮杰辉
  */
 public class RepeatedlyRequestWrapper extends HttpServletRequestWrapper {

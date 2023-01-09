@@ -20,7 +20,7 @@ import com.igg.quartz.domain.SysJob;
 
 /**
  * 定时任务工具类
- * 
+ *
  * @author 阮杰辉
  *
  */
@@ -111,7 +111,7 @@ public class ScheduleUtils {
 
     /**
      * 检查包名是否为白名单配置
-     * 
+     *
      * @param invokeTarget 目标字符串
      * @return 结果
      */

@@ -2,7 +2,7 @@ package com.igg.common.enums;
 
 /**
  * 操作人类别
- * 
+ *
  * @author 阮杰辉
  */
 public enum OperatorType {

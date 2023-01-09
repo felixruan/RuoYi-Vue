@@ -8,7 +8,7 @@ import com.igg.common.utils.spring.SpringUtils;
 
 /**
  * 异步任务管理器
- * 
+ *
  * @author 阮杰辉
  */
 public class AsyncManager {
@@ -35,7 +35,7 @@ public class AsyncManager {
 
     /**
      * 执行任务
-     * 
+     *
      * @param task 任务
      */
     public void execute(TimerTask task) {

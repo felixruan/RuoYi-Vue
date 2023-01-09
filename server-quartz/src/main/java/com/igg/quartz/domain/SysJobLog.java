@@ -8,7 +8,7 @@ import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 定时任务调度日志表 sys_job_log
- * 
+ *
  * @author 阮杰辉
  */
 public class SysJobLog extends BaseEntity {
@@ -111,7 +111,7 @@ public class SysJobLog extends BaseEntity {
     public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
-    
+
     public Date getStopTime() {
         return stopTime;
     }

@@ -2,7 +2,7 @@ package com.igg.common.core.domain.model;
 
 /**
  * 用户登录对象
- * 
+ *
  * @author 阮杰辉
  */
 public class LoginBody {

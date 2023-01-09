@@ -15,7 +15,7 @@ import com.igg.generator.domain.GenTableColumn;
 
 /**
  * 模板处理工具类
- * 
+ *
  * @author 阮杰辉
  */
 public class VelocityUtils {
@@ -197,7 +197,7 @@ public class VelocityUtils {
 
     /**
      * 根据列类型获取导入包
-     * 
+     *
      * @param genTable 业务表对象
      * @return 返回需要导入的包列表
      */
@@ -221,7 +221,7 @@ public class VelocityUtils {
 
     /**
      * 根据列类型获取字典组
-     * 
+     *
      * @param genTable 业务表对象
      * @return 返回字典组
      */
@@ -238,7 +238,7 @@ public class VelocityUtils {
 
     /**
      * 添加字典列表
-     * 
+     *
      * @param dicts 字典列表
      * @param columns 列集合
      */

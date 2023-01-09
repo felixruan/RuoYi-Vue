@@ -2,7 +2,7 @@ package com.igg.system.domain;
 
 /**
  * 当前在线会话
- * 
+ *
  * @author 阮杰辉
  */
 public class SysUserOnline {

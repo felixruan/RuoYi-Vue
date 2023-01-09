@@ -2,13 +2,13 @@ package com.igg.common.utils.poi;
 
 /**
  * Excel数据格式处理适配器
- * 
+ *
  * @author 阮杰辉
  */
 public interface ExcelHandlerAdapter {
     /**
      * 格式化
-     * 
+     *
      * @param value 单元格数据值
      * @param args excel注解args参数组
      *

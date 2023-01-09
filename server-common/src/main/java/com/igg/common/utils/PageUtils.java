@@ -7,7 +7,7 @@ import com.igg.common.utils.sql.SqlUtil;
 
 /**
  * 分页工具类
- * 
+ *
  * @author 阮杰辉
  */
 public class PageUtils extends PageHelper {

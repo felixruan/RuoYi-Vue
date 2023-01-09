@@ -2,7 +2,7 @@ package com.igg.common.constant;
 
 /**
  * 任务调度通用常量
- * 
+ *
  * @author 阮杰辉
  */
 public class ScheduleConstants {

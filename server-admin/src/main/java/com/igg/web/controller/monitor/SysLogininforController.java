@@ -22,7 +22,7 @@ import com.igg.system.service.ISysLogininforService;
 
 /**
  * 系统访问记录
- * 
+ *
  * @author 阮杰辉
  */
 @RestController

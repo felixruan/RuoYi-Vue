@@ -2,7 +2,7 @@ package com.igg.common.constant;
 
 /**
  * 返回状态码
- * 
+ *
  * @author 阮杰辉
  */
 public class HttpStatus {

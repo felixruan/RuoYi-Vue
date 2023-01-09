@@ -4,7 +4,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * 分页数据
- * 
+ *
  * @author 阮杰辉
  */
 public class PageDomain {

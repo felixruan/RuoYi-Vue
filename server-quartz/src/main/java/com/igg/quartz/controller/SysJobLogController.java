@@ -21,7 +21,7 @@ import com.igg.quartz.service.ISysJobLogService;
 
 /**
  * 调度日志操作处理
- * 
+ *
  * @author 阮杰辉
  */
 @RestController
@@ -52,7 +52,7 @@ public class SysJobLogController extends BaseController {
         ExcelUtil<SysJobLog> util = new ExcelUtil<>(SysJobLog.class);
         util.exportExcel(response, list, "调度日志");
     }
-    
+
     /**
      * 根据调度编号获取详细信息
      */

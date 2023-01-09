@@ -20,7 +20,7 @@ import com.igg.framework.web.service.TokenService;
 
 /**
  * 自定义退出处理类 返回成功
- * 
+ *
  * @author 阮杰辉
  */
 @Configuration
@@ -30,7 +30,7 @@ public class LogoutSuccessHandlerImpl implements LogoutSuccessHandler {
 
     /**
      * 退出处理
-     * 
+     *
      * @return
      */
     @Override

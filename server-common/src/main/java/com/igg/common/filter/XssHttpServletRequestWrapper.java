@@ -14,7 +14,7 @@ import com.igg.common.utils.html.EscapeUtil;
 
 /**
  * XSS过滤处理
- * 
+ *
  * @author 阮杰辉
  */
 public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
@@ -86,7 +86,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
 
     /**
      * 是否是Json请求
-     * 
+     *
      * @param request
      */
     public boolean isJsonRequest() {

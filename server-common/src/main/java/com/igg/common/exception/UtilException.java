@@ -2,7 +2,7 @@ package com.igg.common.exception;
 
 /**
  * 工具类异常
- * 
+ *
  * @author 阮杰辉
  */
 public class UtilException extends RuntimeException {

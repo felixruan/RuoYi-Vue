@@ -9,7 +9,7 @@ import com.igg.framework.web.domain.Server;
 
 /**
  * 服务器监控
- * 
+ *
  * @author 阮杰辉
  */
 @RestController

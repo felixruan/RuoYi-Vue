@@ -4,7 +4,7 @@ import com.igg.common.exception.base.BaseException;
 
 /**
  * 文件信息异常类
- * 
+ *
  * @author 阮杰辉
  */
 public class FileException extends BaseException {

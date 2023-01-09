@@ -8,7 +8,7 @@ import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 操作日志记录表 oper_log
- * 
+ *
  * @author 阮杰辉
  */
 public class SysOperLog extends BaseEntity {

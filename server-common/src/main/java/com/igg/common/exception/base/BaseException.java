@@ -5,7 +5,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * 基础异常
- * 
+ *
  * @author 阮杰辉
  */
 public class BaseException extends RuntimeException {

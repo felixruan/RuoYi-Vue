@@ -21,7 +21,7 @@ import com.igg.system.service.ISysConfigService;
 
 /**
  * 验证码操作处理
- * 
+ *
  * @author 阮杰辉
  */
 @RestController
@@ -34,7 +34,7 @@ public class CaptchaController {
 
     @Resource
     private RedisCache redisCache;
-    
+
     @Resource
     private ISysConfigService configService;
     /**

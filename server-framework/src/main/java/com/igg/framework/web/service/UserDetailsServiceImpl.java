@@ -25,7 +25,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Resource
     private ISysUserService userService;
-    
+
     @Resource
     private SysPasswordService passwordService;
 

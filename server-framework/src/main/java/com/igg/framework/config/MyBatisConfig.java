@@ -25,7 +25,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * Mybatis支持*匹配扫描包
- * 
+ *
  * @author 阮杰辉
  */
 @Configuration

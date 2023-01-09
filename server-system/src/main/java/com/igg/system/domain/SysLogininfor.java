@@ -8,7 +8,7 @@ import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 系统访问记录表 sys_logininfor
- * 
+ *
  * @author 阮杰辉
  */
 public class SysLogininfor extends BaseEntity {

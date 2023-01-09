@@ -28,7 +28,7 @@ import com.igg.system.service.ISysUserService;
 
 /**
  * 登录校验方法
- * 
+ *
  * @author 阮杰辉
  */
 @Component
@@ -41,7 +41,7 @@ public class SysLoginService {
 
     @Resource
     private RedisCache redisCache;
-    
+
     @Resource
     private ISysUserService userService;
 
@@ -50,7 +50,7 @@ public class SysLoginService {
 
     /**
      * 登录验证
-     * 
+     *
      * @param username 用户名
      * @param password 密码
      * @param code 验证码
@@ -90,7 +90,7 @@ public class SysLoginService {
 
     /**
      * 校验验证码
-     * 
+     *
      * @param username 用户名
      * @param code 验证码
      * @param uuid 唯一标识

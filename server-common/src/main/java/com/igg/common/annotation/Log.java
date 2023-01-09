@@ -10,7 +10,7 @@ import com.igg.common.enums.OperatorType;
 
 /**
  * 自定义操作日志记录注解
- * 
+ *
  * @author 阮杰辉
  *
  */
@@ -19,7 +19,7 @@ import com.igg.common.enums.OperatorType;
 @Documented
 public @interface Log {
     /**
-     * 模块 
+     * 模块
      */
     String title() default "";
 

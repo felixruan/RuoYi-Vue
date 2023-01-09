@@ -2,7 +2,7 @@ package com.igg.common.enums;
 
 /**
  * 用户状态
- * 
+ *
  * @author 阮杰辉
  */
 public enum UserStatus {

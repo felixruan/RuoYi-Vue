@@ -6,7 +6,7 @@ import com.igg.common.core.text.Convert;
 
 /**
  * 权限信息
- * 
+ *
  * @author 阮杰辉
  */
 public class PermissionContextHolder {

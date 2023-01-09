@@ -11,7 +11,7 @@ import com.igg.common.utils.http.HttpUtils;
 
 /**
  * 获取地址类
- * 
+ *
  * @author 阮杰辉
  */
 public class AddressUtils {

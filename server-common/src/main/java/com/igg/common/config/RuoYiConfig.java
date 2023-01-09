@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component;
 
 /**
  * 读取项目相关配置
- * 
+ *
  * @author 阮杰辉
  */
 @Component
-@ConfigurationProperties(prefix = "server")
+@ConfigurationProperties(prefix = "ruoyi")
 public class RuoYiConfig {
     /** 项目名称 */
     private String name;

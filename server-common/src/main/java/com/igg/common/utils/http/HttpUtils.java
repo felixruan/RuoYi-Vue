@@ -24,7 +24,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * 通用http发送方法
- * 
+ *
  * @author 阮杰辉
  */
 public class HttpUtils {

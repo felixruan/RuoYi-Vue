@@ -8,14 +8,14 @@ import com.igg.system.service.ISysUserOnlineService;
 
 /**
  * 在线用户 服务层处理
- * 
+ *
  * @author 阮杰辉
  */
 @Service
 public class SysUserOnlineServiceImpl implements ISysUserOnlineService {
     /**
      * 通过登录地址查询信息
-     * 
+     *
      * @param ipaddr 登录地址
      * @param user 用户信息
      * @return 在线用户信息
@@ -30,7 +30,7 @@ public class SysUserOnlineServiceImpl implements ISysUserOnlineService {
 
     /**
      * 通过用户名称查询信息
-     * 
+     *
      * @param userName 用户名称
      * @param user 用户信息
      * @return 在线用户信息
@@ -45,7 +45,7 @@ public class SysUserOnlineServiceImpl implements ISysUserOnlineService {
 
     /**
      * 通过登录地址/用户名称查询信息
-     * 
+     *
      * @param ipaddr 登录地址
      * @param userName 用户名称
      * @param user 用户信息
@@ -61,7 +61,7 @@ public class SysUserOnlineServiceImpl implements ISysUserOnlineService {
 
     /**
      * 设置在线用户信息
-     * 
+     *
      * @param user 用户信息
      * @return 在线用户
      */

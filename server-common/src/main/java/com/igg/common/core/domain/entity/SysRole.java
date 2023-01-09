@@ -12,7 +12,7 @@ import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 角色表 sys_role
- * 
+ *
  * @author 阮杰辉
  */
 public class SysRole extends BaseEntity {

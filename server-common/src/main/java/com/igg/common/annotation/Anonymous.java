@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 
 /**
  * 匿名访问不鉴权注解
- * 
+ *
  * @author 阮杰辉
  */
 @Target({ ElementType.METHOD, ElementType.TYPE })

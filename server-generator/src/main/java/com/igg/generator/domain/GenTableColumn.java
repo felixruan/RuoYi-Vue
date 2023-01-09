@@ -6,7 +6,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * 代码生成业务字段表 gen_table_column
- * 
+ *
  * @author 阮杰辉
  */
 public class GenTableColumn extends BaseEntity {

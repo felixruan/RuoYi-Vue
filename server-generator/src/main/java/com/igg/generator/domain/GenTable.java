@@ -10,7 +10,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * 业务表 gen_table
- * 
+ *
  * @author 阮杰辉
  */
 public class GenTable extends BaseEntity {

@@ -4,7 +4,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * 路由显示信息
- * 
+ *
  * @author 阮杰辉
  */
 public class MetaVo {

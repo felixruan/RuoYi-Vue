@@ -2,7 +2,7 @@ package com.igg.common.exception;
 
 /**
  * 全局异常
- * 
+ *
  * @author 阮杰辉
  */
 public class GlobalException extends RuntimeException {

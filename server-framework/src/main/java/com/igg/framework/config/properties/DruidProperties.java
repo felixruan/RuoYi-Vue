@@ -6,7 +6,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 /**
  * druid 配置属性
- * 
+ *
  * @author 阮杰辉
  */
 @Configuration

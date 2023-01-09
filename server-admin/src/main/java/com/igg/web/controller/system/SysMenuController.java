@@ -23,7 +23,7 @@ import com.igg.system.service.ISysMenuService;
 
 /**
  * 菜单信息
- * 
+ *
  * @author 阮杰辉
  */
 @RestController

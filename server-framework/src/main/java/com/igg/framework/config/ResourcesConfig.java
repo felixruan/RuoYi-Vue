@@ -17,7 +17,7 @@ import com.igg.framework.interceptor.RepeatSubmitInterceptor;
 
 /**
  * 通用配置
- * 
+ *
  * @author 阮杰辉
  */
 @Configuration

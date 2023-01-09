@@ -6,7 +6,7 @@ import com.igg.common.utils.DateUtils;
 
 /**
  * JVM相关信息
- * 
+ *
  * @author 阮杰辉
  */
 public class Jvm {

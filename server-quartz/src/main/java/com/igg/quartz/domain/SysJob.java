@@ -15,7 +15,7 @@ import com.igg.quartz.util.CronUtils;
 
 /**
  * 定时任务调度表 sys_job
- * 
+ *
  * @author 阮杰辉
  */
 public class SysJob extends BaseEntity {

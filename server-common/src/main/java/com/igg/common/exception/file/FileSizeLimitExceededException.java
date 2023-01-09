@@ -2,7 +2,7 @@ package com.igg.common.exception.file;
 
 /**
  * 文件名大小限制异常类
- * 
+ *
  * @author 阮杰辉
  */
 public class FileSizeLimitExceededException extends FileException {

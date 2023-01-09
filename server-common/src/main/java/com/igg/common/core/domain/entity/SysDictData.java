@@ -11,7 +11,7 @@ import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 字典数据表 sys_dict_data
- * 
+ *
  * @author 阮杰辉
  */
 public class SysDictData extends BaseEntity {
@@ -133,7 +133,7 @@ public class SysDictData extends BaseEntity {
     public void setStatus(String status) {
         this.status = status;
     }
-    
+
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)

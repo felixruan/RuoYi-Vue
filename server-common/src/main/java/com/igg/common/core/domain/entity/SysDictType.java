@@ -11,7 +11,7 @@ import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 字典类型表 sys_dict_type
- * 
+ *
  * @author 阮杰辉
  */
 public class SysDictType extends BaseEntity {
@@ -69,7 +69,7 @@ public class SysDictType extends BaseEntity {
     public void setStatus(String status) {
         this.status = status;
     }
-    
+
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)

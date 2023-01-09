@@ -2,7 +2,7 @@ package com.igg.common.exception.job;
 
 /**
  * 计划策略异常
- * 
+ *
  * @author 阮杰辉
  */
 public class TaskException extends Exception {

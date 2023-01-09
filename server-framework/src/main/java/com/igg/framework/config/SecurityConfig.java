@@ -22,7 +22,7 @@ import com.igg.framework.security.handle.LogoutSuccessHandlerImpl;
 
 /**
  * spring security配置
- * 
+ *
  * @author 阮杰辉
  */
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Resource
     private UserDetailsService userDetailsService;
-    
+
     /**
      * 认证失败处理类
      */
@@ -50,7 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Resource
     private JwtAuthenticationTokenFilter authenticationTokenFilter;
-    
+
     /**
      * 跨域过滤器
      */

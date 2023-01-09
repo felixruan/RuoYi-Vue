@@ -9,7 +9,7 @@ import com.igg.common.xss.Xss;
 
 /**
  * 通知公告表 sys_notice
- * 
+ *
  * @author 阮杰辉
  */
 public class SysNotice extends BaseEntity {

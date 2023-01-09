@@ -2,7 +2,7 @@ package com.igg.common.utils.sign;
 
 /**
  * Base64工具类
- * 
+ *
  * @author 阮杰辉
  */
 public final class Base64 {

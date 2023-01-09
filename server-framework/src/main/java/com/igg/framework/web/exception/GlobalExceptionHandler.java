@@ -17,7 +17,7 @@ import com.igg.common.utils.StringUtils;
 
 /**
  * 全局异常处理器
- * 
+ *
  * @author 阮杰辉
  */
 @RestControllerAdvice

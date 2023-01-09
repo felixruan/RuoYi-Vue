@@ -2,7 +2,7 @@ package com.igg.common.constant;
 
 /**
  * 代码生成通用常量
- * 
+ *
  * @author 阮杰辉
  */
 public class GenConstants {

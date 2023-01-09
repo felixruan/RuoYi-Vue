@@ -25,7 +25,7 @@ import com.igg.system.service.ISysConfigService;
 
 /**
  * 参数配置 信息操作处理
- * 
+ *
  * @author 阮杰辉
  */
 @RestController
