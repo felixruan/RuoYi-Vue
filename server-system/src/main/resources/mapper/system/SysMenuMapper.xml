@@ -124,7 +124,7 @@
     </select>
 
     <select id="hasChildByMenuId" resultType="Integer">
-        select count(1) from sys_menu where parent_id = #{menuId} 
+        select count(1) from sys_menu where parent_id = #{menuId}
     </select>
 
     <select id="checkMenuNameUnique" parameterType="SysMenu" resultMap="SysMenuResult">
