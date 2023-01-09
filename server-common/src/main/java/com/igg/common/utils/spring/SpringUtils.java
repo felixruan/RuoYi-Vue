@@ -16,19 +16,19 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 @Component
-public final class SpringUtils implements BeanFactoryPostProcessor, ApplicationContextAware  {
+public final class SpringUtils implements BeanFactoryPostProcessor, ApplicationContextAware {
     /** Spring应用上下文环境 */
     private static ConfigurableListableBeanFactory beanFactory;
 
     private static ApplicationContext applicationContext;
 
     @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException  {
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         SpringUtils.beanFactory = beanFactory;
     }
 
     @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException  {
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         SpringUtils.applicationContext = applicationContext;
     }
 
