@@ -9,6 +9,7 @@ import com.igg.generator.domain.GenTableColumn;
  * @author 阮杰辉
  */
 public interface IGenTableColumnService {
+
     /**
      * 查询业务字段列表
      *
@@ -40,4 +41,5 @@ public interface IGenTableColumnService {
      * @return 结果
      */
     int deleteGenTableColumnByIds(String ids);
+
 }

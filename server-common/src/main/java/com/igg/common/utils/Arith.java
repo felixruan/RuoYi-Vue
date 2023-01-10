@@ -100,4 +100,5 @@ public class Arith {
         BigDecimal one = BigDecimal.ONE;
         return b.divide(one, scale, RoundingMode.HALF_UP).doubleValue();
     }
+
 }

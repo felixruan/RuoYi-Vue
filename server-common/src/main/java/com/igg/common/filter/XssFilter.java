@@ -20,6 +20,7 @@ import com.igg.common.enums.HttpMethod;
  * @author 阮杰辉
  */
 public class XssFilter implements Filter {
+
     /**
      * 排除链接
      */
@@ -63,4 +64,5 @@ public class XssFilter implements Filter {
     public void destroy() {
 
     }
+
 }

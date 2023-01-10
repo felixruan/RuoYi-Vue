@@ -6,6 +6,7 @@ package com.igg.common.core.domain.model;
  * @author 阮杰辉
  */
 public class LoginBody {
+
     /**
      * 用户名
      */
@@ -57,4 +58,5 @@ public class LoginBody {
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
+
 }

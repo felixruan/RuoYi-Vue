@@ -10,6 +10,7 @@ import com.igg.common.core.domain.entity.SysUser;
  * @author 阮杰辉
  */
 public interface SysUserMapper {
+
     /**
      * 根据条件分页查询用户列表
      *
@@ -123,4 +124,5 @@ public interface SysUserMapper {
      * @return 结果
      */
     SysUser checkEmailUnique(String email);
+
 }

@@ -28,6 +28,7 @@ import com.igg.system.service.ISysDeptService;
  */
 @Service
 public class SysDeptServiceImpl implements ISysDeptService {
+
     @Resource
     private SysDeptMapper deptMapper;
 
@@ -300,4 +301,5 @@ public class SysDeptServiceImpl implements ISysDeptService {
     private boolean hasChild(List<SysDept> list, SysDept t) {
         return getChildList(list, t).size() > 0;
     }
+
 }

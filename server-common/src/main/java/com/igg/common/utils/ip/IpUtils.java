@@ -11,6 +11,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class IpUtils {
+
     /**
      * 获取客户端IP
      *
@@ -220,4 +221,5 @@ public class IpUtils {
     public static boolean isUnknown(String checkString) {
         return StringUtils.isBlank(checkString) || "unknown".equalsIgnoreCase(checkString);
     }
+
 }

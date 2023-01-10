@@ -9,6 +9,7 @@ import com.igg.system.domain.SysRoleMenu;
  * @author 阮杰辉
  */
 public interface SysRoleMenuMapper {
+
     /**
      * 查询菜单使用数量
      *
@@ -40,4 +41,5 @@ public interface SysRoleMenuMapper {
      * @return 结果
      */
     int batchRoleMenu(List<SysRoleMenu> roleMenuList);
+
 }

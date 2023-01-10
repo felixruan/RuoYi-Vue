@@ -10,6 +10,7 @@ import com.igg.generator.domain.GenTable;
  * @author 阮杰辉
  */
 public interface IGenTableService {
+
     /**
      * 查询业务列表
      *
@@ -117,4 +118,5 @@ public interface IGenTableService {
      * @param genTable 业务信息
      */
     void validateEdit(GenTable genTable);
+
 }

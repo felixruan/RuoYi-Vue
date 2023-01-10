@@ -31,6 +31,7 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping("/test/user")
 public class TestController extends BaseController {
+
     private final static Map<Integer, UserEntity> users = new LinkedHashMap<>(); {
         users.put(1, new UserEntity(1, "admin", "admin123", "15888888888"));
         users.put(2, new UserEntity(2, "ry", "admin123", "15666666666"));
@@ -153,4 +154,5 @@ class UserEntity {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
 }

@@ -13,6 +13,7 @@ import com.igg.system.service.ISysUserOnlineService;
  */
 @Service
 public class SysUserOnlineServiceImpl implements ISysUserOnlineService {
+
     /**
      * 通过登录地址查询信息
      *
@@ -83,4 +84,5 @@ public class SysUserOnlineServiceImpl implements ISysUserOnlineService {
         }
         return sysUserOnline;
     }
+
 }

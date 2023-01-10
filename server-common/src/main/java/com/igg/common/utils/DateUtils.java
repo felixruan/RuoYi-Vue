@@ -17,6 +17,7 @@ import org.apache.commons.lang3.time.DateFormatUtils;
  * @author 阮杰辉
  */
 public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
+
     public static String YYYY = "yyyy";
 
     public static String YYYY_MM = "yyyy-MM";
@@ -160,4 +161,5 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
         ZonedDateTime zdt = localDateTime.atZone(ZoneId.systemDefault());
         return Date.from(zdt.toInstant());
     }
+
 }

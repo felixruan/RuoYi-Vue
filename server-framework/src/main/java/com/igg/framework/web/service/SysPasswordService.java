@@ -24,6 +24,7 @@ import com.igg.framework.security.context.AuthenticationContextHolder;
  */
 @Component
 public class SysPasswordService {
+
     @Resource
     private RedisCache redisCache;
 
@@ -80,4 +81,5 @@ public class SysPasswordService {
             redisCache.deleteObject(getCacheKey(loginName));
         }
     }
+
 }

@@ -24,6 +24,7 @@ import com.igg.framework.interceptor.RepeatSubmitInterceptor;
  */
 @Component
 public class SameUrlDataInterceptor extends RepeatSubmitInterceptor {
+
     public final String REPEAT_PARAMS = "repeatParams";
 
     public final String REPEAT_TIME = "repeatTime";
@@ -97,4 +98,5 @@ public class SameUrlDataInterceptor extends RepeatSubmitInterceptor {
         }
         return false;
     }
+
 }

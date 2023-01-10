@@ -16,6 +16,7 @@ import com.igg.common.core.domain.BaseEntity;
  * @author 阮杰辉
  */
 public class SysDept extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 部门ID */
@@ -175,4 +176,5 @@ public class SysDept extends BaseEntity {
             .append("updateTime", getUpdateTime())
             .toString();
     }
+
 }

@@ -22,6 +22,7 @@ import com.igg.framework.interceptor.RepeatSubmitInterceptor;
  */
 @Configuration
 public class ResourcesConfig implements WebMvcConfigurer {
+
     @Resource
     private RepeatSubmitInterceptor repeatSubmitInterceptor;
 
@@ -66,4 +67,5 @@ public class ResourcesConfig implements WebMvcConfigurer {
         // 返回新的CorsFilter
         return new CorsFilter(source);
     }
+
 }

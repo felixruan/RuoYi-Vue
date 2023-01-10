@@ -25,6 +25,7 @@ import com.igg.framework.web.service.TokenService;
  */
 @Configuration
 public class LogoutSuccessHandlerImpl implements LogoutSuccessHandler {
+
     @Resource
     private TokenService tokenService;
 
@@ -46,4 +47,5 @@ public class LogoutSuccessHandlerImpl implements LogoutSuccessHandler {
         }
         ServletUtils.renderString(response, JSON.toJSONString(AjaxResult.success("退出成功")));
     }
+
 }

@@ -8,6 +8,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class EscapeUtil {
+
     public static final String RE_HTML_MARK = "(<[^<]*?>)|(<[\\s]*?/[^<]*?>)|(<[^<]*?/[\\s]*?>)";
 
     private static final char[][] TEXT = new char[64][];
@@ -137,4 +138,5 @@ public class EscapeUtil {
         System.out.println("escape: " + escape);
         System.out.println("unescape: " + EscapeUtil.unescape(escape));
     }
+
 }

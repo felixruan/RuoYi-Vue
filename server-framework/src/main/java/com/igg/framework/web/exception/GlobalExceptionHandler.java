@@ -101,4 +101,5 @@ public class GlobalExceptionHandler {
     public AjaxResult handleDemoModeException(DemoModeException e) {
         return AjaxResult.error("演示模式，不允许操作");
     }
+
 }

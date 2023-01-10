@@ -8,6 +8,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class MetaVo {
+
     /**
      * 设置该路由在侧边栏和面包屑中展示的名字
      */
@@ -88,4 +89,5 @@ public class MetaVo {
     public void setLink(String link) {
         this.link = link;
     }
+
 }

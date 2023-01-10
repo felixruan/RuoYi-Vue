@@ -11,6 +11,7 @@ import javax.validation.Validator;
  * @author 阮杰辉
  */
 public class BeanValidators {
+
     public static void validateWithException(Validator validator, Object object, Class<?>... groups)
             throws ConstraintViolationException {
         Set<ConstraintViolation<Object>> constraintViolations = validator.validate(object, groups);
@@ -18,4 +19,5 @@ public class BeanValidators {
             throw new ConstraintViolationException(constraintViolations);
         }
     }
+
 }

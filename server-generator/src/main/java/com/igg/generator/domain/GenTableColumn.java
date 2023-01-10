@@ -10,6 +10,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class GenTableColumn extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 编号 */
@@ -308,4 +309,5 @@ public class GenTableColumn extends BaseEntity {
             return this.columnComment;
         }
     }
+
 }

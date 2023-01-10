@@ -13,6 +13,7 @@ import com.igg.common.exception.UtilException;
  * @author 阮杰辉
  */
 public final class UUID implements java.io.Serializable, Comparable<UUID> {
+
     private static final long serialVersionUID = -1185015143654744140L;
 
     /**
@@ -440,4 +441,5 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
     public static ThreadLocalRandom getRandom() {
         return ThreadLocalRandom.current();
     }
+
 }

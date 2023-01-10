@@ -6,6 +6,7 @@ package com.igg.framework.web.domain.server;
  * @author 阮杰辉
  */
 public class Sys {
+
     /**
      * 服务器名称
      */
@@ -70,4 +71,5 @@ public class Sys {
     public void setOsArch(String osArch) {
         this.osArch = osArch;
     }
+
 }

@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
  * @author 阮杰辉
  */
 public class BeanUtils extends org.springframework.beans.BeanUtils {
+
     /** Bean方法名中属性名开始的下标 */
     private static final int BEAN_METHOD_PROP_INDEX = 3;
 
@@ -95,4 +96,5 @@ public class BeanUtils extends org.springframework.beans.BeanUtils {
     public static boolean isMethodPropEquals(String m1, String m2) {
         return m1.substring(BEAN_METHOD_PROP_INDEX).equals(m2.substring(BEAN_METHOD_PROP_INDEX));
     }
+
 }

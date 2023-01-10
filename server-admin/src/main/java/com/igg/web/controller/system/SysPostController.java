@@ -31,6 +31,7 @@ import com.igg.system.service.ISysPostService;
 @RestController
 @RequestMapping("/system/post")
 public class SysPostController extends BaseController {
+
     @Resource
     private ISysPostService postService;
 
@@ -113,4 +114,5 @@ public class SysPostController extends BaseController {
         List<SysPost> posts = postService.selectPostAll();
         return success(posts);
     }
+
 }

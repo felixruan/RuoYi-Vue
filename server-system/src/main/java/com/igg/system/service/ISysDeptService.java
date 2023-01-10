@@ -10,6 +10,7 @@ import com.igg.common.core.domain.entity.SysDept;
  * @author 阮杰辉
  */
 public interface ISysDeptService {
+
     /**
      * 查询部门管理数据
      *
@@ -120,4 +121,5 @@ public interface ISysDeptService {
      * @return 结果
      */
     int deleteDeptById(Long deptId);
+
 }

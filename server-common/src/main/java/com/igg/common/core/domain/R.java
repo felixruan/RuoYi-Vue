@@ -9,6 +9,7 @@ import com.igg.common.constant.HttpStatus;
  * @author 阮杰辉
  */
 public class R<T> implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     /** 成功 */
@@ -94,4 +95,5 @@ public class R<T> implements Serializable {
     public static <T> Boolean isSuccess(R<T> ret) {
         return R.SUCCESS == ret.getCode();
     }
+
 }

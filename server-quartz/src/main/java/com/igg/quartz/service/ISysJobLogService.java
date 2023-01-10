@@ -9,6 +9,7 @@ import com.igg.quartz.domain.SysJobLog;
  * @author 阮杰辉
  */
 public interface ISysJobLogService {
+
     /**
      * 获取quartz调度器日志的计划任务
      *
@@ -52,4 +53,5 @@ public interface ISysJobLogService {
      * 清空任务日志
      */
     void cleanJobLog();
+
 }

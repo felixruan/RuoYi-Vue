@@ -9,6 +9,7 @@ import java.util.List;
  * @author 阮杰辉
  */
 public class TableDataInfo implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     /** 总记录数 */
@@ -71,4 +72,5 @@ public class TableDataInfo implements Serializable {
     public void setMsg(String msg) {
         this.msg = msg;
     }
+
 }

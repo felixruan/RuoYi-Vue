@@ -9,6 +9,7 @@ import com.igg.system.domain.SysUserOnline;
  * @author 阮杰辉
  */
 public interface ISysUserOnlineService {
+
     /**
      * 通过登录地址查询信息
      *
@@ -44,4 +45,5 @@ public interface ISysUserOnlineService {
      * @return 在线用户
      */
     SysUserOnline loginUserToUserOnline(LoginUser user);
+
 }

@@ -18,6 +18,7 @@ import com.igg.common.utils.html.EscapeUtil;
  * @author 阮杰辉
  */
 public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
+
     /**
      * @param request
      */
@@ -93,4 +94,5 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
         String header = super.getHeader(HttpHeaders.CONTENT_TYPE);
         return StringUtils.startsWithIgnoreCase(header, MediaType.APPLICATION_JSON_VALUE);
     }
+
 }

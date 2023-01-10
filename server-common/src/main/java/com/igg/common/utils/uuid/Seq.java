@@ -8,6 +8,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉 序列生成类
  */
 public class Seq {
+
     // 通用序列类型
     public static final String commSeqType = "COMMON";
 
@@ -76,4 +77,5 @@ public class Seq {
         // 转字符串，用0左补齐
         return StringUtils.padl(value, length);
     }
+
 }

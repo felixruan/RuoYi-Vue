@@ -15,6 +15,7 @@ import com.igg.common.core.domain.BaseEntity;
  * @author 阮杰辉
  */
 public class SysPost extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 岗位序号 */
@@ -108,4 +109,5 @@ public class SysPost extends BaseEntity {
             .append("remark", getRemark())
             .toString();
     }
+
 }

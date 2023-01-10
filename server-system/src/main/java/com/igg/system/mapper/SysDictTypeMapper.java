@@ -9,6 +9,7 @@ import com.igg.common.core.domain.entity.SysDictType;
  * @author 阮杰辉
  */
 public interface SysDictTypeMapper {
+
     /**
      * 根据条件分页查询字典类型
      *
@@ -79,4 +80,5 @@ public interface SysDictTypeMapper {
      * @return 结果
      */
     SysDictType checkDictTypeUnique(String dictType);
+
 }

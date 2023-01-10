@@ -9,6 +9,7 @@ import com.igg.system.domain.SysLogininfor;
  * @author 阮杰辉
  */
 public interface SysLogininforMapper {
+
     /**
      * 新增系统登录日志
      *
@@ -38,4 +39,5 @@ public interface SysLogininforMapper {
      * @return 结果
      */
     int cleanLogininfor();
+
 }

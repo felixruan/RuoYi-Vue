@@ -8,6 +8,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class SysCache {
+
     /** 缓存名称 */
     private String cacheName = "";
 
@@ -66,4 +67,5 @@ public class SysCache {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 }

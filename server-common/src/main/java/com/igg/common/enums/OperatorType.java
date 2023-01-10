@@ -6,6 +6,7 @@ package com.igg.common.enums;
  * @author 阮杰辉
  */
 public enum OperatorType {
+
     /**
      * 其它
      */
@@ -20,4 +21,5 @@ public enum OperatorType {
      * 手机端用户
      */
     MOBILE
+
 }

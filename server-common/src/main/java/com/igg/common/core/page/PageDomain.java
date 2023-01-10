@@ -8,6 +8,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class PageDomain {
+
     /** 当前记录起始索引 */
     private Integer pageNum;
 
@@ -80,4 +81,5 @@ public class PageDomain {
     public void setReasonable(Boolean reasonable) {
         this.reasonable = reasonable;
     }
+
 }

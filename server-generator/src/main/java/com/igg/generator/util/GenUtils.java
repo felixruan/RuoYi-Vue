@@ -14,6 +14,7 @@ import com.igg.generator.domain.GenTableColumn;
  * @author 阮杰辉
  */
 public class GenUtils {
+
     /**
      * 初始化表信息
      */
@@ -217,4 +218,5 @@ public class GenUtils {
             return 0;
         }
     }
+
 }

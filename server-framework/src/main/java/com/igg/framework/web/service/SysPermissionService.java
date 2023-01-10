@@ -17,6 +17,7 @@ import com.igg.system.service.ISysRoleService;
  */
 @Component
 public class SysPermissionService {
+
     @Resource
     private ISysRoleService roleService;
 
@@ -66,4 +67,5 @@ public class SysPermissionService {
         }
         return perms;
     }
+
 }

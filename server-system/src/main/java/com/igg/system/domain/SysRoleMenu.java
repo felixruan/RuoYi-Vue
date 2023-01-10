@@ -9,6 +9,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  * @author 阮杰辉
  */
 public class SysRoleMenu {
+
     /** 角色ID */
     private Long roleId;
 
@@ -38,4 +39,5 @@ public class SysRoleMenu {
             .append("menuId", getMenuId())
             .toString();
     }
+
 }

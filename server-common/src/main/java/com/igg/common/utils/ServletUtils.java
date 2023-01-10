@@ -23,6 +23,7 @@ import com.igg.common.core.text.Convert;
  * @author 阮杰辉
  */
 public class ServletUtils {
+
     /**
      * 获取String参数
      */
@@ -185,4 +186,5 @@ public class ServletUtils {
             return StringUtils.EMPTY;
         }
     }
+
 }

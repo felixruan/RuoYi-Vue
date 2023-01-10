@@ -9,6 +9,7 @@ import com.igg.generator.domain.GenTableColumn;
  * @author 阮杰辉
  */
 public interface GenTableColumnMapper {
+
     /**
      * 根据表名称查询列信息
      *
@@ -56,4 +57,5 @@ public interface GenTableColumnMapper {
      * @return 结果
      */
     int deleteGenTableColumnByIds(Long[] ids);
+
 }

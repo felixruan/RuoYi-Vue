@@ -15,6 +15,7 @@ import com.igg.framework.web.domain.Server;
 @RestController
 @RequestMapping("/monitor/server")
 public class ServerController {
+
     @PreAuthorize("@ss.hasPermi('monitor:server:list')")
     @GetMapping()
     public AjaxResult getInfo() throws Exception {
@@ -22,4 +23,5 @@ public class ServerController {
         server.copyTo();
         return AjaxResult.success(server);
     }
+
 }

@@ -8,6 +8,7 @@ import com.alibaba.fastjson2.filter.SimplePropertyPreFilter;
  * @author 阮杰辉
  */
 public class PropertyPreExcludeFilter extends SimplePropertyPreFilter {
+
     public PropertyPreExcludeFilter() {
     }
 
@@ -17,4 +18,5 @@ public class PropertyPreExcludeFilter extends SimplePropertyPreFilter {
         }
         return this;
     }
+
 }

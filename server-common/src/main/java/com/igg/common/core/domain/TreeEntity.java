@@ -9,6 +9,7 @@ import java.util.List;
  * @author 阮杰辉
  */
 public class TreeEntity extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 父菜单名称 */
@@ -65,4 +66,5 @@ public class TreeEntity extends BaseEntity {
     public void setChildren(List<?> children) {
         this.children = children;
     }
+
 }

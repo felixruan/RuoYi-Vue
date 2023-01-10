@@ -9,6 +9,7 @@ import com.igg.common.core.domain.entity.SysDictData;
  * @author 阮杰辉
  */
 public interface ISysDictDataService {
+
     /**
      * 根据条件分页查询字典数据
      *
@@ -56,4 +57,5 @@ public interface ISysDictDataService {
      * @return 结果
      */
     int updateDictData(SysDictData dictData);
+
 }

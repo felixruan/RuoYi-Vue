@@ -10,6 +10,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class CharsetKit {
+
     /** ISO-8859-1 */
     public static final String ISO_8859_1 = "ISO-8859-1";
     /** UTF-8 */
@@ -75,4 +76,5 @@ public class CharsetKit {
     public static String systemCharset() {
         return Charset.defaultCharset().name();
     }
+
 }

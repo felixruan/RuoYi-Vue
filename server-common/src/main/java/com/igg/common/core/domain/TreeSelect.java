@@ -13,6 +13,7 @@ import com.igg.common.core.domain.entity.SysMenu;
  * @author 阮杰辉
  */
 public class TreeSelect implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     /** 节点ID */
@@ -64,4 +65,5 @@ public class TreeSelect implements Serializable {
     public void setChildren(List<TreeSelect> children) {
         this.children = children;
     }
+
 }

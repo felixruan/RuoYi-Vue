@@ -14,6 +14,7 @@ import com.igg.common.utils.spring.SpringUtils;
  * @author 阮杰辉
  */
 public class DictUtils {
+
     /**
      * 分隔符
      */
@@ -155,4 +156,5 @@ public class DictUtils {
     public static String getCacheKey(String configKey) {
         return CacheConstants.SYS_DICT_KEY + configKey;
     }
+
 }

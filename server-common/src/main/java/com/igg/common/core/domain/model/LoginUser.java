@@ -13,6 +13,7 @@ import com.igg.common.core.domain.entity.SysUser;
  * @author 阮杰辉
  */
 public class LoginUser implements UserDetails {
+
     private static final long serialVersionUID = 1L;
 
     /**
@@ -230,4 +231,5 @@ public class LoginUser implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
+
 }

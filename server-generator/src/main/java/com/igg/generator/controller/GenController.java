@@ -36,6 +36,7 @@ import com.igg.generator.service.IGenTableService;
 @RestController
 @RequestMapping("/tool/gen")
 public class GenController extends BaseController {
+
     @Resource
     private IGenTableService genTableService;
 
@@ -197,4 +198,5 @@ public class GenController extends BaseController {
         response.setContentType("application/octet-stream; charset=UTF-8");
         IOUtils.write(data, response.getOutputStream());
     }
+
 }

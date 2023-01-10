@@ -6,6 +6,7 @@ package com.igg.common.exception.job;
  * @author 阮杰辉
  */
 public class TaskException extends Exception {
+
     private static final long serialVersionUID = 1L;
 
     private Code code;
@@ -26,4 +27,5 @@ public class TaskException extends Exception {
     public enum Code {
         TASK_EXISTS, NO_TASK_EXISTS, TASK_ALREADY_STARTED, UNKNOWN, CONFIG_ERROR, TASK_NODE_NOT_AVAILABLE
     }
+
 }

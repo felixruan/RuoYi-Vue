@@ -6,6 +6,7 @@ package com.igg.common.utils.file;
  * @author 阮杰辉
  */
 public class MimeTypeUtils {
+
     public static final String IMAGE_PNG = "image/png";
 
     public static final String IMAGE_JPG = "image/jpg";
@@ -53,4 +54,5 @@ public class MimeTypeUtils {
                 return "";
         }
     }
+
 }

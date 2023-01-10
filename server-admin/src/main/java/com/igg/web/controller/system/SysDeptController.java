@@ -30,6 +30,7 @@ import com.igg.system.service.ISysDeptService;
 @RestController
 @RequestMapping("/system/dept")
 public class SysDeptController extends BaseController {
+
     @Resource
     private ISysDeptService deptService;
 
@@ -114,4 +115,5 @@ public class SysDeptController extends BaseController {
         deptService.checkDeptDataScope(deptId);
         return toAjax(deptService.deleteDeptById(deptId));
     }
+
 }

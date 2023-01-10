@@ -10,6 +10,7 @@ import com.igg.common.core.domain.entity.SysDictData;
  * @author 阮杰辉
  */
 public interface SysDictDataMapper {
+
     /**
      * 根据条件分页查询字典数据
      *
@@ -91,4 +92,5 @@ public interface SysDictDataMapper {
      * @return 结果
      */
     int updateDictDataType(@Param("oldDictType") String oldDictType, @Param("newDictType") String newDictType);
+
 }

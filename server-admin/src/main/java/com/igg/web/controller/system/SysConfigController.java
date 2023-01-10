@@ -31,6 +31,7 @@ import com.igg.system.service.ISysConfigService;
 @RestController
 @RequestMapping("/system/config")
 public class SysConfigController extends BaseController {
+
     @Resource
     private ISysConfigService configService;
 
@@ -120,4 +121,5 @@ public class SysConfigController extends BaseController {
         configService.resetConfigCache();
         return success();
     }
+
 }

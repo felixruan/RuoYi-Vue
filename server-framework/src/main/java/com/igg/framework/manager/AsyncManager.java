@@ -12,6 +12,7 @@ import com.igg.common.utils.spring.SpringUtils;
  * @author 阮杰辉
  */
 public class AsyncManager {
+
     /**
      * 操作延迟10毫秒
      */
@@ -48,4 +49,5 @@ public class AsyncManager {
     public void shutdown() {
         Threads.shutdownAndAwaitTermination(executor);
     }
+
 }

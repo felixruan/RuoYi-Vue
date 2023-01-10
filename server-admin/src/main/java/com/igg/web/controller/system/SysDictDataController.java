@@ -33,6 +33,7 @@ import com.igg.system.service.ISysDictTypeService;
 @RestController
 @RequestMapping("/system/dict/data")
 public class SysDictDataController extends BaseController {
+
     @Resource
     private ISysDictDataService dictDataService;
 
@@ -109,4 +110,5 @@ public class SysDictDataController extends BaseController {
         dictDataService.deleteDictDataByIds(dictCodes);
         return success();
     }
+
 }

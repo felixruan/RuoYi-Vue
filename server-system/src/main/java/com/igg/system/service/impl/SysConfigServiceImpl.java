@@ -24,6 +24,7 @@ import com.igg.system.service.ISysConfigService;
  */
 @Service
 public class SysConfigServiceImpl implements ISysConfigService {
+
     @Resource
     private SysConfigMapper configMapper;
 
@@ -205,4 +206,5 @@ public class SysConfigServiceImpl implements ISysConfigService {
     private String getCacheKey(String configKey) {
         return CacheConstants.SYS_CONFIG_KEY + configKey;
     }
+
 }

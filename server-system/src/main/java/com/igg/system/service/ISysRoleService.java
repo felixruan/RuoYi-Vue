@@ -11,6 +11,7 @@ import com.igg.system.domain.SysUserRole;
  * @author 阮杰辉
  */
 public interface ISysRoleService {
+
     /**
      * 根据条件分页查询角色数据
      *
@@ -169,4 +170,5 @@ public interface ISysRoleService {
      * @return 结果
      */
     int insertAuthUsers(Long roleId, Long[] userIds);
+
 }

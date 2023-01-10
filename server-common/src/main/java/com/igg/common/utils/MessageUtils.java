@@ -10,6 +10,7 @@ import com.igg.common.utils.spring.SpringUtils;
  * @author 阮杰辉
  */
 public class MessageUtils {
+
     /**
      * 根据消息键和参数 获取消息 委托给spring messageSource
      *
@@ -21,4 +22,5 @@ public class MessageUtils {
         MessageSource messageSource = SpringUtils.getBean(MessageSource.class);
         return messageSource.getMessage(code, args, LocaleContextHolder.getLocale());
     }
+
 }

@@ -27,6 +27,7 @@ import com.igg.quartz.service.ISysJobLogService;
 @RestController
 @RequestMapping("/monitor/jobLog")
 public class SysJobLogController extends BaseController {
+
     @Resource
     private ISysJobLogService jobLogService;
 
@@ -83,4 +84,5 @@ public class SysJobLogController extends BaseController {
         jobLogService.cleanJobLog();
         return success();
     }
+
 }

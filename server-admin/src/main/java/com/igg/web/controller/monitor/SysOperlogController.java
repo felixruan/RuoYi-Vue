@@ -27,6 +27,7 @@ import com.igg.system.service.ISysOperLogService;
 @RestController
 @RequestMapping("/monitor/operlog")
 public class SysOperlogController extends BaseController {
+
     @Resource
     private ISysOperLogService operLogService;
 
@@ -61,4 +62,5 @@ public class SysOperlogController extends BaseController {
         operLogService.cleanOperLog();
         return success();
     }
+
 }

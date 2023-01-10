@@ -74,4 +74,5 @@ public class ImageUtils {
             IOUtils.closeQuietly(in);
         }
     }
+
 }

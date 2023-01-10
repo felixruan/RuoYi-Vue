@@ -28,6 +28,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
  */
 @Component
 public class TokenService {
+
     // 令牌自定义标识
     @Value("${token.header}")
     private String header;
@@ -202,4 +203,5 @@ public class TokenService {
     private String getTokenKey(String uuid) {
         return CacheConstants.LOGIN_TOKEN_KEY + uuid;
     }
+
 }

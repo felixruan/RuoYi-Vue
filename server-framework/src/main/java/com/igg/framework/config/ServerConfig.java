@@ -11,6 +11,7 @@ import com.igg.common.utils.ServletUtils;
  */
 @Component
 public class ServerConfig {
+
     /**
      * 获取完整的请求路径，包括：域名，端口，上下文访问路径
      *
@@ -26,4 +27,5 @@ public class ServerConfig {
         String contextPath = request.getServletContext().getContextPath();
         return url.delete(url.length() - request.getRequestURI().length(), url.length()).append(contextPath).toString();
     }
+
 }

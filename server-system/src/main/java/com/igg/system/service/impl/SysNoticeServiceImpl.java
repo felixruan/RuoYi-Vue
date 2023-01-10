@@ -14,6 +14,7 @@ import com.igg.system.service.ISysNoticeService;
  */
 @Service
 public class SysNoticeServiceImpl implements ISysNoticeService {
+
     @Resource
     private SysNoticeMapper noticeMapper;
 
@@ -82,4 +83,5 @@ public class SysNoticeServiceImpl implements ISysNoticeService {
     public int deleteNoticeByIds(Long[] noticeIds) {
         return noticeMapper.deleteNoticeByIds(noticeIds);
     }
+
 }

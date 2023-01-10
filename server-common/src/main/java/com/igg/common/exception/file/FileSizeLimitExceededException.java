@@ -6,9 +6,11 @@ package com.igg.common.exception.file;
  * @author 阮杰辉
  */
 public class FileSizeLimitExceededException extends FileException {
+
     private static final long serialVersionUID = 1L;
 
     public FileSizeLimitExceededException(long defaultMaxSize) {
         super("upload.exceed.maxSize", new Object[] { defaultMaxSize });
     }
+
 }

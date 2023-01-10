@@ -9,6 +9,7 @@ import com.igg.generator.domain.GenTable;
  * @author 阮杰辉
  */
 public interface GenTableMapper {
+
     /**
      * 查询业务列表
      *
@@ -79,4 +80,5 @@ public interface GenTableMapper {
      * @return 结果
      */
     int deleteGenTableByIds(Long[] ids);
+
 }

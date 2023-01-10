@@ -16,6 +16,7 @@ import java.util.regex.Pattern;
  * @author 阮杰辉
  */
 public final class HTMLFilter {
+
     /**
      * regex flag union representing /si modifiers in php
      **/
@@ -498,4 +499,5 @@ public final class HTMLFilter {
     private boolean allowedAttribute(final String name, final String paramName) {
         return allowed(name) && (vAllowed.isEmpty() || vAllowed.get(name).contains(paramName));
     }
+
 }

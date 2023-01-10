@@ -21,6 +21,7 @@ import org.springframework.stereotype.Component;
 @SuppressWarnings(value = { "unchecked", "rawtypes" })
 @Component
 public class RedisCache {
+
     @Resource
     public RedisTemplate redisTemplate;
 
@@ -243,4 +244,5 @@ public class RedisCache {
     public Collection<String> keys(final String pattern) {
         return redisTemplate.keys(pattern);
     }
+
 }

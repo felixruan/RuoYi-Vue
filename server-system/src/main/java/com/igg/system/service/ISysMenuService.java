@@ -12,6 +12,7 @@ import com.igg.system.domain.vo.RouterVo;
  * @author 阮杰辉
  */
 public interface ISysMenuService {
+
     /**
      * 根据用户查询系统菜单列表
      *
@@ -140,4 +141,5 @@ public interface ISysMenuService {
      * @return 结果
      */
     String checkMenuNameUnique(SysMenu menu);
+
 }

@@ -176,4 +176,5 @@ public class BaseController {
     public String getUsername() {
         return getLoginUser().getUsername();
     }
+
 }

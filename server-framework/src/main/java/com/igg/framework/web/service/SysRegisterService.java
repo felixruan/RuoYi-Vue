@@ -25,6 +25,7 @@ import com.igg.system.service.ISysUserService;
  */
 @Component
 public class SysRegisterService {
+
     @Resource
     private ISysUserService userService;
 
@@ -92,4 +93,5 @@ public class SysRegisterService {
             throw new CaptchaException();
         }
     }
+
 }

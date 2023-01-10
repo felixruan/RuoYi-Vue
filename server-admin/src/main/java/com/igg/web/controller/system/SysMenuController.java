@@ -29,6 +29,7 @@ import com.igg.system.service.ISysMenuService;
 @RestController
 @RequestMapping("/system/menu")
 public class SysMenuController extends BaseController {
+
     @Resource
     private ISysMenuService menuService;
 
@@ -121,4 +122,5 @@ public class SysMenuController extends BaseController {
         }
         return toAjax(menuService.deleteMenuById(menuId));
     }
+
 }

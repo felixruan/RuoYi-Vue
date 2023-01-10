@@ -9,6 +9,7 @@ import com.igg.common.core.domain.entity.SysUser;
  * @author 阮杰辉
  */
 public interface ISysUserService {
+
     /**
      * 根据条件分页查询用户列表
      *
@@ -202,4 +203,5 @@ public interface ISysUserService {
      * @return 结果
      */
     String importUser(List<SysUser> userList, Boolean isUpdateSupport, String operName);
+
 }

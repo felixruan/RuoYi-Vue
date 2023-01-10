@@ -29,6 +29,7 @@ import com.igg.system.domain.SysCache;
 @RestController
 @RequestMapping("/monitor/cache")
 public class CacheController {
+
     @Resource
     private RedisTemplate<String, String> redisTemplate;
 
@@ -108,4 +109,5 @@ public class CacheController {
         redisTemplate.delete(cacheKeys);
         return AjaxResult.success();
     }
+
 }

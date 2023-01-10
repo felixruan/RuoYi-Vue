@@ -6,6 +6,7 @@ package com.igg.common.enums;
  * @author 阮杰辉
  */
 public enum UserStatus {
+
     OK("0", "正常"), DISABLE("1", "停用"), DELETED("2", "删除");
 
     private final String code;
@@ -23,4 +24,5 @@ public enum UserStatus {
     public String getInfo() {
         return info;
     }
+
 }

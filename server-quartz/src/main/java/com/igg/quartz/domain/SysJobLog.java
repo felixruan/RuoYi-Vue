@@ -12,6 +12,7 @@ import com.igg.common.core.domain.BaseEntity;
  * @author 阮杰辉
  */
 public class SysJobLog extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** ID */
@@ -133,4 +134,5 @@ public class SysJobLog extends BaseEntity {
             .append("stopTime", getStopTime())
             .toString();
     }
+
 }

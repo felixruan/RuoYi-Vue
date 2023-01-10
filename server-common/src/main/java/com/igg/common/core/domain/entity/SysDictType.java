@@ -15,6 +15,7 @@ import com.igg.common.core.domain.BaseEntity;
  * @author 阮杰辉
  */
 public class SysDictType extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 字典主键 */
@@ -84,4 +85,5 @@ public class SysDictType extends BaseEntity {
             .append("remark", getRemark())
             .toString();
     }
+
 }

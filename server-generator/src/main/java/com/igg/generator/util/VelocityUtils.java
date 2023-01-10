@@ -19,6 +19,7 @@ import com.igg.generator.domain.GenTableColumn;
  * @author 阮杰辉
  */
 public class VelocityUtils {
+
     /** 项目空间路径 */
     private static final String PROJECT_PATH = "main/java";
 
@@ -338,4 +339,5 @@ public class VelocityUtils {
         }
         return num;
     }
+
 }

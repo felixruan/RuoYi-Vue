@@ -6,6 +6,7 @@ package com.igg.common.exception;
  * @author 阮杰辉
  */
 public class UtilException extends RuntimeException {
+
     private static final long serialVersionUID = 8247610319171014183L;
 
     public UtilException(Throwable e) {
@@ -19,4 +20,5 @@ public class UtilException extends RuntimeException {
     public UtilException(String message, Throwable throwable) {
         super(message, throwable);
     }
+
 }

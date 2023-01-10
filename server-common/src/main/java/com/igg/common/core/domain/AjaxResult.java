@@ -10,6 +10,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class AjaxResult extends HashMap<String, Object> {
+
     private static final long serialVersionUID = 1L;
 
     /** 状态码 */
@@ -166,4 +167,5 @@ public class AjaxResult extends HashMap<String, Object> {
         super.put(key, value);
         return this;
     }
+
 }

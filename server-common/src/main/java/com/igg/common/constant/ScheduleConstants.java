@@ -6,6 +6,7 @@ package com.igg.common.constant;
  * @author 阮杰辉
  */
 public class ScheduleConstants {
+
     public static final String TASK_CLASS_NAME = "TASK_CLASS_NAME";
 
     /** 执行目标key */
@@ -43,4 +44,5 @@ public class ScheduleConstants {
             return value;
         }
     }
+
 }

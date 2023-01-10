@@ -19,6 +19,7 @@ import com.igg.quartz.util.CronUtils;
  * @author 阮杰辉
  */
 public class SysJob extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 任务ID */
@@ -149,4 +150,5 @@ public class SysJob extends BaseEntity {
             .append("remark", getRemark())
             .toString();
     }
+
 }

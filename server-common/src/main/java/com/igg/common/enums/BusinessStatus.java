@@ -7,6 +7,7 @@ package com.igg.common.enums;
  *
  */
 public enum BusinessStatus {
+
     /**
      * 成功
      */
@@ -16,4 +17,5 @@ public enum BusinessStatus {
      * 失败
      */
     FAIL,
+
 }

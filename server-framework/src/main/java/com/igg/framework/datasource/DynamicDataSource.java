@@ -10,6 +10,7 @@ import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
  * @author 阮杰辉
  */
 public class DynamicDataSource extends AbstractRoutingDataSource {
+
     public DynamicDataSource(DataSource defaultTargetDataSource, Map<Object, Object> targetDataSources) {
         super.setDefaultTargetDataSource(defaultTargetDataSource);
         super.setTargetDataSources(targetDataSources);
@@ -20,4 +21,5 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
     protected Object determineCurrentLookupKey() {
         return DynamicDataSourceContextHolder.getDataSourceType();
     }
+
 }

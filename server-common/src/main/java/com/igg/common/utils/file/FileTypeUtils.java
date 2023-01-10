@@ -9,6 +9,7 @@ import org.apache.commons.lang3.StringUtils;
  * @author 阮杰辉
  */
 public class FileTypeUtils {
+
     /**
      * 获取文件类型
      * <p>
@@ -60,4 +61,5 @@ public class FileTypeUtils {
         }
         return strFileExtendName;
     }
+
 }

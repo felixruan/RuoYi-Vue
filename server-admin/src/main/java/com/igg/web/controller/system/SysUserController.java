@@ -41,6 +41,7 @@ import com.igg.system.service.ISysUserService;
 @RestController
 @RequestMapping("/system/user")
 public class SysUserController extends BaseController {
+
     @Resource
     private ISysUserService userService;
 
@@ -227,4 +228,5 @@ public class SysUserController extends BaseController {
     public AjaxResult deptTree(SysDept dept) {
         return success(deptService.selectDeptTreeList(dept));
     }
+
 }

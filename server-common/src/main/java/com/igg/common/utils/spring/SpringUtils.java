@@ -17,6 +17,7 @@ import com.igg.common.utils.StringUtils;
  */
 @Component
 public final class SpringUtils implements BeanFactoryPostProcessor, ApplicationContextAware {
+
     /** Spring应用上下文环境 */
     private static ConfigurableListableBeanFactory beanFactory;
 
@@ -142,4 +143,5 @@ public final class SpringUtils implements BeanFactoryPostProcessor, ApplicationC
     public static String getRequiredProperty(String key) {
         return applicationContext.getEnvironment().getRequiredProperty(key);
     }
+
 }

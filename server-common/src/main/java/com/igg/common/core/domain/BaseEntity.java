@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @author 阮杰辉
  */
 public class BaseEntity implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     /** 搜索值 */
@@ -99,4 +100,5 @@ public class BaseEntity implements Serializable {
     public void setParams(Map<String, Object> params) {
         this.params = params;
     }
+
 }

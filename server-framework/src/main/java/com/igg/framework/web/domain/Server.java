@@ -27,6 +27,7 @@ import oshi.util.Util;
  * @author 阮杰辉
  */
 public class Server {
+
     private static final int OSHI_WAIT_SECOND = 1000;
 
     /**
@@ -211,4 +212,5 @@ public class Server {
             return String.format("%d B", size);
         }
     }
+
 }

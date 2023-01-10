@@ -13,6 +13,7 @@ import com.igg.common.xss.Xss;
  * @author 阮杰辉
  */
 public class SysNotice extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 公告ID */
@@ -88,4 +89,5 @@ public class SysNotice extends BaseEntity {
             .append("remark", getRemark())
             .toString();
     }
+
 }

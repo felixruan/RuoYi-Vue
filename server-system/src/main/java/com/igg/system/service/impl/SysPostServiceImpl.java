@@ -18,6 +18,7 @@ import com.igg.system.service.ISysPostService;
  */
 @Service
 public class SysPostServiceImpl implements ISysPostService {
+
     @Resource
     private SysPostMapper postMapper;
 
@@ -159,4 +160,5 @@ public class SysPostServiceImpl implements ISysPostService {
     public int updatePost(SysPost post) {
         return postMapper.updatePost(post);
     }
+
 }

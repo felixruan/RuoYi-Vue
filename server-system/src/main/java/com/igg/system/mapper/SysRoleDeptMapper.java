@@ -9,6 +9,7 @@ import com.igg.system.domain.SysRoleDept;
  * @author 阮杰辉
  */
 public interface SysRoleDeptMapper {
+
     /**
      * 通过角色ID删除角色和部门关联
      *
@@ -40,4 +41,5 @@ public interface SysRoleDeptMapper {
      * @return 结果
      */
     int batchRoleDept(List<SysRoleDept> roleDeptList);
+
 }

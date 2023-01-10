@@ -6,6 +6,7 @@ package com.igg.common.constant;
  * @author 阮杰辉
  */
 public class UserConstants {
+
     /**
      * 平台内系统用户的唯一标志
      */
@@ -74,4 +75,5 @@ public class UserConstants {
      */
     public static final int PASSWORD_MIN_LENGTH = 5;
     public static final int PASSWORD_MAX_LENGTH = 20;
+
 }

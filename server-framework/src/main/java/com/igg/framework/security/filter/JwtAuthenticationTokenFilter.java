@@ -23,6 +23,7 @@ import com.igg.framework.web.service.TokenService;
  */
 @Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
+
     @Resource
     private TokenService tokenService;
 
@@ -38,4 +39,5 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         }
         chain.doFilter(request, response);
     }
+
 }

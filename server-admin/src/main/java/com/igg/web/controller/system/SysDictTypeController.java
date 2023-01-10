@@ -31,6 +31,7 @@ import com.igg.system.service.ISysDictTypeService;
 @RestController
 @RequestMapping("/system/dict/type")
 public class SysDictTypeController extends BaseController {
+
     @Resource
     private ISysDictTypeService dictTypeService;
 
@@ -118,4 +119,5 @@ public class SysDictTypeController extends BaseController {
         List<SysDictType> dictTypes = dictTypeService.selectDictTypeAll();
         return success(dictTypes);
     }
+
 }

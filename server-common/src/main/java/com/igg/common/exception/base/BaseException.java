@@ -9,6 +9,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class BaseException extends RuntimeException {
+
     private static final long serialVersionUID = 1L;
 
     /**
@@ -81,4 +82,5 @@ public class BaseException extends RuntimeException {
     public String getDefaultMessage() {
         return defaultMessage;
     }
+
 }

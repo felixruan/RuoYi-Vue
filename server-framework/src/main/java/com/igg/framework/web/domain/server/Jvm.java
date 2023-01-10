@@ -10,6 +10,7 @@ import com.igg.common.utils.DateUtils;
  * @author 阮杰辉
  */
 public class Jvm {
+
     /**
      * 当前JVM占用的内存总数(M)
      */
@@ -110,4 +111,5 @@ public class Jvm {
     public String getInputArgs() {
         return ManagementFactory.getRuntimeMXBean().getInputArguments().toString();
     }
+
 }

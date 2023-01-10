@@ -25,6 +25,7 @@ import com.igg.system.service.ISysDictTypeService;
  */
 @Service
 public class SysDictTypeServiceImpl implements ISysDictTypeService {
+
     @Resource
     private SysDictTypeMapper dictTypeMapper;
 
@@ -198,4 +199,5 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService {
         }
         return UserConstants.UNIQUE;
     }
+
 }

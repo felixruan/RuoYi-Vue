@@ -24,6 +24,7 @@ import com.igg.common.annotation.Anonymous;
  */
 @Configuration
 public class PermitAllUrlProperties implements InitializingBean, ApplicationContextAware {
+
     private static final Pattern PATTERN = Pattern.compile("\\{(.*?)\\}");
 
     private ApplicationContext applicationContext;
@@ -64,4 +65,5 @@ public class PermitAllUrlProperties implements InitializingBean, ApplicationCont
     public void setUrls(List<String> urls) {
         this.urls = urls;
     }
+
 }

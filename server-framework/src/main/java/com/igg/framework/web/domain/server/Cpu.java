@@ -8,6 +8,7 @@ import com.igg.common.utils.Arith;
  * @author 阮杰辉
  */
 public class Cpu {
+
     /**
      * 核心数
      */
@@ -85,4 +86,5 @@ public class Cpu {
     public void setFree(double free) {
         this.free = free;
     }
+
 }

@@ -25,6 +25,7 @@ import org.apache.commons.io.FilenameUtils;
  * @author 阮杰辉
  */
 public class FileUtils {
+
     public static String FILENAME_PATTERN = "[a-zA-Z0-9_\\-\\|\\.\\u4e00-\\u9fa5]+";
 
     /**
@@ -246,4 +247,5 @@ public class FileUtils {
         String baseName = FilenameUtils.getBaseName(fileName);
         return baseName;
     }
+
 }

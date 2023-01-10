@@ -26,6 +26,7 @@ import com.igg.system.service.ISysConfigService;
  */
 @RestController
 public class CaptchaController {
+
     @Resource(name = "captchaProducer")
     private Producer captchaProducer;
 
@@ -81,4 +82,5 @@ public class CaptchaController {
         ajax.put("img", Base64.encode(os.toByteArray()));
         return ajax;
     }
+
 }

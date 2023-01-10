@@ -6,6 +6,7 @@ package com.igg.common.utils.uuid;
  * @author 阮杰辉
  */
 public class IdUtils {
+
     /**
      * 获取随机UUID
      *
@@ -41,4 +42,5 @@ public class IdUtils {
     public static String fastSimpleUUID() {
         return UUID.fastUUID().toString(true);
     }
+
 }

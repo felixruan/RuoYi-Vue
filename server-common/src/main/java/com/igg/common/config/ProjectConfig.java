@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "project")
 public class ProjectConfig {
+
     /** 项目名称 */
     private String name;
 
@@ -115,4 +116,5 @@ public class ProjectConfig {
     public static String getUploadPath() {
         return getProfile() + "/upload";
     }
+
 }

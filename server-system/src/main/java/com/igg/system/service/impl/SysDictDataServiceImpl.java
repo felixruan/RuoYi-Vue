@@ -15,6 +15,7 @@ import com.igg.system.service.ISysDictDataService;
  */
 @Service
 public class SysDictDataServiceImpl implements ISysDictDataService {
+
     @Resource
     private SysDictDataMapper dictDataMapper;
 
@@ -98,4 +99,5 @@ public class SysDictDataServiceImpl implements ISysDictDataService {
         }
         return row;
     }
+
 }

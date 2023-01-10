@@ -35,6 +35,7 @@ import com.igg.quartz.util.ScheduleUtils;
 @RestController
 @RequestMapping("/monitor/job")
 public class SysJobController extends BaseController {
+
     @Resource
     private ISysJobService jobService;
 
@@ -151,4 +152,5 @@ public class SysJobController extends BaseController {
         jobService.deleteJobByIds(jobIds);
         return success();
     }
+
 }

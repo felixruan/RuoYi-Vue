@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "gen")
 @PropertySource(value = { "classpath:generator.yml" })
 public class GenConfig {
+
     /** 作者 */
     public static String author;
 
@@ -61,4 +62,5 @@ public class GenConfig {
     public void setTablePrefix(String tablePrefix) {
         GenConfig.tablePrefix = tablePrefix;
     }
+
 }

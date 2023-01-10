@@ -14,6 +14,7 @@ import com.igg.system.service.ISysOperLogService;
  */
 @Service
 public class SysOperLogServiceImpl implements ISysOperLogService {
+
     @Resource
     private SysOperLogMapper operLogMapper;
 
@@ -67,4 +68,5 @@ public class SysOperLogServiceImpl implements ISysOperLogService {
     public void cleanOperLog() {
         operLogMapper.cleanOperLog();
     }
+
 }

@@ -10,6 +10,7 @@ import org.springframework.lang.Nullable;
  * @author 阮杰辉
  */
 public enum HttpMethod {
+
     GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS, TRACE;
 
     private static final Map<String, HttpMethod> mappings = new HashMap<>(16);
@@ -28,4 +29,5 @@ public enum HttpMethod {
     public boolean matches(String method) {
         return (this == resolve(method));
     }
+
 }

@@ -9,6 +9,7 @@ import com.igg.quartz.domain.SysJob;
  * @author 阮杰辉
  */
 public interface SysJobMapper {
+
     /**
      * 查询调度任务日志集合
      *
@@ -63,4 +64,5 @@ public interface SysJobMapper {
      * @return 结果
      */
     int insertJob(SysJob job);
+
 }

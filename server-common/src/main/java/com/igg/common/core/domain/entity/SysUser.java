@@ -18,6 +18,7 @@ import com.igg.common.xss.Xss;
  * @author 阮杰辉
  */
 public class SysUser extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 用户ID */
@@ -280,4 +281,5 @@ public class SysUser extends BaseEntity {
             .append("dept", getDept())
             .toString();
     }
+
 }

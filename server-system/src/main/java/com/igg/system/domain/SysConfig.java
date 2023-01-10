@@ -14,6 +14,7 @@ import com.igg.common.core.domain.BaseEntity;
  * @author 阮杰辉
  */
 public class SysConfig extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 参数主键 */
@@ -97,4 +98,5 @@ public class SysConfig extends BaseEntity {
             .append("remark", getRemark())
             .toString();
     }
+
 }

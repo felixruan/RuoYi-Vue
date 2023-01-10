@@ -10,6 +10,7 @@ import com.igg.common.core.domain.entity.SysMenu;
  * @author 阮杰辉
  */
 public interface SysMenuMapper {
+
     /**
      * 查询系统菜单列表
      *
@@ -121,4 +122,5 @@ public interface SysMenuMapper {
      * @return 结果
      */
     SysMenu checkMenuNameUnique(@Param("menuName") String menuName, @Param("parentId") Long parentId);
+
 }

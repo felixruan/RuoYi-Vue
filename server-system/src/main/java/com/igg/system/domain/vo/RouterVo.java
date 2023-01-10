@@ -10,6 +10,7 @@ import java.util.List;
  */
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class RouterVo {
+
     /**
      * 路由名字
      */
@@ -126,4 +127,5 @@ public class RouterVo {
     public void setChildren(List<RouterVo> children) {
         this.children = children;
     }
+
 }

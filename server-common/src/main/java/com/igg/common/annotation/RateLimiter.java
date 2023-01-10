@@ -17,6 +17,7 @@ import com.igg.common.enums.LimitType;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface RateLimiter {
+
     /**
      * 限流key
      */
@@ -36,4 +37,5 @@ public @interface RateLimiter {
      * 限流类型
      */
     LimitType limitType() default LimitType.DEFAULT;
+
 }

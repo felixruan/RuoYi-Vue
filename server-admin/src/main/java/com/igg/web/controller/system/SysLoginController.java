@@ -24,6 +24,7 @@ import com.igg.system.service.ISysMenuService;
  */
 @RestController
 public class SysLoginController {
+
     @Resource
     private SysLoginService loginService;
 
@@ -79,4 +80,5 @@ public class SysLoginController {
         List<SysMenu> menus = menuService.selectMenuTreeByUserId(userId);
         return AjaxResult.success(menuService.buildMenus(menus));
     }
+
 }

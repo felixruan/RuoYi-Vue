@@ -9,6 +9,7 @@ import com.igg.system.domain.SysNotice;
  * @author 阮杰辉
  */
 public interface SysNoticeMapper {
+
     /**
      * 查询公告信息
      *
@@ -56,4 +57,5 @@ public interface SysNoticeMapper {
      * @return 结果
      */
     int deleteNoticeByIds(Long[] noticeIds);
+
 }

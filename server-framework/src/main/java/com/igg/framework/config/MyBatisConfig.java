@@ -30,6 +30,7 @@ import com.igg.common.utils.StringUtils;
  */
 @Configuration
 public class MyBatisConfig {
+
     @javax.annotation.Resource
     private Environment env;
 
@@ -105,4 +106,5 @@ public class MyBatisConfig {
         sessionFactory.setConfigLocation(new DefaultResourceLoader().getResource(configLocation));
         return sessionFactory.getObject();
     }
+
 }

@@ -12,6 +12,7 @@ import com.igg.common.core.domain.BaseEntity;
  * @author 阮杰辉
  */
 public class SysOperLog extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 日志主键 */
@@ -217,4 +218,5 @@ public class SysOperLog extends BaseEntity {
     public void setOperTime(Date operTime) {
         this.operTime = operTime;
     }
+
 }

@@ -24,6 +24,7 @@ import com.igg.framework.security.context.PermissionContextHolder;
 @Aspect
 @Component
 public class DataScopeAspect {
+
     /**
      * 全部数据权限
      */
@@ -139,4 +140,5 @@ public class DataScopeAspect {
             baseEntity.getParams().put(DATA_SCOPE, "");
         }
     }
+
 }

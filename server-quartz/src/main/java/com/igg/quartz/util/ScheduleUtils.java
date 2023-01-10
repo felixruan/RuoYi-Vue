@@ -25,6 +25,7 @@ import com.igg.quartz.domain.SysJob;
  *
  */
 public class ScheduleUtils {
+
     /**
      * 得到quartz任务类
      *
@@ -124,4 +125,5 @@ public class ScheduleUtils {
         Object obj = SpringUtils.getBean(StringUtils.split(invokeTarget, ".")[0]);
         return StringUtils.containsAnyIgnoreCase(obj.getClass().getPackage().getName(), Constants.JOB_WHITELIST_STR);
     }
+
 }

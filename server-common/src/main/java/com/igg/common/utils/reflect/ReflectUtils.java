@@ -22,6 +22,7 @@ import com.igg.common.utils.DateUtils;
 @SuppressWarnings("rawtypes")
 @Slf4j
 public class ReflectUtils {
+
     private static final String SETTER_PREFIX = "set";
 
     private static final String GETTER_PREFIX = "get";
@@ -324,4 +325,5 @@ public class ReflectUtils {
         }
         return new RuntimeException(msg, e);
     }
+
 }

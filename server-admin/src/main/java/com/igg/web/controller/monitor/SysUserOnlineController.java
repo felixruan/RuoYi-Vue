@@ -31,6 +31,7 @@ import com.igg.system.service.ISysUserOnlineService;
 @RestController
 @RequestMapping("/monitor/online")
 public class SysUserOnlineController extends BaseController {
+
     @Resource
     private ISysUserOnlineService userOnlineService;
 
@@ -75,4 +76,5 @@ public class SysUserOnlineController extends BaseController {
         redisCache.deleteObject(CacheConstants.LOGIN_TOKEN_KEY + tokenId);
         return success();
     }
+
 }

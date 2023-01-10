@@ -14,6 +14,7 @@ import com.igg.generator.mapper.GenTableColumnMapper;
  */
 @Service
 public class GenTableColumnServiceImpl implements IGenTableColumnService {
+
     @Resource
     private GenTableColumnMapper genTableColumnMapper;
 
@@ -60,4 +61,5 @@ public class GenTableColumnServiceImpl implements IGenTableColumnService {
     public int deleteGenTableColumnByIds(String ids) {
         return genTableColumnMapper.deleteGenTableColumnByIds(Convert.toLongArray(ids));
     }
+
 }

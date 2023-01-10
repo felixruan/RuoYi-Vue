@@ -92,4 +92,5 @@ public abstract class AbstractQuartzJob implements Job {
      * @throws Exception 执行过程中的异常
      */
     protected abstract void doExecute(JobExecutionContext context, SysJob sysJob) throws Exception;
+
 }

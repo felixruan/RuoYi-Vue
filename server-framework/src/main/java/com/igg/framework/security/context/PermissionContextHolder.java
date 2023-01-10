@@ -10,6 +10,7 @@ import com.igg.common.core.text.Convert;
  * @author 阮杰辉
  */
 public class PermissionContextHolder {
+
     private static final String PERMISSION_CONTEXT_ATTRIBUTES = "PERMISSION_CONTEXT";
 
     public static void setContext(String permission) {
@@ -21,4 +22,5 @@ public class PermissionContextHolder {
         return Convert.toStr(RequestContextHolder.currentRequestAttributes().getAttribute(PERMISSION_CONTEXT_ATTRIBUTES,
                 RequestAttributes.SCOPE_REQUEST));
     }
+
 }

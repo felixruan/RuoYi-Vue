@@ -18,6 +18,7 @@ import com.igg.common.constant.Constants;
  * @author 阮杰辉
  */
 public class RepeatedlyRequestWrapper extends HttpServletRequestWrapper {
+
     private final byte[] body;
 
     public RepeatedlyRequestWrapper(HttpServletRequest request, ServletResponse response) throws IOException {
@@ -63,4 +64,5 @@ public class RepeatedlyRequestWrapper extends HttpServletRequestWrapper {
             }
         };
     }
+
 }

@@ -14,6 +14,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class GenTable extends BaseEntity {
+
     private static final long serialVersionUID = 1L;
 
     /** 编号 */
@@ -313,4 +314,5 @@ public class GenTable extends BaseEntity {
         }
         return StringUtils.equalsAnyIgnoreCase(javaField, GenConstants.BASE_ENTITY);
     }
+
 }

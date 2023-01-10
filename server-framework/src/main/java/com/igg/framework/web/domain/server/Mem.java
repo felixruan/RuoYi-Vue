@@ -8,6 +8,7 @@ import com.igg.common.utils.Arith;
  * @author 阮杰辉
  */
 public class Mem {
+
     /**
      * 内存总量
      */
@@ -50,4 +51,5 @@ public class Mem {
     public double getUsage() {
         return Arith.mul(Arith.div(used, total, 4), 100);
     }
+
 }

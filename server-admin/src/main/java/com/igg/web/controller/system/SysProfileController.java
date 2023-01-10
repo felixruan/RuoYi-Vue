@@ -32,6 +32,7 @@ import com.igg.system.service.ISysUserService;
 @RestController
 @RequestMapping("/system/user/profile")
 public class SysProfileController extends BaseController {
+
     @Resource
     private ISysUserService userService;
 
@@ -128,4 +129,5 @@ public class SysProfileController extends BaseController {
         }
         return error("上传图片异常，请联系管理员");
     }
+
 }

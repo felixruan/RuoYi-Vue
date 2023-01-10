@@ -24,6 +24,7 @@ import com.igg.quartz.util.ScheduleUtils;
  */
 @Service
 public class SysJobServiceImpl implements ISysJobService {
+
     @Resource
     private Scheduler scheduler;
 
@@ -232,4 +233,5 @@ public class SysJobServiceImpl implements ISysJobService {
     public boolean checkCronExpressionIsValid(String cronExpression) {
         return CronUtils.isValid(cronExpression);
     }
+
 }

@@ -57,4 +57,5 @@ public class SysLogininforServiceImpl implements ISysLogininforService {
     public void cleanLogininfor() {
         logininforMapper.cleanLogininfor();
     }
+
 }

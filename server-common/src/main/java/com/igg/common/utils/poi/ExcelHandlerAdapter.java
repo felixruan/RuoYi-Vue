@@ -6,6 +6,7 @@ package com.igg.common.utils.poi;
  * @author 阮杰辉
  */
 public interface ExcelHandlerAdapter {
+
     /**
      * 格式化
      *
@@ -15,4 +16,5 @@ public interface ExcelHandlerAdapter {
      * @return 处理后的值
      */
     Object format(Object value, String[] args);
+
 }

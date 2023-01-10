@@ -21,6 +21,7 @@ import com.igg.common.utils.uuid.Seq;
  * @author 阮杰辉
  */
 public class FileUploadUtils {
+
     /**
      * 默认大小 50M
      */
@@ -194,4 +195,5 @@ public class FileUploadUtils {
         }
         return extension;
     }
+
 }

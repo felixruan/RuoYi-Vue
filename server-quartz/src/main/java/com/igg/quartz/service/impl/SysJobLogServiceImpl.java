@@ -14,6 +14,7 @@ import com.igg.quartz.service.ISysJobLogService;
  */
 @Service
 public class SysJobLogServiceImpl implements ISysJobLogService {
+
     @Resource
     private SysJobLogMapper jobLogMapper;
 
@@ -77,4 +78,5 @@ public class SysJobLogServiceImpl implements ISysJobLogService {
     public void cleanJobLog() {
         jobLogMapper.cleanJobLog();
     }
+
 }

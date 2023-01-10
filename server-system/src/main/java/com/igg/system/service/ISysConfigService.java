@@ -9,6 +9,7 @@ import com.igg.system.domain.SysConfig;
  * @author 阮杰辉
  */
 public interface ISysConfigService {
+
     /**
      * 查询参数配置信息
      *
@@ -85,4 +86,5 @@ public interface ISysConfigService {
      * @return 结果
      */
     String checkConfigKeyUnique(SysConfig config);
+
 }

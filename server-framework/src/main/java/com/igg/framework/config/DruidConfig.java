@@ -31,6 +31,7 @@ import com.igg.framework.datasource.DynamicDataSource;
  */
 @Configuration
 public class DruidConfig {
+
     @Bean
     @ConfigurationProperties("spring.datasource.druid.master")
     public DataSource masterDataSource(DruidProperties druidProperties) {
@@ -110,4 +111,5 @@ public class DruidConfig {
         registrationBean.addUrlPatterns(commonJsPattern);
         return registrationBean;
     }
+
 }

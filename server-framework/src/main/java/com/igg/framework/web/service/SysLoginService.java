@@ -33,6 +33,7 @@ import com.igg.system.service.ISysUserService;
  */
 @Component
 public class SysLoginService {
+
     @Resource
     private TokenService tokenService;
 
@@ -122,4 +123,5 @@ public class SysLoginService {
         sysUser.setLoginDate(DateUtils.getNowDate());
         userService.updateUserProfile(sysUser);
     }
+
 }

@@ -6,6 +6,7 @@ package com.igg.common.enums;
  * @author 阮杰辉
  */
 public enum BusinessType {
+
     /**
      * 其它
      */
@@ -55,4 +56,5 @@ public enum BusinessType {
      * 清空数据
      */
     CLEAN,
+
 }

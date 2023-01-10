@@ -6,6 +6,7 @@ package com.igg.framework.web.domain.server;
  * @author 阮杰辉
  */
 public class SysFile {
+
     /**
      * 盘符路径
      */
@@ -96,4 +97,5 @@ public class SysFile {
     public void setUsage(double usage) {
         this.usage = usage;
     }
+
 }

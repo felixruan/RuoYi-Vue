@@ -14,6 +14,7 @@ import com.igg.quartz.domain.SysJob;
  * @author 阮杰辉
  */
 public class JobInvokeUtil {
+
     /**
      * 执行方法
      *
@@ -155,4 +156,5 @@ public class JobInvokeUtil {
         }
         return classs;
     }
+
 }

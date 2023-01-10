@@ -32,6 +32,7 @@ import com.igg.system.service.ISysRoleService;
  */
 @Service
 public class SysRoleServiceImpl implements ISysRoleService {
+
     @Resource
     private SysRoleMapper roleMapper;
 
@@ -381,4 +382,5 @@ public class SysRoleServiceImpl implements ISysRoleService {
         }
         return userRoleMapper.batchUserRole(list);
     }
+
 }

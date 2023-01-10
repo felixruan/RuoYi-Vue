@@ -16,6 +16,7 @@ import com.igg.common.core.text.StrFormatter;
  * @author 阮杰辉
  */
 public class StringUtils extends org.apache.commons.lang3.StringUtils {
+
     /** 空字符串 */
     private static final String NULLSTR = "";
 
@@ -515,4 +516,5 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
         }
         return sb.toString();
     }
+
 }

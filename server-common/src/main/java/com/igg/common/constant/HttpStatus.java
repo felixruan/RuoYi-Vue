@@ -6,6 +6,7 @@ package com.igg.common.constant;
  * @author 阮杰辉
  */
 public class HttpStatus {
+
     /**
      * 操作成功
      */
@@ -90,4 +91,5 @@ public class HttpStatus {
      * 系统警告消息
      */
     public static final int WARN = 601;
+
 }

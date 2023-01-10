@@ -9,6 +9,7 @@ import com.igg.common.utils.StringUtils;
  * @author 阮杰辉
  */
 public class SqlUtil {
+
     /**
      * 定义常用的 sql关键字
      */
@@ -50,4 +51,5 @@ public class SqlUtil {
             }
         }
     }
+
 }

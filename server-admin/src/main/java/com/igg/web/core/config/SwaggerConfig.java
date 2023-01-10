@@ -29,6 +29,7 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 public class SwaggerConfig {
+
     /** 系统基础配置 */
     @Resource
     private ProjectConfig projectConfig;
@@ -116,4 +117,5 @@ public class SwaggerConfig {
                 .version("版本号:" + projectConfig.getVersion())
                 .build();
     }
+
 }

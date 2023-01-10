@@ -6,6 +6,7 @@ package com.igg.system.domain;
  * @author 阮杰辉
  */
 public class SysUserOnline {
+
     /** 会话编号 */
     private String tokenId;
 
@@ -93,4 +94,5 @@ public class SysUserOnline {
     public void setLoginTime(Long loginTime) {
         this.loginTime = loginTime;
     }
+
 }

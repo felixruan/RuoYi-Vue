@@ -28,6 +28,7 @@ import com.igg.system.service.ISysLogininforService;
 @RestController
 @RequestMapping("/monitor/logininfor")
 public class SysLogininforController extends BaseController {
+
     @Resource
     private ISysLogininforService logininforService;
 
@@ -73,4 +74,5 @@ public class SysLogininforController extends BaseController {
         passwordService.clearLoginRecordCache(userName);
         return success();
     }
+
 }

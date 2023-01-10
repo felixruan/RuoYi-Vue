@@ -40,6 +40,7 @@ import com.igg.system.service.ISysUserService;
 @RestController
 @RequestMapping("/system/role")
 public class SysRoleController extends BaseController {
+
     @Resource
     private ISysRoleService roleService;
 
@@ -236,4 +237,5 @@ public class SysRoleController extends BaseController {
         ajax.put("depts", deptService.selectDeptTreeList(new SysDept()));
         return ajax;
     }
+
 }

@@ -450,4 +450,5 @@ public class GenTableServiceImpl implements IGenTableService {
         }
         return genPath + File.separator + VelocityUtils.getFileName(template, table);
     }
+
 }

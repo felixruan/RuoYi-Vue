@@ -6,6 +6,7 @@ package com.igg.common.exception;
  * @author 阮杰辉
  */
 public final class ServiceException extends RuntimeException {
+
     private static final long serialVersionUID = 1L;
 
     /**
@@ -62,4 +63,5 @@ public final class ServiceException extends RuntimeException {
         this.detailMessage = detailMessage;
         return this;
     }
+
 }

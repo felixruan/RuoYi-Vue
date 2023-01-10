@@ -10,6 +10,7 @@ import com.igg.common.constant.Constants;
  * @author 阮杰辉
  */
 public class VelocityInitializer {
+
     /**
      * 初始化vm方法
      */
@@ -26,4 +27,5 @@ public class VelocityInitializer {
             throw new RuntimeException(e);
         }
     }
+
 }

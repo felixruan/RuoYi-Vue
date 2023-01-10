@@ -9,6 +9,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  * @author 阮杰辉
  */
 public class SysUserRole {
+
     /** 用户ID */
     private Long userId;
 
@@ -38,4 +39,5 @@ public class SysUserRole {
             .append("roleId", getRoleId())
             .toString();
     }
+
 }

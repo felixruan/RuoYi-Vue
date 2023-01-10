@@ -16,6 +16,7 @@ import com.igg.framework.security.context.PermissionContextHolder;
  */
 @Service("ss")
 public class PermissionService {
+
     /** 所有权限标识 */
     private static final String ALL_PERMISSION = "*:*:*";
 
@@ -143,4 +144,5 @@ public class PermissionService {
     private boolean hasPermissions(Set<String> permissions, String permission) {
         return permissions.contains(ALL_PERMISSION) || permissions.contains(StringUtils.trim(permission));
     }
+
 }

@@ -13,6 +13,7 @@ import com.igg.common.exception.ServiceException;
  * @author 阮杰辉
  */
 public class SecurityUtils {
+
     /**
      * 用户ID
      **/
@@ -96,4 +97,5 @@ public class SecurityUtils {
     public static boolean isAdmin(Long userId) {
         return userId != null && 1L == userId;
     }
+
 }

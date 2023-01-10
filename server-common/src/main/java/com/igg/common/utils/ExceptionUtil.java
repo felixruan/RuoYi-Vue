@@ -10,6 +10,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
  * @author 阮杰辉
  */
 public class ExceptionUtil {
+
     /**
      * 获取exception的详细错误信息。
      */
@@ -31,4 +32,5 @@ public class ExceptionUtil {
         }
         return StringUtils.defaultString(msg);
     }
+
 }

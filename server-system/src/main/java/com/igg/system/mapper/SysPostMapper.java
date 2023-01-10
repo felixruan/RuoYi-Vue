@@ -9,6 +9,7 @@ import com.igg.system.domain.SysPost;
  * @author 阮杰辉
  */
 public interface SysPostMapper {
+
     /**
      * 查询岗位数据集合
      *
@@ -95,4 +96,5 @@ public interface SysPostMapper {
      * @return 结果
      */
     SysPost checkPostCodeUnique(String postCode);
+
 }

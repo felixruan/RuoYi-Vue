@@ -9,6 +9,7 @@ import com.igg.system.domain.SysUserPost;
  * @author 阮杰辉
  */
 public interface SysUserPostMapper {
+
     /**
      * 通过用户ID删除用户和岗位关联
      *
@@ -40,4 +41,5 @@ public interface SysUserPostMapper {
      * @return 结果
      */
     int batchUserPost(List<SysUserPost> userPostList);
+
 }
