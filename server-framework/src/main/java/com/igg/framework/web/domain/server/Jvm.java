@@ -1,5 +1,6 @@
 package com.igg.framework.web.domain.server;
 
+import lombok.Data;
 import java.lang.management.ManagementFactory;
 import com.igg.common.utils.Arith;
 import com.igg.common.utils.DateUtils;
@@ -9,6 +10,7 @@ import com.igg.common.utils.DateUtils;
  *
  * @author 阮杰辉
  */
+@Data
 public class Jvm {
 
     /**
@@ -40,24 +42,12 @@ public class Jvm {
         return Arith.div(total, (1024 * 1024), 2);
     }
 
-    public void setTotal(double total) {
-        this.total = total;
-    }
-
     public double getMax() {
         return Arith.div(max, (1024 * 1024), 2);
     }
 
-    public void setMax(double max) {
-        this.max = max;
-    }
-
     public double getFree() {
         return Arith.div(free, (1024 * 1024), 2);
-    }
-
-    public void setFree(double free) {
-        this.free = free;
     }
 
     public double getUsed() {
@@ -73,22 +63,6 @@ public class Jvm {
      */
     public String getName() {
         return ManagementFactory.getRuntimeMXBean().getVmName();
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public String getHome() {
-        return home;
-    }
-
-    public void setHome(String home) {
-        this.home = home;
     }
 
     /**

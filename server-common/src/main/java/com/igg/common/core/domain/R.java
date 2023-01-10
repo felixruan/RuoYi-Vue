@@ -1,5 +1,6 @@
 package com.igg.common.core.domain;
 
+import lombok.Data;
 import java.io.Serializable;
 import com.igg.common.constant.HttpStatus;
 
@@ -8,6 +9,7 @@ import com.igg.common.constant.HttpStatus;
  *
  * @author 阮杰辉
  */
+@Data
 public class R<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -62,22 +64,6 @@ public class R<T> implements Serializable {
         apiResult.setData(data);
         apiResult.setMsg(msg);
         return apiResult;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
     }
 
     public T getData() {

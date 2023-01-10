@@ -1,5 +1,7 @@
 package com.igg.common.core.domain;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import java.util.HashMap;
 import com.igg.common.constant.HttpStatus;
 import com.igg.common.utils.StringUtils;
@@ -9,6 +11,8 @@ import com.igg.common.utils.StringUtils;
  *
  * @author 阮杰辉
  */
+@Data
+@NoArgsConstructor
 public class AjaxResult extends HashMap<String, Object> {
 
     private static final long serialVersionUID = 1L;
@@ -25,9 +29,6 @@ public class AjaxResult extends HashMap<String, Object> {
     /**
      * 初始化一个新创建的 AjaxResult 对象，使其表示一个空消息。
      */
-    public AjaxResult() {
-    }
-
     /**
      * 初始化一个新创建的 AjaxResult 对象
      *

@@ -1,5 +1,6 @@
 package com.igg.framework.web.domain.server;
 
+import lombok.Data;
 import com.igg.common.utils.Arith;
 
 /**
@@ -7,6 +8,7 @@ import com.igg.common.utils.Arith;
  *
  * @author 阮杰辉
  */
+@Data
 public class Mem {
 
     /**
