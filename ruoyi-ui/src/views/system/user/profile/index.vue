@@ -49,7 +49,7 @@
               <userInfo :user="user" />
             </el-tab-pane>
             <el-tab-pane label="修改密码" name="resetPwd">
-              <resetPwd />
+              <resetPwd :user="user" />
             </el-tab-pane>
           </el-tabs>
         </el-card>

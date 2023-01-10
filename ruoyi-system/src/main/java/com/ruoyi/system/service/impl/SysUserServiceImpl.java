@@ -161,15 +161,14 @@ public class SysUserServiceImpl implements ISysUserService
     /**
      * 校验用户名称是否唯一
      * 
-     * @param user 用户信息
+     * @param userName 用户名称
      * @return 结果
      */
     @Override
-    public String checkUserNameUnique(SysUser user)
+    public String checkUserNameUnique(String userName)
     {
-        Long userId = StringUtils.isNull(user.getUserId()) ? -1L : user.getUserId();
-        SysUser info = userMapper.checkUserNameUnique(user.getUserName());
-        if (StringUtils.isNotNull(info) && info.getUserId().longValue() != userId.longValue())
+        int count = userMapper.checkUserNameUnique(userName);
+        if (count > 0)
         {
             return UserConstants.NOT_UNIQUE;
         }
@@ -508,8 +507,6 @@ public class SysUserServiceImpl implements ISysUserService
                 else if (isUpdateSupport)
                 {
                     BeanValidators.validateWithException(validator, user);
-                    checkUserAllowed(user);
-                    checkUserDataScope(user.getUserId());
                     user.setUpdateBy(operName);
                     this.updateUser(user);
                     successNum++;

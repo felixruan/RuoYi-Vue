@@ -129,7 +129,9 @@
             v-hasPermi="['monitor:job:remove']"
           >删除</el-button>
           <el-dropdown size="mini" @command="(command) => handleCommand(command, scope.row)" v-hasPermi="['monitor:job:changeStatus', 'monitor:job:query']">
-            <el-button size="mini" type="text" icon="el-icon-d-arrow-right">更多</el-button>
+            <span class="el-dropdown-link">
+              <i class="el-icon-d-arrow-right el-icon--right"></i>更多
+            </span>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="handleRun" icon="el-icon-caret-right"
                 v-hasPermi="['monitor:job:changeStatus']">执行一次</el-dropdown-item>
@@ -454,7 +456,7 @@ export default {
     /** 任务日志列表查询 */
     handleJobLog(row) {
       const jobId = row.jobId || 0;
-      this.$router.push('/monitor/job-log/index/' + jobId)
+      this.$router.push({ path: '/monitor/job-log/index', query: { jobId: jobId } })
     },
     /** 新增按钮操作 */
     handleAdd() {

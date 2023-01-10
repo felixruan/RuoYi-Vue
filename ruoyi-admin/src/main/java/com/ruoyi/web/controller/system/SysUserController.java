@@ -20,7 +20,6 @@ import com.ruoyi.common.annotation.Log;
 import com.ruoyi.common.constant.UserConstants;
 import com.ruoyi.common.core.controller.BaseController;
 import com.ruoyi.common.core.domain.AjaxResult;
-import com.ruoyi.common.core.domain.entity.SysDept;
 import com.ruoyi.common.core.domain.entity.SysRole;
 import com.ruoyi.common.core.domain.entity.SysUser;
 import com.ruoyi.common.core.page.TableDataInfo;
@@ -28,7 +27,6 @@ import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.StringUtils;
 import com.ruoyi.common.utils.poi.ExcelUtil;
-import com.ruoyi.system.service.ISysDeptService;
 import com.ruoyi.system.service.ISysPostService;
 import com.ruoyi.system.service.ISysRoleService;
 import com.ruoyi.system.service.ISysUserService;
@@ -47,9 +45,6 @@ public class SysUserController extends BaseController
 
     @Autowired
     private ISysRoleService roleService;
-
-    @Autowired
-    private ISysDeptService deptService;
 
     @Autowired
     private ISysPostService postService;
@@ -85,7 +80,7 @@ public class SysUserController extends BaseController
         List<SysUser> userList = util.importExcel(file.getInputStream());
         String operName = getUsername();
         String message = userService.importUser(userList, updateSupport, operName);
-        return success(message);
+        return AjaxResult.success(message);
     }
 
     @PostMapping("/importTemplate")
@@ -125,19 +120,19 @@ public class SysUserController extends BaseController
     @PostMapping
     public AjaxResult add(@Validated @RequestBody SysUser user)
     {
-        if (UserConstants.NOT_UNIQUE.equals(userService.checkUserNameUnique(user)))
+        if (UserConstants.NOT_UNIQUE.equals(userService.checkUserNameUnique(user.getUserName())))
         {
-            return error("新增用户'" + user.getUserName() + "'失败，登录账号已存在");
+            return AjaxResult.error("新增用户'" + user.getUserName() + "'失败，登录账号已存在");
         }
         else if (StringUtils.isNotEmpty(user.getPhonenumber())
                 && UserConstants.NOT_UNIQUE.equals(userService.checkPhoneUnique(user)))
         {
-            return error("新增用户'" + user.getUserName() + "'失败，手机号码已存在");
+            return AjaxResult.error("新增用户'" + user.getUserName() + "'失败，手机号码已存在");
         }
         else if (StringUtils.isNotEmpty(user.getEmail())
                 && UserConstants.NOT_UNIQUE.equals(userService.checkEmailUnique(user)))
         {
-            return error("新增用户'" + user.getUserName() + "'失败，邮箱账号已存在");
+            return AjaxResult.error("新增用户'" + user.getUserName() + "'失败，邮箱账号已存在");
         }
         user.setCreateBy(getUsername());
         user.setPassword(SecurityUtils.encryptPassword(user.getPassword()));
@@ -154,19 +149,15 @@ public class SysUserController extends BaseController
     {
         userService.checkUserAllowed(user);
         userService.checkUserDataScope(user.getUserId());
-        if (UserConstants.NOT_UNIQUE.equals(userService.checkUserNameUnique(user)))
-        {
-            return error("修改用户'" + user.getUserName() + "'失败，登录账号已存在");
-        }
-        else if (StringUtils.isNotEmpty(user.getPhonenumber())
+        if (StringUtils.isNotEmpty(user.getPhonenumber())
                 && UserConstants.NOT_UNIQUE.equals(userService.checkPhoneUnique(user)))
         {
-            return error("修改用户'" + user.getUserName() + "'失败，手机号码已存在");
+            return AjaxResult.error("修改用户'" + user.getUserName() + "'失败，手机号码已存在");
         }
         else if (StringUtils.isNotEmpty(user.getEmail())
                 && UserConstants.NOT_UNIQUE.equals(userService.checkEmailUnique(user)))
         {
-            return error("修改用户'" + user.getUserName() + "'失败，邮箱账号已存在");
+            return AjaxResult.error("修改用户'" + user.getUserName() + "'失败，邮箱账号已存在");
         }
         user.setUpdateBy(getUsername());
         return toAjax(userService.updateUser(user));
@@ -242,15 +233,5 @@ public class SysUserController extends BaseController
         userService.checkUserDataScope(userId);
         userService.insertUserAuth(userId, roleIds);
         return success();
-    }
-
-    /**
-     * 获取部门树列表
-     */
-    @PreAuthorize("@ss.hasPermi('system:user:list')")
-    @GetMapping("/deptTree")
-    public AjaxResult deptTree(SysDept dept)
-    {
-        return success(deptService.selectDeptTreeList(dept));
     }
 }

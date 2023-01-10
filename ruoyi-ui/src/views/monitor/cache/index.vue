@@ -68,7 +68,7 @@
 
 <script>
 import { getCache } from "@/api/monitor/cache";
-import * as echarts from "echarts";
+import echarts from "echarts";
 
 export default {
   name: "Cache",

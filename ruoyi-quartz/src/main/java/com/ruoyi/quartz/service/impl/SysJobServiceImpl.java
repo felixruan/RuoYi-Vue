@@ -174,22 +174,15 @@ public class SysJobServiceImpl implements ISysJobService
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public boolean run(SysJob job) throws SchedulerException
+    public void run(SysJob job) throws SchedulerException
     {
-        boolean result = false;
         Long jobId = job.getJobId();
         String jobGroup = job.getJobGroup();
         SysJob properties = selectJobById(job.getJobId());
         // 参数
         JobDataMap dataMap = new JobDataMap();
         dataMap.put(ScheduleConstants.TASK_PROPERTIES, properties);
-        JobKey jobKey = ScheduleUtils.getJobKey(jobId, jobGroup);
-        if (scheduler.checkExists(jobKey))
-        {
-            result = true;
-            scheduler.triggerJob(jobKey, dataMap);
-        }
-        return result;
+        scheduler.triggerJob(ScheduleUtils.getJobKey(jobId, jobGroup), dataMap);
     }
 
     /**

@@ -1,7 +1,6 @@
 package com.ruoyi.system.domain;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -32,7 +31,7 @@ public class SysPost extends BaseEntity
 
     /** 岗位排序 */
     @Excel(name = "岗位排序")
-    private Integer postSort;
+    private String postSort;
 
     /** 状态（0正常 1停用） */
     @Excel(name = "状态", readConverterExp = "0=正常,1=停用")
@@ -75,13 +74,13 @@ public class SysPost extends BaseEntity
         this.postName = postName;
     }
 
-    @NotNull(message = "显示顺序不能为空")
-    public Integer getPostSort()
+    @NotBlank(message = "显示顺序不能为空")
+    public String getPostSort()
     {
         return postSort;
     }
 
-    public void setPostSort(Integer postSort)
+    public void setPostSort(String postSort)
     {
         this.postSort = postSort;
     }

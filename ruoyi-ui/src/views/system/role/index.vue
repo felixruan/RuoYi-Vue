@@ -135,7 +135,9 @@
             v-hasPermi="['system:role:remove']"
           >删除</el-button>
           <el-dropdown size="mini" @command="(command) => handleCommand(command, scope.row)" v-hasPermi="['system:role:edit']">
-            <el-button size="mini" type="text" icon="el-icon-d-arrow-right">更多</el-button>
+            <span class="el-dropdown-link">
+              <i class="el-icon-d-arrow-right el-icon--right"></i>更多
+            </span>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="handleDataScope" icon="el-icon-circle-check"
                 v-hasPermi="['system:role:edit']">数据权限</el-dropdown-item>
@@ -252,8 +254,9 @@
 </template>
 
 <script>
-import { listRole, getRole, delRole, addRole, updateRole, dataScope, changeRoleStatus, deptTreeSelect } from "@/api/system/role";
+import { listRole, getRole, delRole, addRole, updateRole, dataScope, changeRoleStatus } from "@/api/system/role";
 import { treeselect as menuTreeselect, roleMenuTreeselect } from "@/api/system/menu";
+import { treeselect as deptTreeselect, roleDeptTreeselect } from "@/api/system/dept";
 
 export default {
   name: "Role",
@@ -361,6 +364,12 @@ export default {
         this.menuOptions = response.data;
       });
     },
+    /** 查询部门树结构 */
+    getDeptTreeselect() {
+      deptTreeselect().then(response => {
+        this.deptOptions = response.data;
+      });
+    },
     // 所有菜单节点数据
     getMenuAllCheckedKeys() {
       // 目前被选中的菜单节点
@@ -387,8 +396,8 @@ export default {
       });
     },
     /** 根据角色ID查询部门树结构 */
-    getDeptTree(roleId) {
-      return deptTreeSelect(roleId).then(response => {
+    getRoleDeptTreeselect(roleId) {
+      return roleDeptTreeselect(roleId).then(response => {
         this.deptOptions = response.depts;
         return response;
       });
@@ -534,12 +543,12 @@ export default {
     /** 分配数据权限操作 */
     handleDataScope(row) {
       this.reset();
-      const deptTreeSelect = this.getDeptTree(row.roleId);
+      const roleDeptTreeselect = this.getRoleDeptTreeselect(row.roleId);
       getRole(row.roleId).then(response => {
         this.form = response.data;
         this.openDataScope = true;
         this.$nextTick(() => {
-          deptTreeSelect.then(res => {
+          roleDeptTreeselect.then(res => {
             this.$refs.dept.setCheckedKeys(res.checkedKeys);
           });
         });
