@@ -4,8 +4,7 @@ import java.util.Date;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import com.igg.common.constant.Constants;
 import com.igg.common.constant.ScheduleConstants;
 import com.igg.common.utils.ExceptionUtil;
@@ -21,8 +20,8 @@ import com.igg.quartz.service.ISysJobLogService;
  *
  * @author 阮杰辉
  */
+@Slf4j
 public abstract class AbstractQuartzJob implements Job {
-    private static final Logger log = LoggerFactory.getLogger(AbstractQuartzJob.class);
 
     /**
      * 线程本地变量

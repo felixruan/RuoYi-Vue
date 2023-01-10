@@ -1,7 +1,6 @@
 package com.igg.common.utils.ip;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.igg.common.config.RuoYiConfig;
@@ -14,8 +13,8 @@ import com.igg.common.utils.http.HttpUtils;
  *
  * @author 阮杰辉
  */
+@Slf4j
 public class AddressUtils {
-    private static final Logger log = LoggerFactory.getLogger(AddressUtils.class);
 
     // IP地址查询
     public static final String IP_URL = "http://whois.pconline.com.cn/ipJson.jsp";

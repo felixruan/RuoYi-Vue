@@ -67,8 +67,7 @@ import org.apache.poi.xssf.usermodel.XSSFShape;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excel.ColumnType;
 import com.igg.common.annotation.Excel.Type;
@@ -90,8 +89,8 @@ import com.igg.common.utils.reflect.ReflectUtils;
  *
  * @author 阮杰辉
  */
+@Slf4j
 public class ExcelUtil<T> {
-    private static final Logger log = LoggerFactory.getLogger(ExcelUtil.class);
 
     public static final String FORMULA_REGEX_STR = "=|-|\\+|@";
 

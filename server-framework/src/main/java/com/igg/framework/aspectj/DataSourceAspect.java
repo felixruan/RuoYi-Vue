@@ -6,8 +6,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -23,8 +22,8 @@ import com.igg.framework.datasource.DynamicDataSourceContextHolder;
 @Aspect
 @Order(1)
 @Component
+@Slf4j
 public class DataSourceAspect {
-    protected Logger logger = LoggerFactory.getLogger(getClass());
 
     @Pointcut("@annotation(com.igg.common.annotation.DataSource)"
             + "|| @within(com.igg.common.annotation.DataSource)")

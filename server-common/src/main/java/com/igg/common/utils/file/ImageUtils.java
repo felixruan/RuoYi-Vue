@@ -7,8 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Arrays;
 import org.apache.poi.util.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import com.igg.common.config.RuoYiConfig;
 import com.igg.common.constant.Constants;
 import com.igg.common.utils.StringUtils;
@@ -18,8 +17,8 @@ import com.igg.common.utils.StringUtils;
  *
  * @author 阮杰辉
  */
+@Slf4j
 public class ImageUtils {
-    private static final Logger log = LoggerFactory.getLogger(ImageUtils.class);
 
     public static byte[] getImage(String imagePath) {
         InputStream is = getFile(imagePath);

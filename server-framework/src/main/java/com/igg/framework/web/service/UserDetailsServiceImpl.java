@@ -1,7 +1,6 @@
 package com.igg.framework.web.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import javax.annotation.Resource;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,8 +19,8 @@ import com.igg.system.service.ISysUserService;
  * @author 阮杰辉
  */
 @Service
+@Slf4j
 public class UserDetailsServiceImpl implements UserDetailsService {
-    private static final Logger log = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
 
     @Resource
     private ISysUserService userService;
