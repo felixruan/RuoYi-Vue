@@ -10,7 +10,7 @@ import org.springframework.util.FastByteArrayOutputStream;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.google.code.kaptcha.Producer;
-import com.igg.common.config.RuoYiConfig;
+import com.igg.common.config.ProjectConfig;
 import com.igg.common.constant.CacheConstants;
 import com.igg.common.constant.Constants;
 import com.igg.common.core.domain.AjaxResult;
@@ -57,7 +57,7 @@ public class CaptchaController {
         BufferedImage image = null;
 
         // 生成验证码
-        String captchaType = RuoYiConfig.getCaptchaType();
+        String captchaType = ProjectConfig.getCaptchaType();
         if ("math".equals(captchaType)) {
             String capText = captchaProducerMath.createText();
             capStr = capText.substring(0, capText.lastIndexOf("@"));

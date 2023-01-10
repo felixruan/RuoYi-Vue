@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.Objects;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.multipart.MultipartFile;
-import com.igg.common.config.RuoYiConfig;
+import com.igg.common.config.ProjectConfig;
 import com.igg.common.constant.Constants;
 import com.igg.common.exception.file.FileNameLengthLimitExceededException;
 import com.igg.common.exception.file.FileSizeLimitExceededException;
@@ -34,7 +34,7 @@ public class FileUploadUtils {
     /**
      * 默认上传的地址
      */
-    private static String defaultBaseDir = RuoYiConfig.getProfile();
+    private static String defaultBaseDir = ProjectConfig.getProfile();
 
     public static void setDefaultBaseDir(String defaultBaseDir) {
         FileUploadUtils.defaultBaseDir = defaultBaseDir;
@@ -124,7 +124,7 @@ public class FileUploadUtils {
     }
 
     public static final String getPathFileName(String uploadDir, String fileName) throws IOException {
-        int dirLastIndex = RuoYiConfig.getProfile().length() + 1;
+        int dirLastIndex = ProjectConfig.getProfile().length() + 1;
         String currentDir = StringUtils.substring(uploadDir, dirLastIndex);
         return Constants.RESOURCE_PREFIX + "/" + currentDir + "/" + fileName;
     }

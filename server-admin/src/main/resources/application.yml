@@ -1,5 +1,5 @@
 # 项目相关配置
-ruoyi:
+project:
   # 名称
   name: server
   # 版本

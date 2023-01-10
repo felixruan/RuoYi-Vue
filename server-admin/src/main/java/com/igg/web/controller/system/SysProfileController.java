@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import com.igg.common.annotation.Log;
-import com.igg.common.config.RuoYiConfig;
+import com.igg.common.config.ProjectConfig;
 import com.igg.common.constant.UserConstants;
 import com.igg.common.core.controller.BaseController;
 import com.igg.common.core.domain.AjaxResult;
@@ -116,7 +116,7 @@ public class SysProfileController extends BaseController {
     public AjaxResult avatar(@RequestParam("avatarfile") MultipartFile file) throws Exception {
         if (!file.isEmpty()) {
             LoginUser loginUser = getLoginUser();
-            String avatar = FileUploadUtils.upload(RuoYiConfig.getAvatarPath(), file, MimeTypeUtils.IMAGE_EXTENSION);
+            String avatar = FileUploadUtils.upload(ProjectConfig.getAvatarPath(), file, MimeTypeUtils.IMAGE_EXTENSION);
             if (userService.updateUserAvatar(loginUser.getUsername(), avatar)) {
                 AjaxResult ajax = AjaxResult.success();
                 ajax.put("imgUrl", avatar);

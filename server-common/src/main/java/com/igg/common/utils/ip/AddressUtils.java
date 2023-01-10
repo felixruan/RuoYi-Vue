@@ -3,7 +3,7 @@ package com.igg.common.utils.ip;
 import lombok.extern.slf4j.Slf4j;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
-import com.igg.common.config.RuoYiConfig;
+import com.igg.common.config.ProjectConfig;
 import com.igg.common.constant.Constants;
 import com.igg.common.utils.StringUtils;
 import com.igg.common.utils.http.HttpUtils;
@@ -27,7 +27,7 @@ public class AddressUtils {
         if (IpUtils.internalIp(ip)) {
             return "内网IP";
         }
-        if (RuoYiConfig.isAddressEnabled()) {
+        if (ProjectConfig.isAddressEnabled()) {
             try {
                 String rspStr = HttpUtils.sendGet(IP_URL, "ip=" + ip + "&json=true", Constants.GBK);
                 if (StringUtils.isEmpty(rspStr)) {

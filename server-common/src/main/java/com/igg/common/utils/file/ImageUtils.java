@@ -8,7 +8,7 @@ import java.net.URLConnection;
 import java.util.Arrays;
 import org.apache.poi.util.IOUtils;
 import lombok.extern.slf4j.Slf4j;
-import com.igg.common.config.RuoYiConfig;
+import com.igg.common.config.ProjectConfig;
 import com.igg.common.constant.Constants;
 import com.igg.common.utils.StringUtils;
 
@@ -62,7 +62,7 @@ public class ImageUtils {
                 in = urlConnection.getInputStream();
             } else {
                 // 本机地址
-                String localPath = RuoYiConfig.getProfile();
+                String localPath = ProjectConfig.getProfile();
                 String downloadPath = localPath + StringUtils.substringAfter(url, Constants.RESOURCE_PREFIX);
                 in = new FileInputStream(downloadPath);
             }
