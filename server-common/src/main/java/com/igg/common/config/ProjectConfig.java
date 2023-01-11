@@ -1,5 +1,6 @@
 package com.igg.common.config;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties(prefix = "project")
+@Data
 public class ProjectConfig {
 
     /** 项目名称 */
@@ -32,38 +34,6 @@ public class ProjectConfig {
 
     /** 验证码类型 */
     private static String captchaType;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public String getCopyrightYear() {
-        return copyrightYear;
-    }
-
-    public void setCopyrightYear(String copyrightYear) {
-        this.copyrightYear = copyrightYear;
-    }
-
-    public boolean isDemoEnabled() {
-        return demoEnabled;
-    }
-
-    public void setDemoEnabled(boolean demoEnabled) {
-        this.demoEnabled = demoEnabled;
-    }
 
     public static String getProfile() {
         return profile;

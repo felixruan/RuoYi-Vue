@@ -29,8 +29,10 @@
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
         <jwt.version>0.9.1</jwt.version>
-        <spring-boot.version>2.7.6</spring-boot.version>
         <lombok.version>1.18.24</lombok.version>
+        <hutool.version>5.8.10</hutool.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <spring-boot.version>2.7.6</spring-boot.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -179,9 +181,21 @@
             </dependency>
 
             <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
         </dependencies>
@@ -196,6 +210,15 @@
         <module>server-common</module>
     </modules>
     <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
     <profiles>
         <profile>
@@ -217,7 +240,6 @@
             <id>prod</id>
             <properties>
                 <profiles.active>prod</profiles.active>
-                <logging.level>warn</logging.level>
             </properties>
         </profile>
     </profiles>
