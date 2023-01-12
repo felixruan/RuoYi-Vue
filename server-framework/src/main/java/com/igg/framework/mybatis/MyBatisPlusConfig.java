@@ -1,5 +1,6 @@
-package com.igg.framework.config;
+package com.igg.framework.mybatis;
 
+import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -10,13 +11,13 @@ import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInt
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 
 /**
- * mybatis-plus配置类
+ * MybatisPlus配置类
  *
  * @author 阮杰辉
  */
 @EnableTransactionManagement(proxyTargetClass = true)
 @Configuration
-public class MyBatisConfig {
+public class MyBatisPlusConfig {
 
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
@@ -54,6 +55,14 @@ public class MyBatisConfig {
      */
     public BlockAttackInnerInterceptor blockAttackInnerInterceptor() {
         return new BlockAttackInnerInterceptor();
+    }
+
+    /**
+     * 元对象字段填充控制器
+     */
+    @Bean
+    public MetaObjectHandler metaObjectHandler() {
+        return new MyBatisPlusMetaObjectHandler();
     }
 
 }

@@ -121,6 +121,8 @@ public class VelocityUtils {
     public static List<String> getTemplateList(String tplCategory) {
         List<String> templates = new ArrayList<>();
         templates.add("vm/java/domain.java.vm");
+        templates.add("vm/java/vo.java.vm");
+        templates.add("vm/java/ro.java.vm");
         templates.add("vm/java/mapper.java.vm");
         templates.add("vm/java/service.java.vm");
         templates.add("vm/java/serviceImpl.java.vm");
@@ -129,12 +131,19 @@ public class VelocityUtils {
         templates.add("vm/sql/sql.vm");
         templates.add("vm/js/api.js.vm");
         if (GenConstants.TPL_CRUD.equals(tplCategory)) {
-            templates.add("vm/vue/index.vue.vm");
+            // templates.add("vm/vue/index.vue.vm");
+            templates.add("vm/vue/antdv/index.vue.vm");
+            templates.add("vm/vue/antdv/modules/CreateForm.vue.vm");
         } else if (GenConstants.TPL_TREE.equals(tplCategory)) {
-            templates.add("vm/vue/index-tree.vue.vm");
+            // templates.add("vm/vue/index-tree.vue.vm");
+            templates.add("vm/vue/antdv/index.vue.vm");
+            templates.add("vm/vue/antdv/modules/CreateForm.vue.vm");
         } else if (GenConstants.TPL_SUB.equals(tplCategory)) {
-            templates.add("vm/vue/index.vue.vm");
-            templates.add("vm/java/sub-domain.java.vm");
+            // templates.add("vm/vue/index.vue.vm");
+            templates.add("vm/vue/antdv/index.vue.vm");
+            templates.add("vm/vue/antdv/modules/CreateForm.vue.vm");
+            templates.add("vm/vue/antdv/modules/SubTable.vue.vm");
+            templates.add("vm/vue/antdv/modules/CreateSubForm.vue.vm");
         }
         return templates;
     }
@@ -160,8 +169,17 @@ public class VelocityUtils {
 
         if (template.contains("domain.java.vm")) {
             fileName = StringUtils.format("{}/domain/{}.java", javaPath, className);
-        }
-        if (template.contains("sub-domain.java.vm") && StringUtils.equals(GenConstants.TPL_SUB, genTable.getTplCategory())) {
+        } else if (template.contains("vo.java.vm")) {
+            fileName = StringUtils.format("{}/domain/vo/{}VO.java", javaPath, className);
+        } else if (template.contains("ro.java.vm")) {
+            fileName = StringUtils.format("{}/domain/ro/{}RO.java", javaPath, className);
+        } else if (template.contains("CreateForm.vue.vm")) {
+            fileName = StringUtils.format("{}/views/{}/{}/modules/CreateForm.vue", vuePath, moduleName, businessName);
+        } else if (template.contains("SubTable.vue.vm")) {
+            fileName = StringUtils.format("{}/views/{}/{}/modules/SubTable.vue", vuePath, moduleName, businessName);
+        } else if (template.contains("CreateSubForm.vue.vm")) {
+            fileName = StringUtils.format("{}/views/{}/{}/modules/CreateSubForm.vue", vuePath, moduleName, businessName);
+        } else if (template.contains("sub-domain.java.vm") && StringUtils.equals(GenConstants.TPL_SUB, genTable.getTplCategory())) {
             fileName = StringUtils.format("{}/domain/{}.java", javaPath, genTable.getSubTable().getClassName());
         } else if (template.contains("mapper.java.vm")) {
             fileName = StringUtils.format("{}/mapper/{}Mapper.java", javaPath, className);
