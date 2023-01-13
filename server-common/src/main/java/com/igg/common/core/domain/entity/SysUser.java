@@ -1,16 +1,17 @@
 package com.igg.common.core.domain.entity;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.util.Date;
-import java.util.List;
-import javax.validation.constraints.*;
-import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excel.ColumnType;
 import com.igg.common.annotation.Excel.Type;
+import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excels;
 import com.igg.common.core.domain.BaseEntity;
 import com.igg.common.xss.Xss;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
+import java.util.List;
+import javax.validation.constraints.*;
 
 /**
  * 用户对象 sys_user

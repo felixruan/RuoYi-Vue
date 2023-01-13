@@ -1,7 +1,7 @@
 package com.igg.framework.web.domain.server;
 
-import lombok.Data;
 import com.igg.common.utils.Arith;
+import lombok.Data;
 
 /**
  * 內存相关信息

@@ -1,5 +1,8 @@
 package com.igg.common.filter;
 
+import com.igg.common.utils.StringUtils;
+import org.springframework.http.MediaType;
+
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -8,8 +11,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import org.springframework.http.MediaType;
-import com.igg.common.utils.StringUtils;
 
 /**
  * Repeatable 过滤器

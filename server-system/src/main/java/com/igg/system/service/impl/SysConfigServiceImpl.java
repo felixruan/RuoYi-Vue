@@ -1,10 +1,5 @@
 package com.igg.system.service.impl;
 
-import java.util.Collection;
-import java.util.List;
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.common.annotation.DataSource;
 import com.igg.common.constant.CacheConstants;
 import com.igg.common.constant.UserConstants;
@@ -16,6 +11,12 @@ import com.igg.common.utils.StringUtils;
 import com.igg.system.domain.SysConfig;
 import com.igg.system.mapper.SysConfigMapper;
 import com.igg.system.service.ISysConfigService;
+import org.springframework.stereotype.Service;
+
+import java.util.Collection;
+import java.util.List;
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 
 /**
  * 参数配置 服务层实现

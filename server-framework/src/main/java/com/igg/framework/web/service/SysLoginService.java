@@ -1,11 +1,5 @@
 package com.igg.framework.web.service;
 
-import javax.annotation.Resource;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.stereotype.Component;
 import com.igg.common.constant.CacheConstants;
 import com.igg.common.constant.Constants;
 import com.igg.common.core.domain.entity.SysUser;
@@ -25,6 +19,13 @@ import com.igg.framework.manager.factory.AsyncFactory;
 import com.igg.framework.security.context.AuthenticationContextHolder;
 import com.igg.system.service.ISysConfigService;
 import com.igg.system.service.ISysUserService;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
 
 /**
  * 登录校验方法

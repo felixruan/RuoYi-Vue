@@ -1,16 +1,17 @@
 package com.igg.quartz.domain;
 
-import lombok.Data;
-import java.util.Date;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excel.ColumnType;
+import com.igg.common.annotation.Excel;
 import com.igg.common.constant.ScheduleConstants;
 import com.igg.common.core.domain.BaseEntity;
 import com.igg.common.utils.StringUtils;
 import com.igg.quartz.util.CronUtils;
+import lombok.Data;
+
+import java.util.Date;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 /**
  * 定时任务调度表 sys_job

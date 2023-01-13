@@ -1,12 +1,5 @@
 package com.igg.framework.interceptor.impl;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
-import javax.servlet.http.HttpServletRequest;
-import javax.annotation.Resource;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import com.alibaba.fastjson2.JSON;
 import com.igg.common.annotation.RepeatSubmit;
 import com.igg.common.constant.CacheConstants;
@@ -15,6 +8,14 @@ import com.igg.common.filter.RepeatedlyRequestWrapper;
 import com.igg.common.utils.StringUtils;
 import com.igg.common.utils.http.HttpHelper;
 import com.igg.framework.interceptor.RepeatSubmitInterceptor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 判断请求url和数据是否和上一次相同，

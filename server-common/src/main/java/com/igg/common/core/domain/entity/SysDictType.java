@@ -1,12 +1,13 @@
 package com.igg.common.core.domain.entity;
 
+import com.igg.common.annotation.Excel.ColumnType;
+import com.igg.common.annotation.Excel;
+import com.igg.common.core.domain.BaseEntity;
 import lombok.Data;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import com.igg.common.annotation.Excel;
-import com.igg.common.annotation.Excel.ColumnType;
-import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 字典类型表 sys_dict_type

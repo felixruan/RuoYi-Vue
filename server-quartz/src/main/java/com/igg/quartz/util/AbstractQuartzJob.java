@@ -1,10 +1,5 @@
 package com.igg.quartz.util;
 
-import java.util.Date;
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import lombok.extern.slf4j.Slf4j;
 import com.igg.common.constant.Constants;
 import com.igg.common.constant.ScheduleConstants;
 import com.igg.common.utils.ExceptionUtil;
@@ -14,6 +9,12 @@ import com.igg.common.utils.spring.SpringUtils;
 import com.igg.quartz.domain.SysJob;
 import com.igg.quartz.domain.SysJobLog;
 import com.igg.quartz.service.ISysJobLogService;
+import lombok.extern.slf4j.Slf4j;
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+import java.util.Date;
 
 /**
  * 抽象quartz调用

@@ -1,13 +1,5 @@
 package com.igg.framework.security.handle;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.annotation.Resource;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import com.alibaba.fastjson2.JSON;
 import com.igg.common.constant.Constants;
 import com.igg.common.core.domain.AjaxResult;
@@ -17,6 +9,15 @@ import com.igg.common.utils.StringUtils;
 import com.igg.framework.manager.AsyncManager;
 import com.igg.framework.manager.factory.AsyncFactory;
 import com.igg.framework.web.service.TokenService;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
+
+import java.io.IOException;
+import javax.annotation.Resource;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 自定义退出处理类 返回成功

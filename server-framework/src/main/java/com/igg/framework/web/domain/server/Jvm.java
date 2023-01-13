@@ -1,9 +1,10 @@
 package com.igg.framework.web.domain.server;
 
-import lombok.Data;
-import java.lang.management.ManagementFactory;
 import com.igg.common.utils.Arith;
 import com.igg.common.utils.DateUtils;
+import lombok.Data;
+
+import java.lang.management.ManagementFactory;
 
 /**
  * JVM相关信息

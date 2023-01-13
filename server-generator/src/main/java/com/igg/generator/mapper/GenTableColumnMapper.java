@@ -1,7 +1,8 @@
 package com.igg.generator.mapper;
 
-import java.util.List;
 import com.igg.generator.domain.GenTableColumn;
+
+import java.util.List;
 
 /**
  * 业务字段 数据层

@@ -1,8 +1,9 @@
 package com.igg.common.core.text;
 
+import com.igg.common.utils.StringUtils;
+
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import com.igg.common.utils.StringUtils;
 
 /**
  * 字符集工具类

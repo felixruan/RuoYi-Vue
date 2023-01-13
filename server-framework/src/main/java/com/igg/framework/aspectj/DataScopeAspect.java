@@ -1,11 +1,5 @@
 package com.igg.framework.aspectj;
 
-import java.util.ArrayList;
-import java.util.List;
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.springframework.stereotype.Component;
 import com.igg.common.annotation.DataScope;
 import com.igg.common.core.domain.BaseEntity;
 import com.igg.common.core.domain.entity.SysRole;
@@ -15,6 +9,13 @@ import com.igg.common.core.text.Convert;
 import com.igg.common.utils.SecurityUtils;
 import com.igg.common.utils.StringUtils;
 import com.igg.framework.security.context.PermissionContextHolder;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 数据过滤处理

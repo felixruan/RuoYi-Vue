@@ -1,7 +1,5 @@
 package com.igg.framework.manager.factory;
 
-import java.util.TimerTask;
-import lombok.extern.slf4j.Slf4j;
 import com.igg.common.constant.Constants;
 import com.igg.common.utils.LogUtils;
 import com.igg.common.utils.ServletUtils;
@@ -14,6 +12,9 @@ import com.igg.system.domain.SysOperLog;
 import com.igg.system.service.ISysLogininforService;
 import com.igg.system.service.ISysOperLogService;
 import eu.bitwalker.useragentutils.UserAgent;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.TimerTask;
 
 /**
  * 异步工厂（产生任务用）

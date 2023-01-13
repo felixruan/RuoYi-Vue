@@ -1,7 +1,8 @@
 package com.igg.quartz.mapper;
 
-import java.util.List;
 import com.igg.quartz.domain.SysJob;
+
+import java.util.List;
 
 /**
  * 调度任务信息 数据层

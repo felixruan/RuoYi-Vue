@@ -1,12 +1,13 @@
 package com.igg.generator.util;
 
-import java.util.Arrays;
-import org.apache.commons.lang3.RegExUtils;
 import com.igg.common.constant.GenConstants;
 import com.igg.common.utils.StringUtils;
 import com.igg.generator.config.GenConfig;
 import com.igg.generator.domain.GenTable;
 import com.igg.generator.domain.GenTableColumn;
+import org.apache.commons.lang3.RegExUtils;
+
+import java.util.Arrays;
 
 /**
  * 代码生成器 工具类

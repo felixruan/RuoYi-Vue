@@ -1,18 +1,5 @@
 package com.igg.quartz.controller;
 
-import java.util.List;
-import javax.servlet.http.HttpServletResponse;
-import org.quartz.SchedulerException;
-import javax.annotation.Resource;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import com.igg.common.annotation.Log;
 import com.igg.common.constant.Constants;
 import com.igg.common.core.controller.BaseController;
@@ -26,6 +13,20 @@ import com.igg.quartz.domain.SysJob;
 import com.igg.quartz.service.ISysJobService;
 import com.igg.quartz.util.CronUtils;
 import com.igg.quartz.util.ScheduleUtils;
+import org.quartz.SchedulerException;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 调度任务信息操作处理

@@ -1,8 +1,8 @@
 package com.igg.system.domain.vo;
 
+import com.igg.common.utils.StringUtils;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.igg.common.utils.StringUtils;
 
 /**
  * 路由显示信息

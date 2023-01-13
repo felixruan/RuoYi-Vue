@@ -1,8 +1,9 @@
 package com.igg.generator.service;
 
+import com.igg.generator.domain.GenTable;
+
 import java.util.List;
 import java.util.Map;
-import com.igg.generator.domain.GenTable;
 
 /**
  * 业务 服务层

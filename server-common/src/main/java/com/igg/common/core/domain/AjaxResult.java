@@ -1,10 +1,11 @@
 package com.igg.common.core.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.util.HashMap;
 import com.igg.common.constant.HttpStatus;
 import com.igg.common.utils.StringUtils;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.HashMap;
 
 /**
  * 操作消息提醒

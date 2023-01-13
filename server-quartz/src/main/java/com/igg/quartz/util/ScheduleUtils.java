@@ -1,5 +1,12 @@
 package com.igg.quartz.util;
 
+import com.igg.common.constant.Constants;
+import com.igg.common.constant.ScheduleConstants;
+import com.igg.common.exception.job.TaskException.Code;
+import com.igg.common.exception.job.TaskException;
+import com.igg.common.utils.StringUtils;
+import com.igg.common.utils.spring.SpringUtils;
+import com.igg.quartz.domain.SysJob;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
 import org.quartz.Job;
@@ -10,13 +17,6 @@ import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
-import com.igg.common.constant.Constants;
-import com.igg.common.constant.ScheduleConstants;
-import com.igg.common.exception.job.TaskException;
-import com.igg.common.exception.job.TaskException.Code;
-import com.igg.common.utils.StringUtils;
-import com.igg.common.utils.spring.SpringUtils;
-import com.igg.quartz.domain.SysJob;
 
 /**
  * 定时任务工具类

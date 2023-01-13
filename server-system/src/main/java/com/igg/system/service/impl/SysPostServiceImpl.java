@@ -1,8 +1,5 @@
 package com.igg.system.service.impl;
 
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.common.constant.UserConstants;
 import com.igg.common.exception.ServiceException;
 import com.igg.common.utils.StringUtils;
@@ -10,6 +7,10 @@ import com.igg.system.domain.SysPost;
 import com.igg.system.mapper.SysPostMapper;
 import com.igg.system.mapper.SysUserPostMapper;
 import com.igg.system.service.ISysPostService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 岗位信息 服务层处理

@@ -1,12 +1,13 @@
 package com.igg.common.annotation;
 
+import com.igg.common.constant.CacheConstants;
+import com.igg.common.enums.LimitType;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import com.igg.common.constant.CacheConstants;
-import com.igg.common.enums.LimitType;
 
 /**
  * 限流注解

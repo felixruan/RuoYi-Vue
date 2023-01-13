@@ -1,5 +1,9 @@
 package com.igg.common.utils.http;
 
+import com.igg.common.constant.Constants;
+import com.igg.common.utils.StringUtils;
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,9 +21,6 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-import lombok.extern.slf4j.Slf4j;
-import com.igg.common.constant.Constants;
-import com.igg.common.utils.StringUtils;
 
 /**
  * 通用http发送方法

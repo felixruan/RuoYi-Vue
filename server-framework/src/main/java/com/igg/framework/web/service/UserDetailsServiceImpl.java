@@ -1,17 +1,18 @@
 package com.igg.framework.web.service;
 
-import lombok.extern.slf4j.Slf4j;
-import javax.annotation.Resource;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
 import com.igg.common.core.domain.entity.SysUser;
 import com.igg.common.core.domain.model.LoginUser;
 import com.igg.common.enums.UserStatus;
 import com.igg.common.exception.ServiceException;
 import com.igg.common.utils.StringUtils;
 import com.igg.system.service.ISysUserService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * 用户验证处理

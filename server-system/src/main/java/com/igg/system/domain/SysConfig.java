@@ -1,11 +1,12 @@
 package com.igg.system.domain;
 
+import com.igg.common.annotation.Excel.ColumnType;
+import com.igg.common.annotation.Excel;
+import com.igg.common.core.domain.BaseEntity;
 import lombok.Data;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import com.igg.common.annotation.Excel;
-import com.igg.common.annotation.Excel.ColumnType;
-import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 参数配置表 sys_config

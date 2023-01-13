@@ -1,10 +1,5 @@
 package com.igg.framework.web.domain;
 
-import lombok.Data;
-import java.net.UnknownHostException;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Properties;
 import com.igg.common.utils.Arith;
 import com.igg.common.utils.ip.IpUtils;
 import com.igg.framework.web.domain.server.Cpu;
@@ -12,15 +7,21 @@ import com.igg.framework.web.domain.server.Jvm;
 import com.igg.framework.web.domain.server.Mem;
 import com.igg.framework.web.domain.server.Sys;
 import com.igg.framework.web.domain.server.SysFile;
+import lombok.Data;
 import oshi.SystemInfo;
-import oshi.hardware.CentralProcessor;
 import oshi.hardware.CentralProcessor.TickType;
+import oshi.hardware.CentralProcessor;
 import oshi.hardware.GlobalMemory;
 import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.FileSystem;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
 import oshi.util.Util;
+
+import java.net.UnknownHostException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Properties;
 
 /**
  * 服务器相关信息

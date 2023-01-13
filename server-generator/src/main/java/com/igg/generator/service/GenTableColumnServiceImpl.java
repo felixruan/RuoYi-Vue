@@ -1,11 +1,12 @@
 package com.igg.generator.service;
 
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.common.core.text.Convert;
 import com.igg.generator.domain.GenTableColumn;
 import com.igg.generator.mapper.GenTableColumnMapper;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 业务字段 服务层实现

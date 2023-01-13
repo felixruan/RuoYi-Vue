@@ -1,13 +1,5 @@
 package com.igg.system.service.impl;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import com.igg.common.constant.UserConstants;
 import com.igg.common.core.domain.entity.SysDictData;
 import com.igg.common.core.domain.entity.SysDictType;
@@ -17,6 +9,15 @@ import com.igg.common.utils.StringUtils;
 import com.igg.system.mapper.SysDictDataMapper;
 import com.igg.system.mapper.SysDictTypeMapper;
 import com.igg.system.service.ISysDictTypeService;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 
 /**
  * 字典 业务层处理

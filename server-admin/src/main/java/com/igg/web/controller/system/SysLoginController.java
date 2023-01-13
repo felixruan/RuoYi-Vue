@@ -1,12 +1,5 @@
 package com.igg.web.controller.system;
 
-import java.util.List;
-import java.util.Set;
-import javax.annotation.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 import com.igg.common.constant.Constants;
 import com.igg.common.core.domain.AjaxResult;
 import com.igg.common.core.domain.entity.SysMenu;
@@ -16,6 +9,14 @@ import com.igg.common.utils.SecurityUtils;
 import com.igg.framework.web.service.SysLoginService;
 import com.igg.framework.web.service.SysPermissionService;
 import com.igg.system.service.ISysMenuService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Set;
+import javax.annotation.Resource;
 
 /**
  * 登录验证

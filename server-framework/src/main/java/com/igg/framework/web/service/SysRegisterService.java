@@ -1,7 +1,5 @@
 package com.igg.framework.web.service;
 
-import javax.annotation.Resource;
-import org.springframework.stereotype.Component;
 import com.igg.common.constant.CacheConstants;
 import com.igg.common.constant.Constants;
 import com.igg.common.constant.UserConstants;
@@ -17,6 +15,9 @@ import com.igg.framework.manager.AsyncManager;
 import com.igg.framework.manager.factory.AsyncFactory;
 import com.igg.system.service.ISysConfigService;
 import com.igg.system.service.ISysUserService;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
 
 /**
  * 注册校验方法

@@ -1,8 +1,14 @@
 package com.igg.web.controller.system;
 
-import java.util.List;
+import com.igg.common.annotation.Log;
+import com.igg.common.constant.UserConstants;
+import com.igg.common.core.controller.BaseController;
+import com.igg.common.core.domain.AjaxResult;
+import com.igg.common.core.domain.entity.SysDept;
+import com.igg.common.enums.BusinessType;
+import com.igg.common.utils.StringUtils;
+import com.igg.system.service.ISysDeptService;
 import org.apache.commons.lang3.ArrayUtils;
-import javax.annotation.Resource;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,14 +19,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.igg.common.annotation.Log;
-import com.igg.common.constant.UserConstants;
-import com.igg.common.core.controller.BaseController;
-import com.igg.common.core.domain.AjaxResult;
-import com.igg.common.core.domain.entity.SysDept;
-import com.igg.common.enums.BusinessType;
-import com.igg.common.utils.StringUtils;
-import com.igg.system.service.ISysDeptService;
+
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 部门信息

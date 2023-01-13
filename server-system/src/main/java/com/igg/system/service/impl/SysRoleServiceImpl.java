@@ -1,13 +1,5 @@
 package com.igg.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import com.igg.common.annotation.DataScope;
 import com.igg.common.constant.UserConstants;
 import com.igg.common.core.domain.entity.SysRole;
@@ -24,6 +16,15 @@ import com.igg.system.mapper.SysRoleMapper;
 import com.igg.system.mapper.SysRoleMenuMapper;
 import com.igg.system.mapper.SysUserRoleMapper;
 import com.igg.system.service.ISysRoleService;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import javax.annotation.Resource;
 
 /**
  * 角色 业务层处理

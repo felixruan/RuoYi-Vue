@@ -1,7 +1,8 @@
 package com.igg.system.service;
 
-import java.util.List;
 import com.igg.system.domain.SysConfig;
+
+import java.util.List;
 
 /**
  * 参数配置 服务层

@@ -1,12 +1,13 @@
 package com.igg.common.core.domain.entity;
 
+import com.igg.common.core.domain.BaseEntity;
 import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import com.igg.common.core.domain.BaseEntity;
 
 /**
  * 菜单权限表 sys_menu

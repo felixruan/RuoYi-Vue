@@ -1,7 +1,8 @@
 package com.igg.framework.config;
 
-import java.util.concurrent.TimeUnit;
-import javax.annotation.Resource;
+import com.igg.common.config.ProjectConfig;
+import com.igg.common.constant.Constants;
+import com.igg.framework.interceptor.RepeatSubmitInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.CacheControl;
@@ -11,9 +12,9 @@ import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import com.igg.common.config.ProjectConfig;
-import com.igg.common.constant.Constants;
-import com.igg.framework.interceptor.RepeatSubmitInterceptor;
+
+import java.util.concurrent.TimeUnit;
+import javax.annotation.Resource;
 
 /**
  * 通用配置

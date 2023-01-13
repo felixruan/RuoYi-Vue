@@ -1,10 +1,5 @@
 package com.igg.generator.util;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import org.apache.velocity.VelocityContext;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.igg.common.constant.GenConstants;
@@ -12,6 +7,12 @@ import com.igg.common.utils.DateUtils;
 import com.igg.common.utils.StringUtils;
 import com.igg.generator.domain.GenTable;
 import com.igg.generator.domain.GenTableColumn;
+import org.apache.velocity.VelocityContext;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * 模板处理工具类

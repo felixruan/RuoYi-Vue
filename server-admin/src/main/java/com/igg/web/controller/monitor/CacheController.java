@@ -1,13 +1,9 @@
 package com.igg.web.controller.monitor;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import javax.annotation.Resource;
+import com.igg.common.constant.CacheConstants;
+import com.igg.common.core.domain.AjaxResult;
+import com.igg.common.utils.StringUtils;
+import com.igg.system.domain.SysCache;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,10 +12,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.igg.common.constant.CacheConstants;
-import com.igg.common.core.domain.AjaxResult;
-import com.igg.common.utils.StringUtils;
-import com.igg.system.domain.SysCache;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+import javax.annotation.Resource;
 
 /**
  * 缓存监控

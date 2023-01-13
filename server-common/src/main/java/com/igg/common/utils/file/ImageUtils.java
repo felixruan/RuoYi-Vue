@@ -1,16 +1,17 @@
 package com.igg.common.utils.file;
 
+import com.igg.common.config.ProjectConfig;
+import com.igg.common.constant.Constants;
+import com.igg.common.utils.StringUtils;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.poi.util.IOUtils;
+
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Arrays;
-import org.apache.poi.util.IOUtils;
-import lombok.extern.slf4j.Slf4j;
-import com.igg.common.config.ProjectConfig;
-import com.igg.common.constant.Constants;
-import com.igg.common.utils.StringUtils;
 
 /**
  * 图片处理工具类

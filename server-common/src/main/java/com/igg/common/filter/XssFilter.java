@@ -1,5 +1,8 @@
 package com.igg.common.filter;
 
+import com.igg.common.enums.HttpMethod;
+import com.igg.common.utils.StringUtils;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +14,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.igg.common.utils.StringUtils;
-import com.igg.common.enums.HttpMethod;
 
 /**
  * 防止XSS攻击的过滤器

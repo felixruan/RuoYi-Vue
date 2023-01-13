@@ -1,15 +1,5 @@
 package com.igg.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.common.constant.Constants;
 import com.igg.common.constant.UserConstants;
 import com.igg.common.core.domain.TreeSelect;
@@ -24,6 +14,17 @@ import com.igg.system.mapper.SysMenuMapper;
 import com.igg.system.mapper.SysRoleMapper;
 import com.igg.system.mapper.SysRoleMenuMapper;
 import com.igg.system.service.ISysMenuService;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+import javax.annotation.Resource;
 
 /**
  * 菜单 业务层处理

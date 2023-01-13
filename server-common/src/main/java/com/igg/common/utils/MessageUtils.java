@@ -1,8 +1,8 @@
 package com.igg.common.utils;
 
+import com.igg.common.utils.spring.SpringUtils;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
-import com.igg.common.utils.spring.SpringUtils;
 
 /**
  * 获取i18n资源文件

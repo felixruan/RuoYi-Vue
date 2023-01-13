@@ -1,14 +1,15 @@
 package com.igg.common.utils;
 
+import com.igg.common.constant.Constants;
+import com.igg.common.core.text.StrFormatter;
+import org.springframework.util.AntPathMatcher;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.springframework.util.AntPathMatcher;
-import com.igg.common.constant.Constants;
-import com.igg.common.core.text.StrFormatter;
 
 /**
  * 字符串工具类

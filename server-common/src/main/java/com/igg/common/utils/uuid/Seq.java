@@ -1,8 +1,9 @@
 package com.igg.common.utils.uuid;
 
-import java.util.concurrent.atomic.AtomicInteger;
 import com.igg.common.utils.DateUtils;
 import com.igg.common.utils.StringUtils;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author 阮杰辉 序列生成类

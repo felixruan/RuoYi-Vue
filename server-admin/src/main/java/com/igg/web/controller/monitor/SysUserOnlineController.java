@@ -1,16 +1,5 @@
 package com.igg.web.controller.monitor;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import com.igg.common.annotation.Log;
 import com.igg.common.constant.CacheConstants;
 import com.igg.common.core.controller.BaseController;
@@ -22,6 +11,18 @@ import com.igg.common.enums.BusinessType;
 import com.igg.common.utils.StringUtils;
 import com.igg.system.domain.SysUserOnline;
 import com.igg.system.service.ISysUserOnlineService;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 在线用户监控

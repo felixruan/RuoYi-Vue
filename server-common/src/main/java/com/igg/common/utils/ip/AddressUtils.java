@@ -1,12 +1,12 @@
 package com.igg.common.utils.ip;
 
-import lombok.extern.slf4j.Slf4j;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.igg.common.config.ProjectConfig;
 import com.igg.common.constant.Constants;
 import com.igg.common.utils.StringUtils;
 import com.igg.common.utils.http.HttpUtils;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 获取地址类

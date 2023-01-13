@@ -1,11 +1,12 @@
 package com.igg.quartz.service.impl;
 
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.quartz.domain.SysJobLog;
 import com.igg.quartz.mapper.SysJobLogMapper;
 import com.igg.quartz.service.ISysJobLogService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 定时任务调度日志信息 服务层

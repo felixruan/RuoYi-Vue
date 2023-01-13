@@ -1,10 +1,11 @@
 package com.igg.framework.manager;
 
+import com.igg.common.utils.Threads;
+import com.igg.common.utils.spring.SpringUtils;
+
 import java.util.TimerTask;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import com.igg.common.utils.Threads;
-import com.igg.common.utils.spring.SpringUtils;
 
 /**
  * 异步任务管理器

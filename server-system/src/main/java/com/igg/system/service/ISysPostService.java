@@ -1,7 +1,8 @@
 package com.igg.system.service;
 
-import java.util.List;
 import com.igg.system.domain.SysPost;
+
+import java.util.List;
 
 /**
  * 岗位信息 服务层

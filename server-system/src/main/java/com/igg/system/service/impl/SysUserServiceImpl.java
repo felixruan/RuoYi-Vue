@@ -1,14 +1,5 @@
 package com.igg.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import javax.validation.Validator;
-import lombok.extern.slf4j.Slf4j;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.CollectionUtils;
 import com.igg.common.annotation.DataScope;
 import com.igg.common.constant.UserConstants;
 import com.igg.common.core.domain.entity.SysRole;
@@ -28,6 +19,16 @@ import com.igg.system.mapper.SysUserPostMapper;
 import com.igg.system.mapper.SysUserRoleMapper;
 import com.igg.system.service.ISysConfigService;
 import com.igg.system.service.ISysUserService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.annotation.Resource;
+import javax.validation.Validator;
 
 /**
  * 用户 业务层处理

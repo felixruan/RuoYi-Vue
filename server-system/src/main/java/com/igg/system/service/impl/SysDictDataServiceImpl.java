@@ -1,12 +1,13 @@
 package com.igg.system.service.impl;
 
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.common.core.domain.entity.SysDictData;
 import com.igg.common.utils.DictUtils;
 import com.igg.system.mapper.SysDictDataMapper;
 import com.igg.system.service.ISysDictDataService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 字典 业务层处理

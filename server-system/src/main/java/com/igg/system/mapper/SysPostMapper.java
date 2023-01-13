@@ -1,7 +1,8 @@
 package com.igg.system.mapper;
 
-import java.util.List;
 import com.igg.system.domain.SysPost;
+
+import java.util.List;
 
 /**
  * 岗位信息 数据层

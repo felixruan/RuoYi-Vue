@@ -1,6 +1,10 @@
 package com.igg.framework.web.exception;
 
-import javax.servlet.http.HttpServletRequest;
+import com.igg.common.constant.HttpStatus;
+import com.igg.common.core.domain.AjaxResult;
+import com.igg.common.exception.DemoModeException;
+import com.igg.common.exception.ServiceException;
+import com.igg.common.utils.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.BindException;
@@ -8,11 +12,8 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import com.igg.common.constant.HttpStatus;
-import com.igg.common.core.domain.AjaxResult;
-import com.igg.common.exception.DemoModeException;
-import com.igg.common.exception.ServiceException;
-import com.igg.common.utils.StringUtils;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 全局异常处理器

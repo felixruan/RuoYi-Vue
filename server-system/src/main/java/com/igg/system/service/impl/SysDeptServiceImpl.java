@@ -1,11 +1,5 @@
 package com.igg.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.stream.Collectors;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.common.annotation.DataScope;
 import com.igg.common.constant.UserConstants;
 import com.igg.common.core.domain.TreeSelect;
@@ -20,6 +14,13 @@ import com.igg.common.utils.spring.SpringUtils;
 import com.igg.system.mapper.SysDeptMapper;
 import com.igg.system.mapper.SysRoleMapper;
 import com.igg.system.service.ISysDeptService;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.annotation.Resource;
 
 /**
  * 部门管理 服务实现

@@ -1,7 +1,8 @@
 package com.igg.system.service;
 
-import java.util.List;
 import com.igg.system.domain.SysLogininfor;
+
+import java.util.List;
 
 /**
  * 系统访问日志情况信息 服务层

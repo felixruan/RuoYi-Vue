@@ -1,11 +1,12 @@
 package com.igg.system.service.impl;
 
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.system.domain.SysLogininfor;
 import com.igg.system.mapper.SysLogininforMapper;
 import com.igg.system.service.ISysLogininforService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 系统访问日志情况信息 服务层处理

@@ -1,8 +1,9 @@
 package com.igg.common.utils.sign;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * Md5加密方法

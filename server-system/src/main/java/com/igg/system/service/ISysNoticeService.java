@@ -1,7 +1,8 @@
 package com.igg.system.service;
 
-import java.util.List;
 import com.igg.system.domain.SysNotice;
+
+import java.util.List;
 
 /**
  * 公告 服务层

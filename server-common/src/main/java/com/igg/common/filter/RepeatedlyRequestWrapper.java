@@ -1,5 +1,8 @@
 package com.igg.common.filter;
 
+import com.igg.common.constant.Constants;
+import com.igg.common.utils.http.HttpHelper;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -9,8 +12,6 @@ import javax.servlet.ServletInputStream;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
-import com.igg.common.utils.http.HttpHelper;
-import com.igg.common.constant.Constants;
 
 /**
  * 构建可重复读取inputStream的request

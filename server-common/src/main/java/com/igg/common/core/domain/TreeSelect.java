@@ -1,13 +1,14 @@
 package com.igg.common.core.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.io.Serializable;
-import java.util.List;
-import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.igg.common.core.domain.entity.SysDept;
 import com.igg.common.core.domain.entity.SysMenu;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Treeselect树结构实体类

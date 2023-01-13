@@ -1,10 +1,10 @@
 package com.igg.system.service.impl;
 
-import org.springframework.stereotype.Service;
 import com.igg.common.core.domain.model.LoginUser;
 import com.igg.common.utils.StringUtils;
 import com.igg.system.domain.SysUserOnline;
 import com.igg.system.service.ISysUserOnlineService;
+import org.springframework.stereotype.Service;
 
 /**
  * 在线用户 服务层处理

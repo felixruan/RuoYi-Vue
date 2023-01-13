@@ -1,15 +1,5 @@
 package com.igg.web.controller.monitor;
 
-import java.util.List;
-import javax.servlet.http.HttpServletResponse;
-import javax.annotation.Resource;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import com.igg.common.annotation.Log;
 import com.igg.common.core.controller.BaseController;
 import com.igg.common.core.domain.AjaxResult;
@@ -19,6 +9,17 @@ import com.igg.common.utils.poi.ExcelUtil;
 import com.igg.framework.web.service.SysPasswordService;
 import com.igg.system.domain.SysLogininfor;
 import com.igg.system.service.ISysLogininforService;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 系统访问记录

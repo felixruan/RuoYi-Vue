@@ -1,18 +1,19 @@
 package com.igg.framework.aspectj;
 
-import java.util.Objects;
+import com.igg.common.annotation.DataSource;
+import com.igg.common.utils.StringUtils;
+import com.igg.framework.datasource.DynamicDataSourceContextHolder;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import com.igg.common.annotation.DataSource;
-import com.igg.common.utils.StringUtils;
-import com.igg.framework.datasource.DynamicDataSourceContextHolder;
+
+import java.util.Objects;
 
 /**
  * 多数据源处理

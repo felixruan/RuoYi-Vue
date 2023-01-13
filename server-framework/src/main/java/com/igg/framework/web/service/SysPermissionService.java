@@ -1,14 +1,15 @@
 package com.igg.framework.web.service;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Component;
 import com.igg.common.core.domain.entity.SysRole;
 import com.igg.common.core.domain.entity.SysUser;
 import com.igg.system.service.ISysMenuService;
 import com.igg.system.service.ISysRoleService;
+import org.springframework.stereotype.Component;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import javax.annotation.Resource;
 
 /**
  * 用户权限处理

@@ -1,10 +1,11 @@
 package com.igg.system.domain;
 
-import lombok.Data;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import com.igg.common.core.domain.BaseEntity;
 import com.igg.common.xss.Xss;
+import lombok.Data;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 /**
  * 通知公告表 sys_notice

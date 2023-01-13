@@ -1,9 +1,10 @@
 package com.igg.quartz.domain;
 
-import lombok.Data;
-import java.util.Date;
 import com.igg.common.annotation.Excel;
 import com.igg.common.core.domain.BaseEntity;
+import lombok.Data;
+
+import java.util.Date;
 
 /**
  * 定时任务调度日志表 sys_job_log

@@ -1,11 +1,12 @@
 package com.igg.system.service.impl;
 
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.system.domain.SysOperLog;
 import com.igg.system.mapper.SysOperLogMapper;
 import com.igg.system.service.ISysOperLogService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 操作日志 服务层处理

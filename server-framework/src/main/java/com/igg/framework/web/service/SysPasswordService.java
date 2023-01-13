@@ -1,10 +1,5 @@
 package com.igg.framework.web.service;
 
-import java.util.concurrent.TimeUnit;
-import javax.annotation.Resource;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.Authentication;
-import org.springframework.stereotype.Component;
 import com.igg.common.constant.CacheConstants;
 import com.igg.common.constant.Constants;
 import com.igg.common.core.domain.entity.SysUser;
@@ -16,6 +11,12 @@ import com.igg.common.utils.SecurityUtils;
 import com.igg.framework.manager.AsyncManager;
 import com.igg.framework.manager.factory.AsyncFactory;
 import com.igg.framework.security.context.AuthenticationContextHolder;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Component;
+
+import java.util.concurrent.TimeUnit;
+import javax.annotation.Resource;
 
 /**
  * 登录密码方法

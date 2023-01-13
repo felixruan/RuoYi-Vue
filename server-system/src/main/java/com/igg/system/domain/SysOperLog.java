@@ -1,11 +1,12 @@
 package com.igg.system.domain;
 
-import lombok.Data;
-import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excel.ColumnType;
+import com.igg.common.annotation.Excel;
 import com.igg.common.core.domain.BaseEntity;
+import lombok.Data;
+
+import java.util.Date;
 
 /**
  * 操作日志记录表 oper_log

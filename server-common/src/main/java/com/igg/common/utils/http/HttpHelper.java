@@ -1,13 +1,14 @@
 package com.igg.common.utils.http;
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.exception.ExceptionUtils;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import javax.servlet.ServletRequest;
-import org.apache.commons.lang3.exception.ExceptionUtils;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * 通用http工具封装

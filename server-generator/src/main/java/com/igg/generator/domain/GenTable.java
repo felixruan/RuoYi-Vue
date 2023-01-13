@@ -1,13 +1,14 @@
 package com.igg.generator.domain;
 
-import lombok.Data;
-import java.util.List;
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-import org.apache.commons.lang3.ArrayUtils;
 import com.igg.common.constant.GenConstants;
 import com.igg.common.core.domain.BaseEntity;
 import com.igg.common.utils.StringUtils;
+import lombok.Data;
+import org.apache.commons.lang3.ArrayUtils;
+
+import java.util.List;
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 
 /**
  * 业务表 gen_table

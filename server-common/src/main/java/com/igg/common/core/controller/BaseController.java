@@ -1,11 +1,5 @@
 package com.igg.common.core.controller;
 
-import java.beans.PropertyEditorSupport;
-import java.util.Date;
-import java.util.List;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.igg.common.constant.HttpStatus;
@@ -19,6 +13,13 @@ import com.igg.common.utils.PageUtils;
 import com.igg.common.utils.SecurityUtils;
 import com.igg.common.utils.StringUtils;
 import com.igg.common.utils.sql.SqlUtil;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+
+import java.beans.PropertyEditorSupport;
+import java.util.Date;
+import java.util.List;
 
 /**
  * web层通用数据处理

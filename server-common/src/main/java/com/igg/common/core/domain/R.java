@@ -1,8 +1,9 @@
 package com.igg.common.core.domain;
 
-import lombok.Data;
-import java.io.Serializable;
 import com.igg.common.constant.HttpStatus;
+import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * 响应信息主体

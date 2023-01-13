@@ -1,15 +1,16 @@
 package com.igg.web.controller.system;
 
-import javax.annotation.Resource;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 import com.igg.common.core.controller.BaseController;
 import com.igg.common.core.domain.AjaxResult;
 import com.igg.common.core.domain.model.RegisterBody;
 import com.igg.common.utils.StringUtils;
 import com.igg.framework.web.service.SysRegisterService;
 import com.igg.system.service.ISysConfigService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * 注册验证

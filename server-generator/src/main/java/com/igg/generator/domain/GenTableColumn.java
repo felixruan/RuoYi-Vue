@@ -1,9 +1,10 @@
 package com.igg.generator.domain;
 
-import lombok.Data;
-import javax.validation.constraints.NotBlank;
 import com.igg.common.core.domain.BaseEntity;
 import com.igg.common.utils.StringUtils;
+import lombok.Data;
+
+import javax.validation.constraints.NotBlank;
 
 /**
  * 代码生成业务字段表 gen_table_column

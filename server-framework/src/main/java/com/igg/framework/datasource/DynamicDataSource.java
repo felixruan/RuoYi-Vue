@@ -1,8 +1,9 @@
 package com.igg.framework.datasource;
 
+import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
+
 import java.util.Map;
 import javax.sql.DataSource;
-import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 /**
  * 动态数据源

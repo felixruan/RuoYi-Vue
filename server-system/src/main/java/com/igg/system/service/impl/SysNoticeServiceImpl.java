@@ -1,11 +1,12 @@
 package com.igg.system.service.impl;
 
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
 import com.igg.system.domain.SysNotice;
 import com.igg.system.mapper.SysNoticeMapper;
 import com.igg.system.service.ISysNoticeService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import javax.annotation.Resource;
 
 /**
  * 公告 服务层实现

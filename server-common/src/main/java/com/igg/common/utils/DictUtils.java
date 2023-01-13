@@ -1,12 +1,13 @@
 package com.igg.common.utils;
 
-import java.util.Collection;
-import java.util.List;
 import com.alibaba.fastjson2.JSONArray;
 import com.igg.common.constant.CacheConstants;
 import com.igg.common.core.domain.entity.SysDictData;
 import com.igg.common.core.redis.RedisCache;
 import com.igg.common.utils.spring.SpringUtils;
+
+import java.util.Collection;
+import java.util.List;
 
 /**
  * 字典工具类

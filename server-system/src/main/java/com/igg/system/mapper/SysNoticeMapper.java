@@ -1,7 +1,8 @@
 package com.igg.system.mapper;
 
-import java.util.List;
 import com.igg.system.domain.SysNotice;
+
+import java.util.List;
 
 /**
  * 通知公告表 数据层

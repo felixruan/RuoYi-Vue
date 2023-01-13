@@ -1,5 +1,13 @@
 package com.igg.common.utils.file;
 
+import com.igg.common.config.ProjectConfig;
+import com.igg.common.utils.DateUtils;
+import com.igg.common.utils.StringUtils;
+import com.igg.common.utils.uuid.IdUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.ArrayUtils;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,13 +19,6 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.ArrayUtils;
-import com.igg.common.config.ProjectConfig;
-import com.igg.common.utils.DateUtils;
-import com.igg.common.utils.StringUtils;
-import com.igg.common.utils.uuid.IdUtils;
-import org.apache.commons.io.FilenameUtils;
 
 /**
  * 文件处理工具类

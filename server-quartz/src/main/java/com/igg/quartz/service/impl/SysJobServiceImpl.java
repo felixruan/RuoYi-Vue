@@ -1,14 +1,5 @@
 package com.igg.quartz.service.impl;
 
-import java.util.List;
-import javax.annotation.PostConstruct;
-import org.quartz.JobDataMap;
-import org.quartz.JobKey;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import com.igg.common.constant.ScheduleConstants;
 import com.igg.common.exception.job.TaskException;
 import com.igg.quartz.domain.SysJob;
@@ -16,6 +7,16 @@ import com.igg.quartz.mapper.SysJobMapper;
 import com.igg.quartz.service.ISysJobService;
 import com.igg.quartz.util.CronUtils;
 import com.igg.quartz.util.ScheduleUtils;
+import org.quartz.JobDataMap;
+import org.quartz.JobKey;
+import org.quartz.Scheduler;
+import org.quartz.SchedulerException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 
 /**
  * 定时任务调度信息 服务层
