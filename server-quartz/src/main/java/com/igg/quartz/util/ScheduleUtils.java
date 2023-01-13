@@ -22,7 +22,6 @@ import org.quartz.TriggerKey;
  * 定时任务工具类
  *
  * @author 阮杰辉
- *
  */
 public class ScheduleUtils {
 

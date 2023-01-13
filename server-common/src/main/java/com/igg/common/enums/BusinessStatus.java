@@ -4,7 +4,6 @@ package com.igg.common.enums;
  * 操作状态
  *
  * @author 阮杰辉
- *
  */
 public enum BusinessStatus {
 

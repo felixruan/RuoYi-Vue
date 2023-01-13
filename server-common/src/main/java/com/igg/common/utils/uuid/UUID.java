@@ -19,7 +19,6 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
 
     /**
      * SecureRandom 的单例
-     *
      */
     private static class Holder {
         static final SecureRandom numberGenerator = getSecureRandom();
@@ -129,7 +128,6 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
      * @param name 指定 {@code UUID} 字符串
      * @return 具有指定值的 {@code UUID}
      * @throws IllegalArgumentException 如果 name 与 {@link #toString} 中描述的字符串表示形式不符抛出此异常
-     *
      */
     public static UUID fromString(String name) {
         String[] components = name.split("-");
@@ -388,7 +386,6 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
      * @param val 与此 UUID 比较的 UUID
      *
      * @return 在此 UUID 小于、等于或大于 val 时，分别返回 -1、0 或 1。
-     *
      */
     @Override
     public int compareTo(UUID val) {
