@@ -104,7 +104,6 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
      * 根据指定的字节数组获取类型 3（基于名称的）UUID 的静态工厂。
      *
      * @param name 用于构造 UUID 的字节数组。
-     *
      * @return 根据指定数组生成的 {@code UUID}
      */
     public static UUID nameUUIDFromBytes(byte[] name) {
@@ -363,7 +362,6 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
      * 当且仅当参数不为 {@code null}、而是一个 UUID 对象、具有与此 UUID 相同的 varriant、包含相同的值（每一位均相同）时，结果才为 {@code true}。
      *
      * @param obj 要与之比较的对象
-     *
      * @return 如果对象相同，则返回 {@code true}；否则返回 {@code false}
      */
     @Override
@@ -384,7 +382,6 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
      * 如果两个 UUID 不同，且第一个 UUID 的最高有效字段大于第二个 UUID 的对应字段，则第一个 UUID 大于第二个 UUID。
      *
      * @param val 与此 UUID 比较的 UUID
-     *
      * @return 在此 UUID 小于、等于或大于 val 时，分别返回 -1、0 或 1。
      */
     @Override

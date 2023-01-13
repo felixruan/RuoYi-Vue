@@ -62,7 +62,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * * 判断一个对象数组是否为空
      *
      * @param objects 要判断的对象数组
-     ** @return true：为空 false：非空
+     * @return true：为空 false：非空
      */
     public static boolean isEmpty(Object[] objects) {
         return isNull(objects) || (objects.length == 0);
