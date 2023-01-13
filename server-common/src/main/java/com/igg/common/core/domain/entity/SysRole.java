@@ -1,7 +1,7 @@
 package com.igg.common.core.domain.entity;
 
-import com.igg.common.annotation.Excel.ColumnType;
 import com.igg.common.annotation.Excel;
+import com.igg.common.annotation.Excel.ColumnType;
 import com.igg.common.core.domain.BaseEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;

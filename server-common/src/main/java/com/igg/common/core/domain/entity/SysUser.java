@@ -1,8 +1,8 @@
 package com.igg.common.core.domain.entity;
 
+import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excel.ColumnType;
 import com.igg.common.annotation.Excel.Type;
-import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excels;
 import com.igg.common.core.domain.BaseEntity;
 import com.igg.common.xss.Xss;

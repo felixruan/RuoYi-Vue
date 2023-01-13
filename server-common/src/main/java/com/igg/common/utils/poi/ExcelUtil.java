@@ -1,8 +1,8 @@
 package com.igg.common.utils.poi;
 
+import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excel.ColumnType;
 import com.igg.common.annotation.Excel.Type;
-import com.igg.common.annotation.Excel;
 import com.igg.common.annotation.Excels;
 import com.igg.common.config.ProjectConfig;
 import com.igg.common.core.domain.AjaxResult;
