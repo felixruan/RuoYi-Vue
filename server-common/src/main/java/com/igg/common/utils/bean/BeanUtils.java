@@ -32,7 +32,7 @@ public class BeanUtils extends org.springframework.beans.BeanUtils {
      * Bean属性复制工具方法。
      *
      * @param dest 目标对象
-     * @param src 源对象
+     * @param src  源对象
      */
     public static void copyBeanProp(Object dest, Object src) {
         try {

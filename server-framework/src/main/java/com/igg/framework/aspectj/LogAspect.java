@@ -56,7 +56,7 @@ public class LogAspect {
      * 拦截异常操作
      *
      * @param joinPoint 切点
-     * @param e 异常
+     * @param e         异常
      */
     @AfterThrowing(value = "@annotation(controllerLog)", throwing = "e")
     public void doAfterThrowing(JoinPoint joinPoint, Log controllerLog, Exception e) {
@@ -103,7 +103,7 @@ public class LogAspect {
     /**
      * 获取注解中对方法的描述信息 用于Controller层注解
      *
-     * @param log 日志
+     * @param log     日志
      * @param operLog 操作日志
      * @throws Exception
      */

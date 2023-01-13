@@ -112,7 +112,6 @@ public class TokenService {
     /**
      * 验证令牌有效期，相差不足20分钟，自动刷新缓存
      *
-     * @param loginUser
      * @return 令牌
      */
     public void verifyToken(LoginUser loginUser) {
@@ -190,7 +189,6 @@ public class TokenService {
     /**
      * 获取请求token
      *
-     * @param request
      * @return token
      */
     private String getToken(HttpServletRequest request) {

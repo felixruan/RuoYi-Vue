@@ -61,8 +61,8 @@ public class DruidConfig {
      * 设置数据源
      *
      * @param targetDataSources 备选数据源集合
-     * @param sourceName 数据源名称
-     * @param beanName bean名称
+     * @param sourceName        数据源名称
+     * @param beanName          bean名称
      */
     public void setDataSource(Map<Object, Object> targetDataSources, String sourceName, String beanName) {
         try {

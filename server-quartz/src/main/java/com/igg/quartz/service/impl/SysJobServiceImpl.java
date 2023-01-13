@@ -210,7 +210,7 @@ public class SysJobServiceImpl implements ISysJobService {
     /**
      * 更新任务
      *
-     * @param job 任务对象
+     * @param job      任务对象
      * @param jobGroup 任务组名
      */
     public void updateSchedulerJob(SysJob job, String jobGroup) throws SchedulerException, TaskException {

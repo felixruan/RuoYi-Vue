@@ -51,7 +51,7 @@ public class Seq {
      * 通用接口序列号 yyMMddHHmmss + 一位机器标识 + length长度循环递增字符串
      *
      * @param atomicInt 序列数
-     * @param length 数值长度
+     * @param length    数值长度
      * @return 序列值
      */
     public static String getId(AtomicInteger atomicInt, int length) {

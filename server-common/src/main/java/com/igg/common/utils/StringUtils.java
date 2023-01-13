@@ -158,7 +158,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 截取字符串
      *
-     * @param str 字符串
+     * @param str   字符串
      * @param start 开始
      * @return 结果
      */
@@ -184,9 +184,9 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 截取字符串
      *
-     * @param str 字符串
+     * @param str   字符串
      * @param start 开始
-     * @param end 结束
+     * @param end   结束
      * @return 结果
      */
     public static String substring(final String str, int start, int end) {
@@ -229,7 +229,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * 转义\： format("this is \\\\{} for {}", "a", "b") -> this is \a for b<br>
      *
      * @param template 文本模板，被替换的部分用 {} 表示
-     * @param params 参数值
+     * @param params   参数值
      * @return 格式化后的文本
      */
     public static String format(String template, Object... params) {
@@ -263,10 +263,10 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 字符串转list
      *
-     * @param str 字符串
-     * @param sep 分隔符
+     * @param str         字符串
+     * @param sep         分隔符
      * @param filterBlank 过滤纯空白
-     * @param trim 去掉首尾空白
+     * @param trim        去掉首尾空白
      * @return list集合
      */
     public static final List<String> str2List(String str, String sep, boolean filterBlank, boolean trim) {
@@ -296,7 +296,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 判断给定的set列表中是否包含数组array 判断给定的数组array中是否包含给定的元素value
      *
-     * @param set 给定的集合
+     * @param set   给定的集合
      * @param array 给定的数组
      * @return boolean 结果
      */
@@ -316,7 +316,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 查找指定字符串是否包含指定字符串列表中的任意一个字符串同时串忽略大小写
      *
-     * @param cs 指定字符串
+     * @param cs                  指定字符串
      * @param searchCharSequences 需要检查的字符串数组
      * @return 是否包含任意一个字符串
      */
@@ -374,7 +374,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 是否包含字符串
      *
-     * @param str 验证字符串
+     * @param str  验证字符串
      * @param strs 字符串组
      * @return 包含返回true
      */
@@ -447,7 +447,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 查找指定字符串是否匹配指定字符串列表中的任意一个字符串
      *
-     * @param str 指定字符串
+     * @param str  指定字符串
      * @param strs 需要检查的字符串数组
      * @return 是否匹配
      */
@@ -470,7 +470,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * ** 表示任意层路径;
      *
      * @param pattern 匹配规则
-     * @param url 需要匹配的url
+     * @param url     需要匹配的url
      * @return
      */
     public static boolean isMatch(String pattern, String url) {
@@ -486,7 +486,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 数字左边补齐0，使之达到指定长度。注意，如果数字转换为字符串后，长度大于size，则只保留 最后size个字符。
      *
-     * @param num 数字对象
+     * @param num  数字对象
      * @param size 字符串指定长度
      * @return 返回数字的字符串格式，该字符串为指定长度。
      */
@@ -497,9 +497,9 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * 字符串左补齐。如果原始字符串s长度大于size，则只保留最后size个字符。
      *
-     * @param s 原始字符串
+     * @param s    原始字符串
      * @param size 字符串指定长度
-     * @param c 用于补齐的字符
+     * @param c    用于补齐的字符
      * @return 返回指定长度的字符串，由原字符串左补齐或截取得到。
      */
     public static final String padl(final String s, final int size, final char c) {

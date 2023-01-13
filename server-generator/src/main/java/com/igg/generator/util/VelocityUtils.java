@@ -265,7 +265,7 @@ public class VelocityUtils {
     /**
      * 添加字典列表
      *
-     * @param dicts 字典列表
+     * @param dicts   字典列表
      * @param columns 列集合
      */
     public static void addDicts(Set<String> dicts, List<GenTableColumn> columns) {
@@ -281,7 +281,7 @@ public class VelocityUtils {
     /**
      * 获取权限前缀
      *
-     * @param moduleName 模块名称
+     * @param moduleName   模块名称
      * @param businessName 业务名称
      * @return 返回权限前缀
      */

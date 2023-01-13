@@ -79,8 +79,8 @@ public class SysRegisterService {
      * 校验验证码
      *
      * @param username 用户名
-     * @param code 验证码
-     * @param uuid 唯一标识
+     * @param code     验证码
+     * @param uuid     唯一标识
      * @return 结果
      */
     public void validateCaptcha(String username, String code, String uuid) {

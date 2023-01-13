@@ -51,8 +51,8 @@ public class CharsetKit {
     /**
      * 转换字符串的字符集编码
      *
-     * @param source 字符串
-     * @param srcCharset 源字符集，默认ISO-8859-1
+     * @param source      字符串
+     * @param srcCharset  源字符集，默认ISO-8859-1
      * @param destCharset 目标字符集，默认UTF-8
      * @return 转换后的字符集
      */
@@ -63,8 +63,8 @@ public class CharsetKit {
     /**
      * 转换字符串的字符集编码
      *
-     * @param source 字符串
-     * @param srcCharset 源字符集，默认ISO-8859-1
+     * @param source      字符串
+     * @param srcCharset  源字符集，默认ISO-8859-1
      * @param destCharset 目标字符集，默认UTF-8
      * @return 转换后的字符集
      */

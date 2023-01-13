@@ -355,7 +355,7 @@ public class SysRoleServiceImpl implements ISysRoleService {
     /**
      * 批量取消授权用户角色
      *
-     * @param roleId 角色ID
+     * @param roleId  角色ID
      * @param userIds 需要取消授权的用户数据ID
      * @return 结果
      */
@@ -367,7 +367,7 @@ public class SysRoleServiceImpl implements ISysRoleService {
     /**
      * 批量选择授权用户角色
      *
-     * @param roleId 角色ID
+     * @param roleId  角色ID
      * @param userIds 需要授权的用户数据ID
      * @return 结果
      */

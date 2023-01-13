@@ -402,7 +402,7 @@ public class SysMenuServiceImpl implements ISysMenuService {
     /**
      * 根据父节点的ID获取所有子节点
      *
-     * @param list 分类表
+     * @param list     分类表
      * @param parentId 传入的父节点ID
      * @return String
      */
@@ -423,7 +423,7 @@ public class SysMenuServiceImpl implements ISysMenuService {
      * 递归列表
      *
      * @param list 分类表
-     * @param t 子节点
+     * @param t    子节点
      */
     private void recursionFn(List<SysMenu> list, SysMenu t) {
         // 得到子节点列表

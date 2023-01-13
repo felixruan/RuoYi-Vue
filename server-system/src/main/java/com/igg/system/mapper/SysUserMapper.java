@@ -72,7 +72,7 @@ public interface SysUserMapper {
      * 修改用户头像
      *
      * @param userName 用户名
-     * @param avatar 头像地址
+     * @param avatar   头像地址
      * @return 结果
      */
     int updateUserAvatar(@Param("userName") String userName, @Param("avatar") String avatar);

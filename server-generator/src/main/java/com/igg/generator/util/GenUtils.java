@@ -115,7 +115,7 @@ public class GenUtils {
     /**
      * 校验数组是否包含指定值
      *
-     * @param arr 数组
+     * @param arr         数组
      * @param targetValue 值
      * @return 是否包含
      */
@@ -167,7 +167,7 @@ public class GenUtils {
      * 批量替换前缀
      *
      * @param replacementm 替换值
-     * @param searchList 替换列表
+     * @param searchList   替换列表
      * @return
      */
     public static String replaceFirst(String replacementm, String[] searchList) {

@@ -242,7 +242,7 @@ public class SysDeptServiceImpl implements ISysDeptService {
     /**
      * 修改子元素关系
      *
-     * @param deptId 被修改的部门ID
+     * @param deptId       被修改的部门ID
      * @param newAncestors 新的父ID集合
      * @param oldAncestors 旧的父ID集合
      */

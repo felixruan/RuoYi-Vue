@@ -79,7 +79,7 @@ public class SecurityUtils {
     /**
      * 判断密码是否相同
      *
-     * @param rawPassword 真实密码
+     * @param rawPassword     真实密码
      * @param encodedPassword 加密后字符
      * @return 结果
      */

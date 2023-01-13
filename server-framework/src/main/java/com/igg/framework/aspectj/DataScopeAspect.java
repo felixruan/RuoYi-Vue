@@ -79,10 +79,10 @@ public class DataScopeAspect {
     /**
      * 数据范围过滤
      *
-     * @param joinPoint 切点
-     * @param user 用户
-     * @param deptAlias 部门别名
-     * @param userAlias 用户别名
+     * @param joinPoint  切点
+     * @param user       用户
+     * @param deptAlias  部门别名
+     * @param userAlias  用户别名
      * @param permission 权限字符
      */
     public static void dataScopeFilter(JoinPoint joinPoint, SysUser user, String deptAlias, String userAlias, String permission) {

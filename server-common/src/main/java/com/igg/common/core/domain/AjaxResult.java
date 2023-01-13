@@ -40,7 +40,7 @@ public class AjaxResult extends HashMap<String, Object> {
      * 初始化一个新创建的 AjaxResult 对象
      *
      * @param code 状态码
-     * @param msg 返回内容
+     * @param msg  返回内容
      */
     public AjaxResult(int code, String msg) {
         super.put(CODE_TAG, code);
@@ -51,7 +51,7 @@ public class AjaxResult extends HashMap<String, Object> {
      * 初始化一个新创建的 AjaxResult 对象
      *
      * @param code 状态码
-     * @param msg 返回内容
+     * @param msg  返回内容
      * @param data 数据对象
      */
     public AjaxResult(int code, String msg, Object data) {
@@ -93,7 +93,7 @@ public class AjaxResult extends HashMap<String, Object> {
     /**
      * 返回成功消息
      *
-     * @param msg 返回内容
+     * @param msg  返回内容
      * @param data 数据对象
      * @return 成功消息
      */
@@ -114,7 +114,7 @@ public class AjaxResult extends HashMap<String, Object> {
     /**
      * 返回警告消息
      *
-     * @param msg 返回内容
+     * @param msg  返回内容
      * @param data 数据对象
      * @return 警告消息
      */
@@ -144,7 +144,7 @@ public class AjaxResult extends HashMap<String, Object> {
     /**
      * 返回错误消息
      *
-     * @param msg 返回内容
+     * @param msg  返回内容
      * @param data 数据对象
      * @return 错误消息
      */
@@ -156,7 +156,7 @@ public class AjaxResult extends HashMap<String, Object> {
      * 返回错误消息
      *
      * @param code 状态码
-     * @param msg 返回内容
+     * @param msg  返回内容
      * @return 错误消息
      */
     public static AjaxResult error(int code, String msg) {
@@ -166,7 +166,7 @@ public class AjaxResult extends HashMap<String, Object> {
     /**
      * 方便链式调用
      *
-     * @param key 键
+     * @param key   键
      * @param value 值
      * @return 数据对象
      */

@@ -57,7 +57,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
     /**
      * 使用指定的数据构造新的 UUID。
      *
-     * @param mostSigBits 用于 {@code UUID} 的最高有效 64 位
+     * @param mostSigBits  用于 {@code UUID} 的最高有效 64 位
      * @param leastSigBits 用于 {@code UUID} 的最低有效 64 位
      */
     public UUID(long mostSigBits, long leastSigBits) {
@@ -406,7 +406,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
     /**
      * 返回指定数字对应的hex值
      *
-     * @param val 值
+     * @param val    值
      * @param digits 位
      * @return 值
      */

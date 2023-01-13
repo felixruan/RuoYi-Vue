@@ -28,9 +28,9 @@ public class AsyncFactory {
      * 记录登录信息
      *
      * @param username 用户名
-     * @param status 状态
-     * @param message 消息
-     * @param args 列表
+     * @param status   状态
+     * @param message  消息
+     * @param args     列表
      * @return 任务task
      */
     public static TimerTask recordLogininfor(final String username, final String status, final String message,

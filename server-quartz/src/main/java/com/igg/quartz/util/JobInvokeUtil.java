@@ -39,8 +39,8 @@ public class JobInvokeUtil {
     /**
      * 调用任务方法
      *
-     * @param bean 目标对象
-     * @param methodName 方法名称
+     * @param bean         目标对象
+     * @param methodName   方法名称
      * @param methodParams 方法参数
      */
     private static void invokeMethod(Object bean, String methodName, List<Object[]> methodParams)
