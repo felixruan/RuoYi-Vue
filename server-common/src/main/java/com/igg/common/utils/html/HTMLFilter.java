@@ -121,13 +121,13 @@ public final class HTMLFilter {
         vAllowed.put("i", no_atts);
         vAllowed.put("em", no_atts);
 
-        vSelfClosingTags = new String[] { "img" };
-        vNeedClosingTags = new String[] { "a", "b", "strong", "i", "em" };
-        vDisallowed = new String[] {};
-        vAllowedProtocols = new String[] { "http", "mailto", "https" }; // no ftp.
-        vProtocolAtts = new String[] { "src", "href" };
-        vRemoveBlanks = new String[] { "a", "b", "strong", "i", "em" };
-        vAllowedEntities = new String[] { "amp", "gt", "lt", "quot" };
+        vSelfClosingTags = new String[]{"img"};
+        vNeedClosingTags = new String[]{"a", "b", "strong", "i", "em"};
+        vDisallowed = new String[]{};
+        vAllowedProtocols = new String[]{"http", "mailto", "https"}; // no ftp.
+        vProtocolAtts = new String[]{"src", "href"};
+        vRemoveBlanks = new String[]{"a", "b", "strong", "i", "em"};
+        vAllowedEntities = new String[]{"amp", "gt", "lt", "quot"};
         stripComment = true;
         encodeQuotes = true;
         alwaysMakeTags = false;

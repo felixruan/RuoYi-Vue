@@ -40,7 +40,7 @@ public class ReflectUtils {
         Object object = obj;
         for (String name : StringUtils.split(propertyName, ".")) {
             String getterMethodName = GETTER_PREFIX + StringUtils.capitalize(name);
-            object = invokeMethod(object, getterMethodName, new Class[] {}, new Object[] {});
+            object = invokeMethod(object, getterMethodName, new Class[]{}, new Object[]{});
         }
         return (E) object;
     }
@@ -55,10 +55,10 @@ public class ReflectUtils {
         for (int i = 0; i < names.length; i++) {
             if (i < names.length - 1) {
                 String getterMethodName = GETTER_PREFIX + StringUtils.capitalize(names[i]);
-                object = invokeMethod(object, getterMethodName, new Class[] {}, new Object[] {});
+                object = invokeMethod(object, getterMethodName, new Class[]{}, new Object[]{});
             } else {
                 String setterMethodName = SETTER_PREFIX + StringUtils.capitalize(names[i]);
-                invokeMethodByName(object, setterMethodName, new Object[] { value });
+                invokeMethodByName(object, setterMethodName, new Object[]{ value });
             }
         }
     }

@@ -95,7 +95,7 @@ public class ExcelUtil<T> {
 
     public static final String FORMULA_REGEX_STR = "=|-|\\+|@";
 
-    public static final String[] FORMULA_STR = { "=", "-", "+", "@" };
+    public static final String[] FORMULA_STR = {"=", "-", "+", "@"};
 
     /**
      * Excel sheet最大行数，默认65536
@@ -1070,7 +1070,7 @@ public class ExcelUtil<T> {
     public String dataFormatHandlerAdapter(Object value, Excel excel) {
         try {
             Object instance = excel.handler().newInstance();
-            Method formatMethod = excel.handler().getMethod("format", new Class[] { Object.class, String[].class });
+            Method formatMethod = excel.handler().getMethod("format", new Class[]{ Object.class, String[].class });
             value = formatMethod.invoke(instance, value, excel.args());
         } catch (Exception e) {
             log.error("不能格式化数据 " + excel.handler(), e.getMessage());
@@ -1202,7 +1202,7 @@ public class ExcelUtil<T> {
                     Excel attr = field.getAnnotation(Excel.class);
                     if (attr != null && (attr.type() == Type.ALL || attr.type() == type)) {
                         field.setAccessible(true);
-                        fields.add(new Object[] { field, attr });
+                        fields.add(new Object[]{ field, attr });
                     }
                     if (Collection.class.isAssignableFrom(field.getType())) {
                         subMethod = getSubMethod(field.getName(), clazz);
@@ -1219,7 +1219,7 @@ public class ExcelUtil<T> {
                     for (Excel attr : excels) {
                         if (attr != null && (attr.type() == Type.ALL || attr.type() == type)) {
                             field.setAccessible(true);
-                            fields.add(new Object[] { field, attr });
+                            fields.add(new Object[]{ field, attr });
                         }
                     }
                 }
@@ -1423,7 +1423,7 @@ public class ExcelUtil<T> {
     public Collection<?> getListCellValue(Object obj) {
         Object value;
         try {
-            value = subMethod.invoke(obj, new Object[] {});
+            value = subMethod.invoke(obj, new Object[]{});
         } catch (Exception e) {
             return new ArrayList<>();
         }
@@ -1443,7 +1443,7 @@ public class ExcelUtil<T> {
         getMethodName.append(name.substring(1));
         Method method = null;
         try {
-            method = pojoClass.getMethod(getMethodName.toString(), new Class[] {});
+            method = pojoClass.getMethod(getMethodName.toString(), new Class[]{});
         } catch (Exception e) {
             log.error("获取对象异常{}", e.getMessage());
         }
