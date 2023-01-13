@@ -238,7 +238,6 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
      * UnsupportedOperationException。
      *
      * @return 此 {@code UUID} 的时钟序列
-     *
      * @throws UnsupportedOperationException 如果此 UUID 的 version 不为 1
      */
     public int clockSequence() throws UnsupportedOperationException {
@@ -256,7 +255,6 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
      * 如果此 UUID 不是基于时间的 UUID，则此方法抛出 UnsupportedOperationException。
      *
      * @return 此 {@code UUID} 的节点值
-     *
      * @throws UnsupportedOperationException 如果此 UUID 的 version 不为 1
      */
     public long node() throws UnsupportedOperationException {
