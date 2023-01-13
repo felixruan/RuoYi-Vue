@@ -17,10 +17,14 @@ import com.igg.framework.security.context.PermissionContextHolder;
 @Service("ss")
 public class PermissionService {
 
-    /** 所有权限标识 */
+    /**
+     * 所有权限标识
+     */
     private static final String ALL_PERMISSION = "*:*:*";
 
-    /** 管理员角色权限标识 */
+    /**
+     * 管理员角色权限标识
+     */
     private static final String SUPER_ADMIN = "admin";
 
     private static final String ROLE_DELIMETER = ",";

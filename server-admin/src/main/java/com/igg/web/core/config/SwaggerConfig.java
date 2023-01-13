@@ -30,15 +30,21 @@ import springfox.documentation.spring.web.plugins.Docket;
 @Configuration
 public class SwaggerConfig {
 
-    /** 系统基础配置 */
+    /**
+     * 系统基础配置
+     */
     @Resource
     private ProjectConfig projectConfig;
 
-    /** 是否开启swagger */
+    /**
+     * 是否开启swagger
+     */
     @Value("${swagger.enabled}")
     private boolean enabled;
 
-    /** 设置请求的统一前缀 */
+    /**
+     * 设置请求的统一前缀
+     */
     @Value("${swagger.pathMapping}")
     private String pathMapping;
 

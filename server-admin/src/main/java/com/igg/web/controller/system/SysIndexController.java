@@ -14,7 +14,9 @@ import com.igg.common.utils.StringUtils;
 @RestController
 public class SysIndexController {
 
-    /** 系统基础配置 */
+    /**
+     * 系统基础配置
+     */
     @Resource
     private ProjectConfig projectConfig;
 

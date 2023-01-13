@@ -24,10 +24,14 @@ public final class UUID implements java.io.Serializable, Comparable<UUID> {
         static final SecureRandom numberGenerator = getSecureRandom();
     }
 
-    /** 此UUID的最高64有效位 */
+    /**
+     * 此UUID的最高64有效位
+     */
     private final long mostSigBits;
 
-    /** 此UUID的最低64有效位 */
+    /**
+     * 此UUID的最低64有效位
+     */
     private final long leastSigBits;
 
     /**

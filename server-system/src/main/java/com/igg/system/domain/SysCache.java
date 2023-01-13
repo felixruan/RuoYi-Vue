@@ -13,16 +13,24 @@ import com.igg.common.utils.StringUtils;
 @NoArgsConstructor
 public class SysCache {
 
-    /** 缓存名称 */
+    /**
+     * 缓存名称
+     */
     private String cacheName = "";
 
-    /** 缓存键名 */
+    /**
+     * 缓存键名
+     */
     private String cacheKey = "";
 
-    /** 缓存内容 */
+    /**
+     * 缓存内容
+     */
     private String cacheValue = "";
 
-    /** 备注 */
+    /**
+     * 备注
+     */
     private String remark = "";
 
     public SysCache(String cacheName, String remark) {

@@ -36,7 +36,9 @@ import com.igg.system.domain.SysOperLog;
 @Slf4j
 public class LogAspect {
 
-    /** 排除敏感属性字段 */
+    /**
+     * 排除敏感属性字段
+     */
     public static final String[] EXCLUDE_PROPERTIES = { "password", "oldPassword", "newPassword", "confirmPassword" };
 
     /**

@@ -17,10 +17,14 @@ import com.igg.common.core.text.StrFormatter;
  */
 public class StringUtils extends org.apache.commons.lang3.StringUtils {
 
-    /** 空字符串 */
+    /**
+     * 空字符串
+     */
     private static final String NULLSTR = "";
 
-    /** 下划线 */
+    /**
+     * 下划线
+     */
     private static final char SEPARATOR = '_';
 
     /**

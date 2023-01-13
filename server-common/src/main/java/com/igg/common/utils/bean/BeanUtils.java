@@ -13,13 +13,19 @@ import java.util.regex.Pattern;
  */
 public class BeanUtils extends org.springframework.beans.BeanUtils {
 
-    /** Bean方法名中属性名开始的下标 */
+    /**
+     * Bean方法名中属性名开始的下标
+     */
     private static final int BEAN_METHOD_PROP_INDEX = 3;
 
-    /** * 匹配getter方法的正则表达式 */
+    /**
+     * * 匹配getter方法的正则表达式
+     */
     private static final Pattern GET_PATTERN = Pattern.compile("get(\\p{javaUpperCase}\\w*)");
 
-    /** * 匹配setter方法的正则表达式 */
+    /**
+     * * 匹配setter方法的正则表达式
+     */
     private static final Pattern SET_PATTERN = Pattern.compile("set(\\p{javaUpperCase}\\w*)");
 
     /**
