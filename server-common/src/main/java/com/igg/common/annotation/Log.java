@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
  *
  * @author 阮杰辉
  */
-@Target({ ElementType.PARAMETER, ElementType.METHOD })
+@Target({ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Log {

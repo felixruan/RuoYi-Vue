@@ -16,7 +16,7 @@ import java.lang.annotation.Target;
  *
  * @author 阮杰辉
  */
-@Target({ ElementType.METHOD, ElementType.TYPE })
+@Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited

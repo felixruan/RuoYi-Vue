@@ -1070,7 +1070,7 @@ public class ExcelUtil<T> {
     public String dataFormatHandlerAdapter(Object value, Excel excel) {
         try {
             Object instance = excel.handler().newInstance();
-            Method formatMethod = excel.handler().getMethod("format", new Class[]{ Object.class, String[].class });
+            Method formatMethod = excel.handler().getMethod("format", new Class[]{Object.class, String[].class});
             value = formatMethod.invoke(instance, value, excel.args());
         } catch (Exception e) {
             log.error("不能格式化数据 " + excel.handler(), e.getMessage());
@@ -1202,7 +1202,7 @@ public class ExcelUtil<T> {
                     Excel attr = field.getAnnotation(Excel.class);
                     if (attr != null && (attr.type() == Type.ALL || attr.type() == type)) {
                         field.setAccessible(true);
-                        fields.add(new Object[]{ field, attr });
+                        fields.add(new Object[]{field, attr});
                     }
                     if (Collection.class.isAssignableFrom(field.getType())) {
                         subMethod = getSubMethod(field.getName(), clazz);
@@ -1219,7 +1219,7 @@ public class ExcelUtil<T> {
                     for (Excel attr : excels) {
                         if (attr != null && (attr.type() == Type.ALL || attr.type() == type)) {
                             field.setAccessible(true);
-                            fields.add(new Object[]{ field, attr });
+                            fields.add(new Object[]{field, attr});
                         }
                     }
                 }
