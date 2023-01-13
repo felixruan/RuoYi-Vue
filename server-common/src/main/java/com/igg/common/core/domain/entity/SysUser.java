@@ -9,9 +9,9 @@ import com.igg.common.xss.Xss;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.*;
 import java.util.Date;
 import java.util.List;
-import javax.validation.constraints.*;
 
 /**
  * 用户对象 sys_user

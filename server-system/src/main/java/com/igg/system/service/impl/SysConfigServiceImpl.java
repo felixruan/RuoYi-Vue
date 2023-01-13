@@ -13,10 +13,10 @@ import com.igg.system.mapper.SysConfigMapper;
 import com.igg.system.service.ISysConfigService;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * 参数配置 服务层实现

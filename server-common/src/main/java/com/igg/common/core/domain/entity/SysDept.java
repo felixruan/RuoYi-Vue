@@ -3,12 +3,12 @@ package com.igg.common.core.domain.entity;
 import com.igg.common.core.domain.BaseEntity;
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 部门表 sys_dept

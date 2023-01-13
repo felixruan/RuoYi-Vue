@@ -5,8 +5,8 @@ import com.igg.system.mapper.SysLogininforMapper;
 import com.igg.system.service.ISysLogininforService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 系统访问日志情况信息 服务层处理

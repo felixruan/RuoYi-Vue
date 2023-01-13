@@ -16,11 +16,11 @@ import com.igg.system.mapper.SysRoleMapper;
 import com.igg.system.service.ISysDeptService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.annotation.Resource;
 
 /**
  * 部门管理 服务实现

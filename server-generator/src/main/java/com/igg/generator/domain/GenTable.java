@@ -6,9 +6,9 @@ import com.igg.common.utils.StringUtils;
 import lombok.Data;
 import org.apache.commons.lang3.ArrayUtils;
 
-import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 /**
  * 业务表 gen_table

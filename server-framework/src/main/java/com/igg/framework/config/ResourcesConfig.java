@@ -13,8 +13,8 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 通用配置

@@ -9,8 +9,8 @@ import com.igg.system.mapper.SysUserPostMapper;
 import com.igg.system.service.ISysPostService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 岗位信息 服务层处理

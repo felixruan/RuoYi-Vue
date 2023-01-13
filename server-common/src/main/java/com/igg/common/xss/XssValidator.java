@@ -2,10 +2,10 @@ package com.igg.common.xss;
 
 import com.igg.common.utils.StringUtils;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 自定义xss校验注解实现

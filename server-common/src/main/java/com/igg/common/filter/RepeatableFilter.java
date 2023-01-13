@@ -3,7 +3,6 @@ package com.igg.common.filter;
 import com.igg.common.utils.StringUtils;
 import org.springframework.http.MediaType;
 
-import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -11,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 
 /**
  * Repeatable 过滤器

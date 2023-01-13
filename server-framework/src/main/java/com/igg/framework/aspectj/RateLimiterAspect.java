@@ -15,10 +15,10 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.RedisScript;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.List;
-import javax.annotation.Resource;
 
 /**
  * 限流处理

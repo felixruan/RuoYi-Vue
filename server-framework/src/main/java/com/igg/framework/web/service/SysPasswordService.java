@@ -15,8 +15,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 登录密码方法

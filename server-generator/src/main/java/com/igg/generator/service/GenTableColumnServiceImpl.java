@@ -5,8 +5,8 @@ import com.igg.generator.domain.GenTableColumn;
 import com.igg.generator.mapper.GenTableColumnMapper;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 业务字段 服务层实现

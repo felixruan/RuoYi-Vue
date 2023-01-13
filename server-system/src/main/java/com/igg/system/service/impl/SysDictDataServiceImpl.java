@@ -6,8 +6,8 @@ import com.igg.system.mapper.SysDictDataMapper;
 import com.igg.system.service.ISysDictDataService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 字典 业务层处理

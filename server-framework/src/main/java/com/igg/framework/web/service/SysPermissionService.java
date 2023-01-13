@@ -6,10 +6,10 @@ import com.igg.system.service.ISysMenuService;
 import com.igg.system.service.ISysRoleService;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import javax.annotation.Resource;
 
 /**
  * 用户权限处理

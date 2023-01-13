@@ -5,8 +5,8 @@ import com.igg.system.mapper.SysNoticeMapper;
 import com.igg.system.service.ISysNoticeService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 公告 服务层实现

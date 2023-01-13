@@ -9,9 +9,9 @@ import com.igg.common.utils.StringUtils;
 import com.igg.quartz.util.CronUtils;
 import lombok.Data;
 
-import java.util.Date;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 /**
  * 定时任务调度表 sys_job
