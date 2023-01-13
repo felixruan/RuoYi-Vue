@@ -170,6 +170,8 @@ public class FileUploadUtils {
     /**
      * 判断MIME类型是否是允许的MIME类型
      *
+     * @param extension
+     * @param allowedExtension
      * @return
      */
     public static final boolean isAllowedExtension(String extension, String[] allowedExtension) {

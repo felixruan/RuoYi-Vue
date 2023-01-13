@@ -1165,6 +1165,8 @@ public class ExcelUtil<T> {
     /**
      * 以类的属性的get方法方法形式获取值
      *
+     * @param o
+     * @param name
      * @return value
      * @throws Exception
      */

@@ -138,6 +138,7 @@ public class ServletUtils {
     /**
      * 是否是Ajax异步请求
      *
+     * @param request
      */
     public static boolean isAjaxRequest(HttpServletRequest request) {
         String accept = request.getHeader("accept");

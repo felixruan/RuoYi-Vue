@@ -105,6 +105,7 @@ public class RedisCache {
     /**
      * 删除单个对象
      *
+     * @param key
      */
     public boolean deleteObject(final String key) {
         return redisTemplate.delete(key);
@@ -161,6 +162,7 @@ public class RedisCache {
     /**
      * 获得缓存的set
      *
+     * @param key
      * @return
      */
     public <T> Set<T> getCacheSet(final String key) {
@@ -170,6 +172,8 @@ public class RedisCache {
     /**
      * 缓存Map
      *
+     * @param key
+     * @param dataMap
      */
     public <T> void setCacheMap(final String key, final Map<String, T> dataMap) {
         if (dataMap != null) {
@@ -180,6 +184,7 @@ public class RedisCache {
     /**
      * 获得缓存的Map
      *
+     * @param key
      * @return
      */
     public <T> Map<String, T> getCacheMap(final String key) {
