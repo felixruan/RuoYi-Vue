@@ -1,6 +1,7 @@
 package com.igg.common.core.domain.model;
 
 import lombok.Data;
+
 /**
  * 用户注册对象
  *

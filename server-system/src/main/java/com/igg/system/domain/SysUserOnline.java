@@ -1,6 +1,7 @@
 package com.igg.system.domain;
 
 import lombok.Data;
+
 /**
  * 当前在线会话
  *

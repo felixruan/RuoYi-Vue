@@ -1,6 +1,7 @@
 package com.igg.framework.web.domain.server;
 
 import lombok.Data;
+
 /**
  * 系统文件相关信息
  *
