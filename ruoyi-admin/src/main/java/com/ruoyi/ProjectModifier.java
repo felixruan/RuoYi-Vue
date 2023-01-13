@@ -8,8 +8,10 @@ import java.io.File;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -260,13 +262,45 @@ public class ProjectModifier {
             .replaceAll("tablePrefix: sys_", "tablePrefix: cloud_test_");
     }
 
+    private static String replaceContent(String content, String start, String end) {
+        Pattern pattern = Pattern.compile("(?<=" + start + ").*(?=" + end + ")");
+        Matcher matcher = pattern.matcher(content);
+        if (matcher.find()) {
+            String str = matcher.group();
+            return content.replace(str, str.trim());
+        }
+        return content;
+    }
+
     private static String replaceFileContent(String filePath) throws Exception {
-        String content = FileUtils.readFileToString(new File(filePath), Charset.forName("UTF-8"));
+        String content;
+        // 注释格式化及换行替换
+        if (filePath.endsWith(".java")) {
+            List<String> contents = FileUtils.readLines(new File(filePath), Charset.forName("UTF-8"));
+            StringBuffer stringBuffer = new StringBuffer();
+            for (String item : contents) {
+                String text = item.trim();
+                if (text.startsWith("/**") && text.endsWith("*/")) {
+                    int index = item.indexOf("/**");
+                    String space = "";
+                    for (int i = 0; i < index; i++) {
+                        space += " ";
+                    }
+                    String comment = text.substring(3, text.length() - 2).trim();
+                    item = space + "/**\r\n" + space + " * " + comment + "\r\n" + space + " */";
+                }
+                stringBuffer.append(item + "\r\n");
+            }
+            content = stringBuffer.toString();
+        } else {
+            content = FileUtils.readFileToString(new File(filePath), Charset.forName("UTF-8"));
+        }
         // 统一处理空格
         content = content
             .replaceAll("\t","    ")  // 去除末尾的空格
             .replaceAll(" \\s+\r\n","\r\n")  // 去除末尾的空格
             .replaceAll(" \r\n","\r\n")  // 去除末尾的空格
+            //.replaceAll(";\r\n    /\\*\\*",";\r\n\r\n    /**")
         ;
         // 去除模块引入的pom
         if (filePath.equals(projectBaseDir + separator + "pom.xml")) {
@@ -579,17 +613,20 @@ public class ProjectModifier {
                 // 构造函数替换
                 String noConstruct1 = "    public " + claasName + "() {\r\n    }\r\n\r\n";
                 String noConstruct2 = "    public " + claasName + "() {\r\n\r\n    }\r\n\r\n";
+                // 是否包含import，不包含则需要换行
+                String importLine = content.contains("\r\nimport ") ? "" : "\r\n";
                 if (content.contains(noConstruct1) || content.contains(noConstruct2)) {
                     content = content.replace(noConstruct1, "")
                                     .replace(noConstruct2, "");
                     content = content
-                            .replaceFirst(";\r\n", ";\r\n\r\nimport lombok.Data;\r\nimport lombok.NoArgsConstructor;")
+                            .replaceFirst(";\r\n", ";\r\n\r\nimport lombok.Data;\r\nimport lombok.NoArgsConstructor;" + importLine)
                             .replaceAll("\r\npublic class", "\r\n@Data\r\n@NoArgsConstructor\r\npublic class");
                 } else {
                     content = content
-                            .replaceFirst(";\r\n", ";\r\n\r\nimport lombok.Data;")
+                            .replaceFirst(";\r\n", ";\r\n\r\nimport lombok.Data;" + importLine)
                             .replaceAll("\r\npublic class", "\r\n@Data\r\npublic class");
                 }
+
                 // 使用反射获取所有的属性
                 Class clazz = Class.forName(packageName + "." + claasName);
                 Field[] fields = clazz.getDeclaredFields();
@@ -633,6 +670,136 @@ public class ProjectModifier {
                             .replaceAll("    public String toString[(][)] \\{[^\\}]+\\}\r\n\r\n", "");
                 }
             }
+        }
+        // import导入和注释处理
+        if (filePath.endsWith(".java")) {
+            // 替换格式
+            content = content
+                    // 替换注释换行格式
+                    .replace("*\r\n     */", "*/")
+                    .replace("*\r\n */", "*/")
+                    .replace("** @return", "* @return")
+                    // .replace("*\r\n     * @return", "* @return")
+                    // 替换大括号格式
+                    .replace("{ \"", "{\"")
+                    .replace("\" }", "\"}")
+                    // 替换对象new
+                    .replace("[] {", "[]{")
+            ;
+            // 按行读取
+            String[] contents = content.split("\r\n");
+            StringBuffer stringBuffer = new StringBuffer();
+            StringBuffer beforeImport = new StringBuffer();
+            StringBuffer afterImport = new StringBuffer();
+            List<String> repImports = new ArrayList<>();
+            List<String> javaImports = new ArrayList<>();
+            List<String> javaxImports = new ArrayList<>();
+            for (int i = 0; i < contents.length; i++) {
+                String item = contents[i];
+                if (item.startsWith("import")) {
+                    item = item.replaceAll("\\.", "1111").replaceAll(";", "0000");
+                    if (item.startsWith("import javax")) {
+                        javaxImports.add(item);
+                    } else if (item.startsWith("import java")) {
+                        javaImports.add(item);
+                    } else {
+                        repImports.add(item);
+                    }
+                    continue;
+                }
+                // 替换大括号空格
+                item = replaceContent(item, " = \\{", "\\}\\)");
+                item = replaceContent(item, "@Target\\(\\{", "\\}\\)");
+                item = replaceContent(item, "\\[\\]\\{", "\\}");
+                // 处理注释
+                String text = item.trim();
+                if (text.startsWith("* @param ")) {
+                    String paramComment = text.substring(9);
+                    int paramIndex = paramComment.indexOf(" ");
+                    if (paramIndex < 0) {
+                        // 不包含注释直接返回
+                        afterImport.append(item + "\r\n");
+                        continue;
+                    }
+                    String param = paramComment.substring(0, paramIndex);
+                    String comment = paramComment.substring(paramIndex).trim();
+                    int paramLength = param.length();
+                    int maxLength = paramLength;
+                    // 往前找所有的参数
+                    for (int j = i - 1; j > 0; j--) {
+                        String beforeText = contents[j].trim();
+                        if (beforeText.startsWith("* @param ")) {
+                            String beforeParamComment = beforeText.substring(9);
+                            String beforeParam = beforeParamComment.substring(0, beforeParamComment.indexOf(" "));
+                            int beforeLength = beforeParam.length();
+                            if (beforeLength > maxLength) {
+                                maxLength = beforeLength;
+                            }
+                        } else {
+                            if (j == i - 1) {
+                                // 参数前面要换行
+                                if (!beforeText.equals("*")) {
+                                    afterImport.append("     *\r\n");
+                                }
+                            }
+                            break;
+                        }
+                    }
+                    // 往后找所有的参数
+                    for (int j = i + 1; j < contents.length; j++) {
+                        String afterText = contents[j].trim();
+                        if (afterText.startsWith("* @param ")) {
+                            String afterParamComment = afterText.substring(9);
+                            String afterParam = afterParamComment.substring(0, afterParamComment.indexOf(" "));
+                            int afterLength = afterParam.length();
+                            if (afterLength > maxLength) {
+                                maxLength = afterLength;
+                            }
+                        } else {
+                            break;
+                        }
+                    }
+                    String space = " ";
+                    if (paramLength != maxLength) {
+                        for (int j = 0; j < maxLength - paramLength; j++) {
+                            space += " ";
+                        }
+                    }
+                    // item = item.replaceFirst(text, "\\* @param " + param + space + comment);
+                    item = "     * @param " + param + space + comment;
+                } else if (text.equals("*")) {
+                    String lastText = contents[i - 1].trim();
+                    String nextText = contents[i + 1].trim();
+                    if ((lastText.startsWith("* @param") && nextText.startsWith("* @return")) ||
+                            (lastText.startsWith("* @return") && nextText.startsWith("* @throws"))) {
+                        continue;
+                    }
+                }
+                if (repImports.size() > 0 || javaxImports.size() > 0 || javaImports.size() > 0) {
+                    afterImport.append(item + "\r\n");
+                } else {
+                    beforeImport.append(item + "\r\n");
+                }
+            }
+            Collections.sort(repImports);
+            Collections.sort(javaxImports);
+            Collections.sort(javaImports);
+            for (String item : repImports) {
+                item = item.replaceAll("1111", ".").replaceAll("0000", ";");
+                stringBuffer.append(item + "\r\n");
+            }
+            if (repImports.size() > 0 && (javaxImports.size() > 0 || javaImports.size() > 0)) {
+                stringBuffer.append("\r\n");
+            }
+            for (String item : javaxImports) {
+                item = item.replaceAll("1111", ".").replaceAll("0000", ";");
+                stringBuffer.append(item + "\r\n");
+            }
+            for (String item : javaImports) {
+                item = item.replaceAll("1111", ".").replaceAll("0000", ";");
+                stringBuffer.append(item + "\r\n");
+            }
+            content = beforeImport + stringBuffer.toString() + afterImport;
         }
         return content
             .replaceAll(PACKAGE_NAME, packageNameNew)
