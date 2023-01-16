@@ -31,12 +31,11 @@ public interface MyBatisPlusMapper<T, V> extends BaseMapper<T> {
         return (Class<V>) ReflectionKit.getSuperClassGenericType(this.getClass(), MyBatisPlusMapper.class, 1);
     }
 
-    default V select(Serializable id) {
-        T result = selectById(id);
-        return BeanUtil.toBean(result, currentVoClass());
+    default V getById(Serializable id) {
+        return BeanUtil.toBean(selectById(id), currentVoClass());
     }
 
-    default List<V> selectList(BaseEntity ro) {
+    default List<V> getList(BaseEntity ro) {
         Map<String, Object> beanMap = BeanUtil.beanToMap(ro, new HashMap<>(), copyOptions);
         List<T> list = selectByMap(beanMap);
         if (CollUtil.isEmpty(list)) {

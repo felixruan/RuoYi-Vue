@@ -55,5 +55,4 @@ public class ${ClassName}RO extends ${Entity} {
 
 #end
 #end
-
 }

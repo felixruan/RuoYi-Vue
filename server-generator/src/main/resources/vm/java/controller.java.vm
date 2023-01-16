@@ -13,6 +13,7 @@ import com.igg.common.core.page.TableDataInfo;
 import com.igg.common.enums.BusinessType;
 import com.igg.common.utils.poi.ExcelUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,6 +33,7 @@ import java.util.List;
  * @author ${author}
  * @date ${datetime}
  */
+@Validated
 @RestController
 @RequestMapping("/${moduleName}/${businessName}")
 public class ${ClassName}Controller extends BaseController {
@@ -84,7 +86,7 @@ public class ${ClassName}Controller extends BaseController {
     @PreAuthorize("@ss.hasPermi('${permissionPrefix}:add')")
     @Log(title = "${functionName}", businessType = BusinessType.INSERT)
     @PostMapping
-    public AjaxResult add(@RequestBody ${ClassName}RO ${className}RO) {
+    public AjaxResult add(@Validated @RequestBody ${ClassName}RO ${className}RO) {
         return toAjax(${className}Service.insert${ClassName}(${className}RO));
     }
 
@@ -94,7 +96,7 @@ public class ${ClassName}Controller extends BaseController {
     @PreAuthorize("@ss.hasPermi('${permissionPrefix}:edit')")
     @Log(title = "${functionName}", businessType = BusinessType.UPDATE)
     @PutMapping
-    public AjaxResult edit(@RequestBody ${ClassName}RO ${className}RO) {
+    public AjaxResult edit(@Validated @RequestBody ${ClassName}RO ${className}RO) {
         return toAjax(${className}Service.update${ClassName}(${className}RO));
     }
 
