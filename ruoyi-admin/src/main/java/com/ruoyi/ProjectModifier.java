@@ -253,7 +253,11 @@ public class ProjectModifier {
                 .replaceAll("    mapperLocations:", "  mapperLocations:")
                 .replaceAll("    # 加载全局的配置文件", "  # 加载全局的配置文件")
                 .replaceAll("    configLocation: classpath:mybatis/mybatis-config.xml",
-                        "  global-config:\r\n    db-config:\r\n      id-type: AUTO")
+                        "  global-config:\r\n    dbConfig:\r\n      # 主键类型\r\n      idType: AUTO\r\n" +
+                                "  configuration:\r\n    # 自动驼峰命名规则映射\r\n    mapUnderscoreToCamelCase: true")
+                // 缓存配置处理
+                .replaceAll("  # redis 配置", "  # cache 配置\r\n  cache:\r\n    type: REDIS\r\n" +
+                        "    redis:\r\n      time-to-live: 1h\r\n  # redis 配置")
                 // redis配置处理
                 .replaceAll("host: localhost", "host: 10.0.16.87")
                 .replaceAll("database: 0", "database: 3")
