@@ -67,6 +67,11 @@ spring:
     restart:
       # 热部署开关
       enabled: true
+  # cache 配置
+  cache:
+    type: REDIS
+    redis:
+      time-to-live: 1h
   # redis 配置
   redis:
     # 地址
@@ -107,8 +112,12 @@ mybatis-plus:
   mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 加载全局的配置文件
   global-config:
-    db-config:
-      id-type: AUTO
+    dbConfig:
+      # 主键类型
+      idType: AUTO
+  configuration:
+    # 自动驼峰命名规则映射
+    mapUnderscoreToCamelCase: true
 
 # PageHelper分页插件
 pagehelper:
