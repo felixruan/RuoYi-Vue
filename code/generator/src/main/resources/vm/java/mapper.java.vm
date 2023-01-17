@@ -1,0 +1,14 @@
+package ${packageName}.mapper;
+
+import ${packageName}.domain.${ClassName};
+import ${packageName}.domain.vo.${ClassName}VO;
+import com.igg.framework.mybatis.MyBatisPlusMapper;
+
+/**
+ * ${functionName}Mapper接口
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface ${ClassName}Mapper extends MyBatisPlusMapper<${ClassName}, ${ClassName}VO> {
+}

@@ -30,7 +30,7 @@ public class ProjectModifier {
     private static final String PACKAGE_NAME = "com.ruoyi";
     private static final String TITLE = "若依管理系统";
     private static final String VERSION = "3.8.5";
-    private static final String projectBaseDir = "D:\\code\\ruoyi\\RuoYi-Vue";
+    private static final String projectBaseDir = "D:\\environment\\project\\RuoYi-Vue";
 
     private static final String groupIdNew = "com.igg.cloudtest";
     private static final String artifactIdNew = "server";
@@ -93,6 +93,13 @@ public class ProjectModifier {
             }
             FileUtils.write(new File(newPath), content, Charset.forName("UTF-8"));
         }
+        // 拷贝代码文件
+        FileUtils.copyDirectory(new File(projectBaseDir + separator + "code" + separator + "common"),
+                new File(projectBaseDirNew + separator + artifactIdNew + "-common"));
+        FileUtils.copyDirectory(new File(projectBaseDir + separator + "code" + separator + "framework"),
+                new File(projectBaseDirNew + separator + artifactIdNew + "-framework"));
+        FileUtils.copyDirectory(new File(projectBaseDir + separator + "code" + separator + "generator"),
+                new File(projectBaseDirNew + separator + artifactIdNew + "-generator"));
         // System.out.println(files.size());
         log.info("[main][重写完成]共耗时：{} 毫秒", (System.currentTimeMillis() - start));
     }
@@ -118,6 +125,7 @@ public class ProjectModifier {
                         && !file.getPath().endsWith("ProjectModifier.java")
                         && !file.getPath().endsWith("MyBatisConfig.java")  // 去除mybatis配置
                         && !file.getPath().contains(separator + "vue" + separator + "v3" + separator)
+                        && !file.getPath().startsWith(projectBaseDir + separator + "code")  // code不引入
                         && !file.getPath().startsWith(projectBaseDir + separator + "ruoyi-ui" + separator)  // UI暂时不导入
                         && !file.getPath().startsWith(projectBaseDir + separator + "ruoyi-generator" + separator +
                         "src" + separator + "main" + separator + "resources" + separator + "vm" + separator)  // vm不导入
@@ -433,7 +441,7 @@ public class ProjectModifier {
         } else if (filePath.equals(projectBaseDir + separator + "ruoyi-common" + separator + "pom.xml")) {
             content = content
                     // 新增依赖
-                    .replaceFirst("</dependencies>\r\n",
+                    .replaceFirst("</dependencies>",
                             "    <dependency>\r\n" +
                                     "            <groupId>cn.hutool</groupId>\r\n" +
                                     "            <artifactId>hutool-all</artifactId>\r\n" +
@@ -446,7 +454,22 @@ public class ProjectModifier {
                                     "            <groupId>com.baomidou</groupId>\r\n" +
                                     "            <artifactId>mybatis-plus-extension</artifactId>\r\n" +
                                     "        </dependency>\r\n\r\n" +
-                                    "    </dependencies>\r\n");
+                                    "    </dependencies>");
+        } else if (filePath.equals(projectBaseDir + separator + "ruoyi-framework" + separator + "pom.xml")) {
+            content = content
+                    // 新增依赖
+                    .replaceFirst("</dependencies>",
+                            "    <!-- Websocket -->\r\n" +
+                                    "        <dependency>\n" +
+                                    "            <groupId>org.springframework.boot</groupId>\r\n" +
+                                    "            <artifactId>spring-boot-starter-websocket</artifactId>\r\n" +
+                                    "        </dependency>\r\n\r\n" +
+                                    "        <!-- Cache -->\r\n" +
+                                    "        <dependency>\r\n" +
+                                    "            <groupId>org.springframework.boot</groupId>\r\n" +
+                                    "            <artifactId>spring-boot-starter-cache</artifactId>\r\n" +
+                                    "        </dependency>\r\n\r\n" +
+                                    "    </dependencies>");
         }
         // 替换pom文件
         if (filePath.endsWith("pom.xml")) {
@@ -831,7 +854,7 @@ public class ProjectModifier {
 
     private static String buildNewFilePath(File file) {
         return file.getPath().replace(projectBaseDir, projectBaseDirNew) // 新目录
-                .replace("ruoyi-", "server-")
+                .replace("ruoyi-", artifactIdNew + "-")
                 .replace("sql" + separator + "quartz.sql", "script" + separator + "sql" + separator + "quartz.sql")
                 .replace("sql" + separator + "ry_20220822.sql", "script" + separator + "sql" + separator + "mysql.sql")
                 .replace("RuoYiConfig", "ProjectConfig")

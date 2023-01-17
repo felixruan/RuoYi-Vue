@@ -1,0 +1,46 @@
+package ${packageName}.domain;
+
+import com.igg.common.core.domain.BaseEntity;
+import com.igg.common.annotation.Excel;
+#foreach ($import in $subImportList)
+import ${import};
+#end
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+/**
+ * ${subTable.functionName}对象 ${subTableName}
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class ${subClassName}DTO extends BaseEntity {
+
+    private static final long serialVersionUID = 1L;
+
+#foreach ($column in $subTable.columns)
+#if(!$table.isSuperColumn($column.javaField))
+    /** $column.columnComment */
+#if($column.list)
+#set($parentheseIndex=$column.columnComment.indexOf("（"))
+#if($parentheseIndex != -1)
+#set($comment=$column.columnComment.substring(0, $parentheseIndex))
+#else
+#set($comment=$column.columnComment)
+#end
+#if($parentheseIndex != -1)
+    @Excel(name = "${comment}", readConverterExp = "$column.readConverterExp()")
+#elseif($column.javaType == 'Date')
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Excel(name = "${comment}", width = 30, dateFormat = "yyyy-MM-dd")
+#else
+    @Excel(name = "${comment}")
+#end
+#end
+    private $column.javaType $column.javaField;
+
+#end
+#end
+}

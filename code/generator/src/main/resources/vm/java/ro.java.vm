@@ -1,0 +1,58 @@
+package ${packageName}.domain.ro;
+
+#if($table.crud || $table.sub)
+import com.igg.common.core.domain.BaseEntity;
+#elseif($table.tree)
+import com.igg.common.core.domain.TreeEntity;
+#end
+import com.igg.common.core.validate.AddGroup;
+import com.igg.common.core.validate.EditGroup;
+#foreach ($import in $importList)
+import ${import};
+#end
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import javax.validation.constraints.*;
+import java.util.Date;
+
+/**
+ * ${functionName}请求对象
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+#if($table.crud || $table.sub)
+#set($Entity="BaseEntity")
+#elseif($table.tree)
+#set($Entity="TreeEntity<${ClassName}RO>")
+#end
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class ${ClassName}RO extends ${Entity} {
+
+#foreach ($column in $columns)
+#if(!$table.isSuperColumn($column.javaField) && ($column.query || $column.isInsert || $column.isEdit))
+    /**
+     * $column.columnComment
+     */
+#if($column.isInsert && $column.isEdit)
+#set($Group="AddGroup.class, EditGroup.class")
+#elseif($column.isInsert)
+#set($Group="AddGroup.class")
+#elseif($column.isEdit)
+#set($Group="EditGroup.class")
+#end
+#if($column.isRequired == 1)
+#if($column.javaType == 'String')
+    @NotBlank(message = "$column.columnComment不能为空", groups = { $Group })
+#else
+    @NotNull(message = "$column.columnComment不能为空", groups = { $Group })
+#end
+#end
+    private $column.javaType $column.javaField;
+
+#end
+#end
+}

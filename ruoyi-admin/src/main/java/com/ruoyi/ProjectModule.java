@@ -13,7 +13,7 @@ public class ProjectModule {
 
     private static Logger log = LoggerFactory.getLogger(ProjectModule.class);
 
-    private static final String projectBaseDir = "D:\\code\\ruoyi\\RuoYi-Vue-New"; // 一键改名后，“新”项目所在的目录
+    private static final String projectBaseDir = "D:\\environment\\project\\ict-platform-server"; // 一键改名后，“新”项目所在的目录
 
     public static void main(String[] args) throws Exception {
         long start = System.currentTimeMillis();
