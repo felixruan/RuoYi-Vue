@@ -124,6 +124,7 @@ public class ProjectModifier {
                         && !file.getPath().endsWith("ProjectModule.java")
                         && !file.getPath().endsWith("ProjectModifier.java")
                         && !file.getPath().endsWith("MyBatisConfig.java")  // 去除mybatis配置
+                        && !file.getPath().endsWith("BeanUtils.java")  // 去除BeanUtils工具类
                         && !file.getPath().contains(separator + "vue" + separator + "v3" + separator)
                         && !file.getPath().startsWith(projectBaseDir + separator + "code")  // code不引入
                         && !file.getPath().startsWith(projectBaseDir + separator + "ruoyi-ui" + separator)  // UI暂时不导入
@@ -312,7 +313,6 @@ public class ProjectModifier {
                 .replaceAll("\t", "    ")  // 去除末尾的空格
                 .replaceAll(" \\s+\r\n", "\r\n")  // 去除末尾的空格
                 .replaceAll(" \r\n", "\r\n")  // 去除末尾的空格
-        //.replaceAll(";\r\n    /\\*\\*",";\r\n\r\n    /**")
         ;
         // 去除模块引入的pom
         if (filePath.equals(projectBaseDir + separator + "pom.xml")) {
@@ -547,11 +547,6 @@ public class ProjectModifier {
                                         "            fileName = StringUtils.format(\"{}/views/{}/{}/modules/CreateSubForm.vue\", vuePath, moduleName, businessName);\r\n" +
                                         "        } else ");
             }
-            // 处理BeanUtils类废弃
-            else if (filePath.endsWith("BeanUtils.java")) {
-                content = content
-                        .replaceFirst("public class BeanUtils", "@Deprecated\r\npublic class BeanUtils");
-            }
             // 处理FastJson2JsonRedisSerializer类型处理
             else if (filePath.endsWith("FastJson2JsonRedisSerializer.java")) {
                 content = content
@@ -623,6 +618,13 @@ public class ProjectModifier {
                     content = content
                             .replaceAll("    p.*? Logger log =.*?;\r\n", "");
                 }
+            }
+            // 替换BeanUtil工具
+            if (content.contains("common.utils.bean.BeanUtils;")) {
+                content = content
+                        .replaceAll("common\\.utils\\.bean\\.BeanUtils;", "common.utils.bean.BeanUtil;")
+                        .replaceAll("BeanUtil\\.copyBeanProp\\(sysJob, context.getMergedJobDataMap\\(\\)\\.get\\(ScheduleConstants.TASK_PROPERTIES\\)\\);",
+                                "BeanUtil.copyProperties(context.getMergedJobDataMap().get(ScheduleConstants.TASK_PROPERTIES), sysJob);");
             }
             // 类大括号之间的换行处理
             int firstPublic = content.indexOf("\r\npublic ");
