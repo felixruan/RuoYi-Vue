@@ -520,6 +520,23 @@ public class ProjectModifier {
                                         "            fileName = StringUtils.format(\"{}/views/{}/{}/modules/CreateSubForm.vue\", vuePath, moduleName, businessName);\r\n" +
                                         "        } else ");
             }
+            // 处理BeanUtils类废弃
+            else if (filePath.endsWith("BeanUtils.java")) {
+                content = content
+                        .replaceFirst("public class BeanUtils", "@Deprecated\r\npublic class BeanUtils");
+            }
+            // 处理FastJson2JsonRedisSerializer类型处理
+            else if (filePath.endsWith("FastJson2JsonRedisSerializer.java")) {
+                content = content
+                        .replaceFirst("return JSON.toJSONString\\(t, JSONWriter\\.Feature\\.WriteClassName\\)\\.getBytes\\(DEFAULT_CHARSET\\);",
+                                "if (t instanceof String) return (((String) t).replaceAll(\"\\\\\"\", \"\\\\\\\\\\\\\\\\\\\\\"\")).getBytes(DEFAULT_CHARSET);\r\n" +
+                                        "        else if (t instanceof java.util.Set) return JSON.toJSONString(t, \"millis\").getBytes(DEFAULT_CHARSET);\r\n" +
+                                        "        else if (t instanceof java.util.Date) return String.valueOf(((java.util.Date) t).getTime()).getBytes(DEFAULT_CHARSET);\r\n" +
+                                        "        return JSON.toJSONString(t, \"millis\", JSONWriter.Feature.WriteClassName).getBytes(DEFAULT_CHARSET);")
+                        .replaceFirst("\r\n        return JSON.parseObject\\(str, clazz, JSONReader\\.Feature\\.SupportAutoType\\);",
+                                "        if (bytes[0] != '{' && bytes[0] != '[') str = \"\\\\\"\" + str + \"\\\\\"\";\r\n" +
+                                        "        return JSON.parseObject(str, clazz, \"millis\", JSONReader.Feature.SupportAutoType);");
+            }
             // 替换@Autowired为@Resource
             if (content.contains("import javax.annotation.Resource;")) {
                 content = content
