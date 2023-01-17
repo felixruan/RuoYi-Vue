@@ -29,8 +29,7 @@ public class MyBatisPlusMetaObjectHandler implements MetaObjectHandler {
                 Date current = ObjectUtil.isNotEmpty(baseEntity.getCreateTime()) ? baseEntity.getCreateTime() : new Date();
                 baseEntity.setCreateTime(current);
                 baseEntity.setUpdateTime(current);
-                String username = StringUtils.isNotBlank(baseEntity.getCreateBy()) ?
-                        baseEntity.getCreateBy() : getLoginUsername();
+                String username = StringUtils.isNotBlank(baseEntity.getCreateBy()) ? baseEntity.getCreateBy() : getLoginUsername();
                 // 当前已登录 且 创建人为空 则填充
                 baseEntity.setCreateBy(username);
                 // 当前已登录 且 更新人为空 则填充
@@ -69,7 +68,7 @@ public class MyBatisPlusMetaObjectHandler implements MetaObjectHandler {
         try {
             loginUser = SecurityUtils.getLoginUser();
         } catch (Exception e) {
-            log.warn("自动注入警告 => 用户未登录");
+            // log.warn("自动注入警告 => 用户未登录");
             return null;
         }
         return loginUser.getUsername();

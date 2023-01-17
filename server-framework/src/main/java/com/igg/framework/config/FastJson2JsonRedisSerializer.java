@@ -29,7 +29,10 @@ public class FastJson2JsonRedisSerializer<T> implements RedisSerializer<T> {
         if (t == null) {
             return new byte[0];
         }
-        return JSON.toJSONString(t, JSONWriter.Feature.WriteClassName).getBytes(DEFAULT_CHARSET);
+        if (t instanceof String) return (((String) t).replaceAll("\"", "\\\\\"")).getBytes(DEFAULT_CHARSET);
+        else if (t instanceof java.util.Set) return JSON.toJSONString(t, "millis").getBytes(DEFAULT_CHARSET);
+        else if (t instanceof java.util.Date) return String.valueOf(((java.util.Date) t).getTime()).getBytes(DEFAULT_CHARSET);
+        return JSON.toJSONString(t, "millis", JSONWriter.Feature.WriteClassName).getBytes(DEFAULT_CHARSET);
     }
 
     @Override
@@ -38,8 +41,8 @@ public class FastJson2JsonRedisSerializer<T> implements RedisSerializer<T> {
             return null;
         }
         String str = new String(bytes, DEFAULT_CHARSET);
-
-        return JSON.parseObject(str, clazz, JSONReader.Feature.SupportAutoType);
+        if (bytes[0] != '{' && bytes[0] != '[') str = "\"" + str + "\"";
+        return JSON.parseObject(str, clazz, "millis", JSONReader.Feature.SupportAutoType);
     }
 
 }

@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
  *
  * @author 阮杰辉
  */
+@Deprecated
 public class BeanUtils extends org.springframework.beans.BeanUtils {
 
     /**
