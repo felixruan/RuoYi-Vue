@@ -81,11 +81,11 @@ public class ProjectModifier {
             } else if (filePath.endsWith("SwaggerConfig.java")) {
                 String mvcPath = newPath.replace("SwaggerConfig.java", "WebMvcConfiguration.java");
                 String mvcContent = "package com.igg.web.core.config;\r\n\r\n" +
-                    "import org.springframework.context.annotation.Configuration;\r\n" +
-                    "import org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration;\r\n\r\n" +
-                    "@Configuration\r\n" +
-                    "public class WebMvcConfiguration extends DelegatingWebMvcConfiguration {\r\n" +
-                    "}\r\n";
+                        "import org.springframework.context.annotation.Configuration;\r\n" +
+                        "import org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration;\r\n\r\n" +
+                        "@Configuration\r\n" +
+                        "public class WebMvcConfiguration extends DelegatingWebMvcConfiguration {\r\n" +
+                        "}\r\n";
                 FileUtils.write(new File(mvcPath), mvcContent, Charset.forName("UTF-8"));
                 content = replaceFileContent(filePath);
             } else {
@@ -120,13 +120,13 @@ public class ProjectModifier {
                         && !file.getPath().contains(separator + "vue" + separator + "v3" + separator)
                         && !file.getPath().startsWith(projectBaseDir + separator + "ruoyi-ui" + separator)  // UI暂时不导入
                         && !file.getPath().startsWith(projectBaseDir + separator + "ruoyi-generator" + separator +
-                            "src" + separator + "main" + separator + "resources" + separator + "vm" + separator)  // vm不导入
+                        "src" + separator + "main" + separator + "resources" + separator + "vm" + separator)  // vm不导入
                         && !file.getPath().startsWith(projectBaseDir + separator + "ruoyi-quartz" + separator +
-                            "src" + separator + "main" + separator + "java" + separator + "com" + separator +
-                            "ruoyi" + separator+ "quartz" + separator + "task" + separator)  // task的测试代码不导入
+                        "src" + separator + "main" + separator + "java" + separator + "com" + separator +
+                        "ruoyi" + separator + "quartz" + separator + "task" + separator)  // task的测试代码不导入
                         && !file.getPath().startsWith(projectBaseDir + separator + "ruoyi-quartz" + separator +
-                            "src" + separator + "main" + separator + "java" + separator + "com" + separator +
-                            "ruoyi" + separator+ "quartz" + separator + "config" + separator)  // 单机模式删除
+                        "src" + separator + "main" + separator + "java" + separator + "com" + separator +
+                        "ruoyi" + separator + "quartz" + separator + "config" + separator)  // 单机模式删除
                         && !file.getPath().startsWith(projectBaseDir + separator + "bin")
                         && !file.getPath().startsWith(projectBaseDir + separator + "doc")
                         && !file.getPath().equals(projectBaseDir + separator + "ry.bat")
@@ -143,9 +143,9 @@ public class ProjectModifier {
             if (item.startsWith("insert into sys_dept values")) {
                 if (item.startsWith("insert into sys_dept values(100")) {
                     item = item.replace("'若依科技'", "'IGG集团'")
-                        .replace("'若依'", "'系统管理员'")
-                        .replace("'15888888888'", "'18850498845'")
-                        .replace("'ry@qq.com'", "'jiehui.ruan@igg.com'");
+                            .replace("'若依'", "'系统管理员'")
+                            .replace("'15888888888'", "'18850498845'")
+                            .replace("'ry@qq.com'", "'jiehui.ruan@igg.com'");
                 } else {
                     continue;
                 }
@@ -153,9 +153,9 @@ public class ProjectModifier {
             if (item.startsWith("insert into sys_user values")) {
                 if (item.startsWith("insert into sys_user values(1")) {
                     item = item.replace("'若依'", "'阮杰辉'")
-                        .replace("'ry@163.com'", "'jiehui.ruan@igg.com'")
-                        .replace("'15888888888'", "'18850498845'")
-                        .replace("103,", "100,");
+                            .replace("'ry@163.com'", "'jiehui.ruan@igg.com'")
+                            .replace("'15888888888'", "'18850498845'")
+                            .replace("103,", "100,");
                 } else {
                     continue;
                 }
@@ -185,81 +185,81 @@ public class ProjectModifier {
     private static String replaceYmlContent(String filePath, String newPath) throws Exception {
         String content = FileUtils.readFileToString(new File(filePath), Charset.forName("UTF-8"));
         content = content
-            .replaceAll("login-username: ruoyi","login-username: admin")
-            .replaceAll("login-password: 123456","login-password: igg123456")
-            // 替换空格
-            .replaceAll("params: count=countSql ","params: count=countSql")
-            .replaceAll(" \\s+\r\n","\r\n")  // 去除末尾的空格
-            .replaceAll(" \r\n","\r\n")  // 去除末尾的空格
-            .replaceAll(PACKAGE_NAME, packageNameNew);
+                .replaceAll("login-username: ruoyi", "login-username: admin")
+                .replaceAll("login-password: 123456", "login-password: igg123456")
+                // 替换空格
+                .replaceAll("params: count=countSql ", "params: count=countSql")
+                .replaceAll(" \\s+\r\n", "\r\n")  // 去除末尾的空格
+                .replaceAll(" \r\n", "\r\n")  // 去除末尾的空格
+                .replaceAll(PACKAGE_NAME, packageNameNew);
         if (!content.endsWith("\r\n")) content += "\r\n";
         // 替换yml代码
         if (newPath.endsWith("application-dev.yml")) {
             content = content + "\r\nspringfox:\r\n  documentation:\r\n    enabled: true\r\n";
             return content
-                .replaceAll("    ","  ")  // 去除末尾的空格
-                //.replaceAll("enabled: true", "enabled: false")
-                .replaceAll("url: jdbc:mysql://localhost:3306/ry-vue", "url: jdbc:mysql://10.0.16.219:3306/igg_cloud_test_v3")
-                // .replaceAll("username: root", "username: root")
-                .replaceAll("password: password", "password: igg123456")
-                .replaceAll("host: localhost", "host: 10.0.16.88")
-                .replaceAll("database: 0", "database: 3");
+                    .replaceAll("    ", "  ")  // 去除末尾的空格
+                    //.replaceAll("enabled: true", "enabled: false")
+                    .replaceAll("url: jdbc:mysql://localhost:3306/ry-vue", "url: jdbc:mysql://10.0.16.219:3306/igg_cloud_test_v3")
+                    // .replaceAll("username: root", "username: root")
+                    .replaceAll("password: password", "password: igg123456")
+                    .replaceAll("host: localhost", "host: 10.0.16.88")
+                    .replaceAll("database: 0", "database: 3");
         }
         if (newPath.endsWith("application-prod.yml")) {
             content = content + "\r\nspringfox:\r\n  documentation:\r\n    enabled: false\r\n";
             return content
-                .replaceAll("    ","  ")  // 去除末尾的空格
-                .replaceAll("url: jdbc:mysql://localhost:3306/ry-vue", "url: jdbc:mysql://10.0.16.116:3306/igg_cloud_test_v3")
-                // .replaceAll("username: root", "username: root")
-                .replaceAll("password: password", "password: igg123456")
-                .replaceAll("host: localhost", "host: 10.0.3.25")
-                .replaceAll("database: 0", "database: 3");
+                    .replaceAll("    ", "  ")  // 去除末尾的空格
+                    .replaceAll("url: jdbc:mysql://localhost:3306/ry-vue", "url: jdbc:mysql://10.0.16.116:3306/igg_cloud_test_v3")
+                    // .replaceAll("username: root", "username: root")
+                    .replaceAll("password: password", "password: igg123456")
+                    .replaceAll("host: localhost", "host: 10.0.3.25")
+                    .replaceAll("database: 0", "database: 3");
         }
         if (newPath.endsWith("application-test.yml")) {
             content = content + "\r\nspringfox:\r\n  documentation:\r\n    enabled: false\r\n";
             return content
-                .replaceAll("    ","  ")  // 去除末尾的空格
-                //.replaceAll("enabled: true", "enabled: false")
-                .replaceAll("url: jdbc:mysql://localhost:3306/ry-vue", "url: jdbc:mysql://10.0.16.87:3306/igg_cloud_test_v3")
-                // .replaceAll("username: root", "username: root")
-                .replaceAll("password: password", "password: igg123456")
-                .replaceAll("host: localhost", "host: 10.0.16.87")
-                .replaceAll("database: 0", "database: 3");
+                    .replaceAll("    ", "  ")  // 去除末尾的空格
+                    //.replaceAll("enabled: true", "enabled: false")
+                    .replaceAll("url: jdbc:mysql://localhost:3306/ry-vue", "url: jdbc:mysql://10.0.16.87:3306/igg_cloud_test_v3")
+                    // .replaceAll("username: root", "username: root")
+                    .replaceAll("password: password", "password: igg123456")
+                    .replaceAll("host: localhost", "host: 10.0.16.87")
+                    .replaceAll("database: 0", "database: 3");
         }
         return content
-            // 项目配置处理
-            .replaceAll("ruoyi:","project:")
-            .replaceAll("name: RuoYi", "name: " + artifactIdNew)
-            .replaceAll("version: " + VERSION, "version: \\$\\{server.version}")
-            .replaceAll("active: druid","active: @profiles.active@")
-            // spring配置缩进处理
-            .replaceAll("     multipart:","    multipart:")
-            .replaceAll("       # 单个文件大小","      # 单个文件大小")
-            .replaceAll("       max-file-size:  10MB","      max-file-size: 5GB")
-            .replaceAll("       # 设置总上传的文件大小","      # 设置总上传的文件大小")
-            .replaceAll("       max-request-size:  20MB","      max-request-size: 5GB")
-            // tokeng配置缩进处理
-            .replaceAll("    # 令牌自定义标识","  # 令牌自定义标识")
-            .replaceAll("    header: Authorization","  header: Authorization")
-            .replaceAll("    # 令牌密钥","  # 令牌密钥")
-            .replaceAll("    secret: abcdefghijklmnopqrstuvwxyz","  secret: abcdefghijklmnopqrstuvwxyz")
-            .replaceAll("    # 令牌有效期（默认30分钟）","  # 令牌有效期（默认30分钟）")
-            .replaceAll("    expireTime: 30","  expireTime: 30")
-            // mybatis配置改为mybatis-plus配置
-            .replaceAll("mybatis:","mybatis-plus:")
-            .replaceAll("    # 搜索指定包别名","  # 搜索指定包别名")
-            .replaceAll("    typeAliasesPackage:","  typeAliasesPackage:")
-            .replaceAll("    # 配置mapper的扫描","  # 配置mapper的扫描")
-            .replaceAll("    mapperLocations:","  mapperLocations:")
-            .replaceAll("    # 加载全局的配置文件","  # 加载全局的配置文件")
-            .replaceAll("    configLocation: classpath:mybatis/mybatis-config.xml",
-                    "  global-config:\r\n    db-config:\r\n      id-type: AUTO")
-            // redis配置处理
-            .replaceAll("host: localhost", "host: 10.0.16.87")
-            .replaceAll("database: 0", "database: 3")
-            // 其他配置
-            .replaceFirst("author: ruoyi", "author: ruanjiehui")
-            .replaceAll("tablePrefix: sys_", "tablePrefix: cloud_test_");
+                // 项目配置处理
+                .replaceAll("ruoyi:", "project:")
+                .replaceAll("name: RuoYi", "name: " + artifactIdNew)
+                .replaceAll("version: " + VERSION, "version: \\$\\{server.version}")
+                .replaceAll("active: druid", "active: @profiles.active@")
+                // spring配置缩进处理
+                .replaceAll("     multipart:", "    multipart:")
+                .replaceAll("       # 单个文件大小", "      # 单个文件大小")
+                .replaceAll("       max-file-size:  10MB", "      max-file-size: 5GB")
+                .replaceAll("       # 设置总上传的文件大小", "      # 设置总上传的文件大小")
+                .replaceAll("       max-request-size:  20MB", "      max-request-size: 5GB")
+                // tokeng配置缩进处理
+                .replaceAll("    # 令牌自定义标识", "  # 令牌自定义标识")
+                .replaceAll("    header: Authorization", "  header: Authorization")
+                .replaceAll("    # 令牌密钥", "  # 令牌密钥")
+                .replaceAll("    secret: abcdefghijklmnopqrstuvwxyz", "  secret: abcdefghijklmnopqrstuvwxyz")
+                .replaceAll("    # 令牌有效期（默认30分钟）", "  # 令牌有效期（默认30分钟）")
+                .replaceAll("    expireTime: 30", "  expireTime: 30")
+                // mybatis配置改为mybatis-plus配置
+                .replaceAll("mybatis:", "mybatis-plus:")
+                .replaceAll("    # 搜索指定包别名", "  # 搜索指定包别名")
+                .replaceAll("    typeAliasesPackage:", "  typeAliasesPackage:")
+                .replaceAll("    # 配置mapper的扫描", "  # 配置mapper的扫描")
+                .replaceAll("    mapperLocations:", "  mapperLocations:")
+                .replaceAll("    # 加载全局的配置文件", "  # 加载全局的配置文件")
+                .replaceAll("    configLocation: classpath:mybatis/mybatis-config.xml",
+                        "  global-config:\r\n    db-config:\r\n      id-type: AUTO")
+                // redis配置处理
+                .replaceAll("host: localhost", "host: 10.0.16.87")
+                .replaceAll("database: 0", "database: 3")
+                // 其他配置
+                .replaceFirst("author: ruoyi", "author: ruanjiehui")
+                .replaceAll("tablePrefix: sys_", "tablePrefix: cloud_test_");
     }
 
     private static String replaceContent(String content, String start, String end) {
@@ -297,163 +297,163 @@ public class ProjectModifier {
         }
         // 统一处理空格
         content = content
-            .replaceAll("\t","    ")  // 去除末尾的空格
-            .replaceAll(" \\s+\r\n","\r\n")  // 去除末尾的空格
-            .replaceAll(" \r\n","\r\n")  // 去除末尾的空格
-            //.replaceAll(";\r\n    /\\*\\*",";\r\n\r\n    /**")
+                .replaceAll("\t", "    ")  // 去除末尾的空格
+                .replaceAll(" \\s+\r\n", "\r\n")  // 去除末尾的空格
+                .replaceAll(" \r\n", "\r\n")  // 去除末尾的空格
+        //.replaceAll(";\r\n    /\\*\\*",";\r\n\r\n    /**")
         ;
         // 去除模块引入的pom
         if (filePath.equals(projectBaseDir + separator + "pom.xml")) {
             // System.out.println(file.getPath());
             content = content
-                // 去除ruoyi相关名称
-                .replaceFirst("    <name>ruoyi</name>\r\n", "")
-                .replaceFirst("    <url>http://www.ruoyi.vip</url>\r\n", "")
-                // 替换ruoyi版本
-                .replaceAll("    <artifactId>ruoyi</artifactId>\r\n    <version>.*?</version>\r\n",
-                        "    <artifactId>ruoyi</artifactId>\r\n    <version>" + versionNew + "</version>\r\n")
-                .replaceFirst("<ruoyi.version>.*?</ruoyi.version>",
-                    "<ruoyi.version>" + versionNew + "</ruoyi.version>")
-                // 增加版本属性
-                .replaceFirst("</properties>",
+                    // 去除ruoyi相关名称
+                    .replaceFirst("    <name>ruoyi</name>\r\n", "")
+                    .replaceFirst("    <url>http://www.ruoyi.vip</url>\r\n", "")
+                    // 替换ruoyi版本
+                    .replaceAll("    <artifactId>ruoyi</artifactId>\r\n    <version>.*?</version>\r\n",
+                            "    <artifactId>ruoyi</artifactId>\r\n    <version>" + versionNew + "</version>\r\n")
+                    .replaceFirst("<ruoyi.version>.*?</ruoyi.version>",
+                            "<ruoyi.version>" + versionNew + "</ruoyi.version>")
+                    // 增加版本属性
+                    .replaceFirst("</properties>",
                             "    <lombok.version>1.18.24</lombok.version>\r\n" +
                                     "        <hutool.version>5.8.10</hutool.version>\r\n" +
                                     "        <mybatis-plus.version>3.5.2</mybatis-plus.version>\r\n" +
                                     "        <spring-boot.version>2.7.6</spring-boot.version>\r\n    </properties>")
-                // 新增依赖管理
-                .replaceFirst("</dependencies>\r\n    </dependencyManagement>",
-                        "    <dependency>\r\n" +
-                                "                <groupId>cn.hutool</groupId>\r\n" +
-                                "                <artifactId>hutool-all</artifactId>\r\n" +
-                                "                <version>\\$\\{hutool.version\\}</version>\r\n" +
-                                "            </dependency>\r\n\r\n" +
-                                "            <dependency>\r\n" +
-                                "                <groupId>com.baomidou</groupId>\r\n" +
-                                "                <artifactId>mybatis-plus-boot-starter</artifactId>\r\n" +
-                                "                <version>\\$\\{mybatis-plus.version\\}</version>\r\n" +
-                                "            </dependency>\r\n\r\n" +
-                                "            <dependency>\r\n" +
-                                "                <groupId>com.baomidou</groupId>\r\n" +
-                                "                <artifactId>mybatis-plus-extension</artifactId>\r\n" +
-                                "                <version>\\$\\{mybatis-plus.version\\}</version>\r\n" +
-                                "            </dependency>\r\n\r\n" +
-                                "        </dependencies>\r\n" +
-                                "    </dependencyManagement>")
-                // 新增lombok依赖及profile
-                .replaceFirst("\r\n    <dependencies>\r\n\r\n    </dependencies>",
-                        "    <dependencies>\r\n" +
-                        "        <dependency>\r\n" +
-                        "            <groupId>org.projectlombok</groupId>\r\n" +
-                        "            <artifactId>lombok</artifactId>\r\n" +
-                        "            <version>\\$\\{lombok.version\\}</version>\r\n" +
-                        "            <scope>provided</scope>\r\n" +
-                        "        </dependency>\r\n" +
-                        "    </dependencies>\r\n\r\n" +
-                        "    <profiles>\r\n" +
-                        "        <profile>\r\n" +
-                        "            <id>test</id>\r\n" +
-                        "            <properties>\r\n" +
-                        "                <profiles.active>test</profiles.active>\r\n" +
-                        "            </properties>\r\n" +
-                        "        </profile>\r\n" +
-                        "        <profile>\r\n" +
-                        "            <id>dev</id>\r\n" +
-                        "            <properties>\r\n" +
-                        "                <profiles.active>dev</profiles.active>\r\n" +
-                        "            </properties>\r\n" +
-                        "            <activation>\r\n" +
-                        "                <activeByDefault>true</activeByDefault>\r\n" +
-                        "            </activation>\r\n" +
-                        "        </profile>\r\n" +
-                        "        <profile>\r\n" +
-                        "            <id>prod</id>\r\n" +
-                        "            <properties>\r\n" +
-                        "                <profiles.active>prod</profiles.active>\r\n" +
-                        "            </properties>\r\n" +
-                        "        </profile>\r\n" +
-                        "    </profiles>")
-                // 替换spring-boot版本
-                .replaceFirst("    <artifactId>spring-boot-dependencies</artifactId>\r\n" +
-                        "                <version>.*?</version>",
-                    "    <artifactId>spring-boot-dependencies</artifactId>\r\n" +
-                        "                <version>\\$\\{spring-boot.version\\}</version>")
-                // 替换插件版本
-                .replaceFirst("<artifactId>maven-compiler-plugin</artifactId>\r\n" +
-                        "                <version>.*?</version>",
-                    "<artifactId>maven-compiler-plugin</artifactId>\r\n" +
-                        "                <version>3.9.0</version>")
-                // 新增资源配置
-                .replaceFirst("</plugins>",
-                    "    <plugin>\n" +
-                        "                <groupId>org.apache.maven.plugins</groupId>\n" +
-                        "                <artifactId>maven-surefire-plugin</artifactId>\n" +
-                        "                <version>2.22.2</version>\n" +
-                        "                <configuration>\n" +
-                        "                    <argLine>-Dfile.encoding=UTF-8</argLine>\n" +
-                        "                    <groups>\\$\\{profiles.active\\}</groups>\n" +
-                        "                    <excludedGroups>exclude</excludedGroups>\n" +
-                        "                </configuration>\n" +
-                        "            </plugin>\n" +
-                        "        </plugins>\r\n" +
-                        "        <resources>\r\n" +
-                        "            <resource>\r\n" +
-                        "                <directory>src/main/resources</directory>\r\n" +
-                        "                <filtering>false</filtering>\r\n" +
-                        "            </resource>\r\n" +
-                        "            <resource>\r\n" +
-                        "                <directory>src/main/resources</directory>\r\n" +
-                        "                <includes>\r\n" +
-                        "                    <include>application*</include>\r\n" +
-                        "                    <include>bootstrap*</include>\r\n" +
-                        "                    <include>banner*</include>\r\n" +
-                        "                </includes>\r\n" +
-                        "                <filtering>true</filtering>\r\n" +
-                        "            </resource>\r\n" +
-                        "        </resources>"
-                )
+                    // 新增依赖管理
+                    .replaceFirst("</dependencies>\r\n    </dependencyManagement>",
+                            "    <dependency>\r\n" +
+                                    "                <groupId>cn.hutool</groupId>\r\n" +
+                                    "                <artifactId>hutool-all</artifactId>\r\n" +
+                                    "                <version>\\$\\{hutool.version\\}</version>\r\n" +
+                                    "            </dependency>\r\n\r\n" +
+                                    "            <dependency>\r\n" +
+                                    "                <groupId>com.baomidou</groupId>\r\n" +
+                                    "                <artifactId>mybatis-plus-boot-starter</artifactId>\r\n" +
+                                    "                <version>\\$\\{mybatis-plus.version\\}</version>\r\n" +
+                                    "            </dependency>\r\n\r\n" +
+                                    "            <dependency>\r\n" +
+                                    "                <groupId>com.baomidou</groupId>\r\n" +
+                                    "                <artifactId>mybatis-plus-extension</artifactId>\r\n" +
+                                    "                <version>\\$\\{mybatis-plus.version\\}</version>\r\n" +
+                                    "            </dependency>\r\n\r\n" +
+                                    "        </dependencies>\r\n" +
+                                    "    </dependencyManagement>")
+                    // 新增lombok依赖及profile
+                    .replaceFirst("\r\n    <dependencies>\r\n\r\n    </dependencies>",
+                            "    <dependencies>\r\n" +
+                                    "        <dependency>\r\n" +
+                                    "            <groupId>org.projectlombok</groupId>\r\n" +
+                                    "            <artifactId>lombok</artifactId>\r\n" +
+                                    "            <version>\\$\\{lombok.version\\}</version>\r\n" +
+                                    "            <scope>provided</scope>\r\n" +
+                                    "        </dependency>\r\n" +
+                                    "    </dependencies>\r\n\r\n" +
+                                    "    <profiles>\r\n" +
+                                    "        <profile>\r\n" +
+                                    "            <id>test</id>\r\n" +
+                                    "            <properties>\r\n" +
+                                    "                <profiles.active>test</profiles.active>\r\n" +
+                                    "            </properties>\r\n" +
+                                    "        </profile>\r\n" +
+                                    "        <profile>\r\n" +
+                                    "            <id>dev</id>\r\n" +
+                                    "            <properties>\r\n" +
+                                    "                <profiles.active>dev</profiles.active>\r\n" +
+                                    "            </properties>\r\n" +
+                                    "            <activation>\r\n" +
+                                    "                <activeByDefault>true</activeByDefault>\r\n" +
+                                    "            </activation>\r\n" +
+                                    "        </profile>\r\n" +
+                                    "        <profile>\r\n" +
+                                    "            <id>prod</id>\r\n" +
+                                    "            <properties>\r\n" +
+                                    "                <profiles.active>prod</profiles.active>\r\n" +
+                                    "            </properties>\r\n" +
+                                    "        </profile>\r\n" +
+                                    "    </profiles>")
+                    // 替换spring-boot版本
+                    .replaceFirst("    <artifactId>spring-boot-dependencies</artifactId>\r\n" +
+                                    "                <version>.*?</version>",
+                            "    <artifactId>spring-boot-dependencies</artifactId>\r\n" +
+                                    "                <version>\\$\\{spring-boot.version\\}</version>")
+                    // 替换插件版本
+                    .replaceFirst("<artifactId>maven-compiler-plugin</artifactId>\r\n" +
+                                    "                <version>.*?</version>",
+                            "<artifactId>maven-compiler-plugin</artifactId>\r\n" +
+                                    "                <version>3.9.0</version>")
+                    // 新增资源配置
+                    .replaceFirst("</plugins>",
+                            "    <plugin>\n" +
+                                    "                <groupId>org.apache.maven.plugins</groupId>\n" +
+                                    "                <artifactId>maven-surefire-plugin</artifactId>\n" +
+                                    "                <version>2.22.2</version>\n" +
+                                    "                <configuration>\n" +
+                                    "                    <argLine>-Dfile.encoding=UTF-8</argLine>\n" +
+                                    "                    <groups>\\$\\{profiles.active\\}</groups>\n" +
+                                    "                    <excludedGroups>exclude</excludedGroups>\n" +
+                                    "                </configuration>\n" +
+                                    "            </plugin>\n" +
+                                    "        </plugins>\r\n" +
+                                    "        <resources>\r\n" +
+                                    "            <resource>\r\n" +
+                                    "                <directory>src/main/resources</directory>\r\n" +
+                                    "                <filtering>false</filtering>\r\n" +
+                                    "            </resource>\r\n" +
+                                    "            <resource>\r\n" +
+                                    "                <directory>src/main/resources</directory>\r\n" +
+                                    "                <includes>\r\n" +
+                                    "                    <include>application*</include>\r\n" +
+                                    "                    <include>bootstrap*</include>\r\n" +
+                                    "                    <include>banner*</include>\r\n" +
+                                    "                </includes>\r\n" +
+                                    "                <filtering>true</filtering>\r\n" +
+                                    "            </resource>\r\n" +
+                                    "        </resources>"
+                    )
             ;
         } else if (filePath.equals(projectBaseDir + separator + "ruoyi-admin" + separator + "pom.xml")) {
             content = content
-                // 替换插件版本
-                .replaceFirst("<artifactId>spring-boot-maven-plugin</artifactId>\r\n" +
-                        "                <version>.*?</version>",
-                    "<artifactId>spring-boot-maven-plugin</artifactId>\r\n" +
-                        "                <version>\\$\\{spring-boot.version\\}</version>"
-                )
-                .replaceFirst("<artifactId>maven-war-plugin</artifactId>\r\n" +
-                        "                <version>.*?</version>",
-                    "<artifactId>maven-war-plugin</artifactId>\r\n" +
-                        "                <version>3.2.2</version>"
-                )
+                    // 替换插件版本
+                    .replaceFirst("<artifactId>spring-boot-maven-plugin</artifactId>\r\n" +
+                                    "                <version>.*?</version>",
+                            "<artifactId>spring-boot-maven-plugin</artifactId>\r\n" +
+                                    "                <version>\\$\\{spring-boot.version\\}</version>"
+                    )
+                    .replaceFirst("<artifactId>maven-war-plugin</artifactId>\r\n" +
+                                    "                <version>.*?</version>",
+                            "<artifactId>maven-war-plugin</artifactId>\r\n" +
+                                    "                <version>3.2.2</version>"
+                    )
             ;
         } else if (filePath.equals(projectBaseDir + separator + "ruoyi-common" + separator + "pom.xml")) {
             content = content
-                // 新增依赖
-                .replaceFirst("</dependencies>\r\n",
-                "    <dependency>\r\n" +
-                        "            <groupId>cn.hutool</groupId>\r\n" +
-                        "            <artifactId>hutool-all</artifactId>\r\n" +
-                        "        </dependency>\r\n\r\n" +
-                        "        <dependency>\r\n" +
-                        "            <groupId>com.baomidou</groupId>\r\n" +
-                        "            <artifactId>mybatis-plus-boot-starter</artifactId>\r\n" +
-                        "        </dependency>\r\n\r\n" +
-                        "        <dependency>\r\n" +
-                        "            <groupId>com.baomidou</groupId>\r\n" +
-                        "            <artifactId>mybatis-plus-extension</artifactId>\r\n" +
-                        "        </dependency>\r\n\r\n" +
-                        "    </dependencies>\r\n");
+                    // 新增依赖
+                    .replaceFirst("</dependencies>\r\n",
+                            "    <dependency>\r\n" +
+                                    "            <groupId>cn.hutool</groupId>\r\n" +
+                                    "            <artifactId>hutool-all</artifactId>\r\n" +
+                                    "        </dependency>\r\n\r\n" +
+                                    "        <dependency>\r\n" +
+                                    "            <groupId>com.baomidou</groupId>\r\n" +
+                                    "            <artifactId>mybatis-plus-boot-starter</artifactId>\r\n" +
+                                    "        </dependency>\r\n\r\n" +
+                                    "        <dependency>\r\n" +
+                                    "            <groupId>com.baomidou</groupId>\r\n" +
+                                    "            <artifactId>mybatis-plus-extension</artifactId>\r\n" +
+                                    "        </dependency>\r\n\r\n" +
+                                    "    </dependencies>\r\n");
         }
         // 替换pom文件
         if (filePath.endsWith("pom.xml")) {
             content = content
-                // 错误缩进处理
-                .replaceFirst("\r\n         \\<", "\r\n        \\<")
-                .replaceFirst("\r\n           \\<", "\r\n           \\<")
-                // 替换ruoyi版本
-                .replaceAll("<groupId>com.ruoyi</groupId>\r\n        <version>.*?</version>\r\n",
-                        "<groupId>com.ruoyi</groupId>\r\n        <version>" + versionNew + "</version>\r\n")
-                .replaceAll(GROUP_ID, groupIdNew);
+                    // 错误缩进处理
+                    .replaceFirst("\r\n         \\<", "\r\n        \\<")
+                    .replaceFirst("\r\n           \\<", "\r\n           \\<")
+                    // 替换ruoyi版本
+                    .replaceAll("<groupId>com.ruoyi</groupId>\r\n        <version>.*?</version>\r\n",
+                            "<groupId>com.ruoyi</groupId>\r\n        <version>" + versionNew + "</version>\r\n")
+                    .replaceAll(GROUP_ID, groupIdNew);
             content = content.substring(0, content.lastIndexOf(">") + 1) + "\r\n";
         }
         // 处理banner文本
@@ -489,8 +489,8 @@ public class ProjectModifier {
                 content = content
                         .replace("templates.add(\"vm/java/domain.java.vm\");",
                                 "templates.add(\"vm/java/domain.java.vm\");\r\n" +
-                                "        templates.add(\"vm/java/vo.java.vm\");\r\n" +
-                                "        templates.add(\"vm/java/ro.java.vm\");")
+                                        "        templates.add(\"vm/java/vo.java.vm\");\r\n" +
+                                        "        templates.add(\"vm/java/ro.java.vm\");")
                         .replaceFirst("templates.add\\(\"vm/vue/index.vue.vm\"\\);",
                                 "// templates.add(\"vm/vue/index.vue.vm\");\r\n" +
                                         "            templates.add(\"vm/vue/antdv/index.vue.vm\");\r\n" +
@@ -523,67 +523,67 @@ public class ProjectModifier {
             // 替换@Autowired为@Resource
             if (content.contains("import javax.annotation.Resource;")) {
                 content = content
-                    .replaceAll("@Autowired", "@Resource")
-                    .replaceAll("import org.springframework.beans.factory.annotation.Autowired;\r\n", "");
+                        .replaceAll("@Autowired", "@Resource")
+                        .replaceAll("import org.springframework.beans.factory.annotation.Autowired;\r\n", "");
             } else {
                 content = content
-                    .replaceAll("@Autowired", "@Resource")
-                    .replaceAll("import org.springframework.beans.factory.annotation.Autowired;", "import javax.annotation.Resource;");
+                        .replaceAll("@Autowired", "@Resource")
+                        .replaceAll("import org.springframework.beans.factory.annotation.Autowired;", "import javax.annotation.Resource;");
             }
             // 全局java文件替换
             content = content
-                .replaceAll("@author ruoyi", "@author 阮杰辉")
-                .replaceAll("RuoYi首创 ", "")
-                // 名称包含ruoyi的文件名处理
-                .replaceAll("RuoYiConfig", "ProjectConfig")
-                .replaceAll("ruoyiConfig", "projectConfig")
-                .replaceAll("@ConfigurationProperties\\(prefix = \"ruoyi\"\\)", "@ConfigurationProperties\\(prefix = \"project\"\\)")
-                .replaceAll("RuoYiApplication", "AdminApplication")
-                .replaceAll("RuoYiServletInitializer", "AdminServletInitializer")
-                // 泛型类尖括号内容去除
-                .replaceAll("new HashSet\\<.*?\\>", "new HashSet\\<\\>")
-                .replaceAll("new ArrayList\\<.*?\\>", "new ArrayList\\<\\>")
-                .replaceAll("new HashMap\\<.*?\\>", "new HashMap\\<\\>")
-                .replaceAll("new LinkedHashMap\\<.*?\\>", "new LinkedHashMap\\<\\>")
-                .replaceAll("new ExcelUtil\\<.*?\\>", "new ExcelUtil\\<\\>")
-                // 大括号格式化处理
-                .replaceAll("\r\n\\{", " \\{")
-                .replaceAll("\r\n\\s+\\{", " \\{")
-                .replaceAll("}\r\n\\s+else", "} else")
-                .replaceAll("}\r\n\\s+catch", "} catch")
-                .replaceAll("}\r\n\\s+finally", "} finally")
-                // 修正错误的括号替换
-                .replaceAll("// last 2 bits should be zero \\{", " \\{ // last 2 bits should be zero")
-                .replaceAll("// last 4 bits should be zero \\{", " \\{ // last 4 bits should be zero")
+                    .replaceAll("@author ruoyi", "@author 阮杰辉")
+                    .replaceAll("RuoYi首创 ", "")
+                    // 名称包含ruoyi的文件名处理
+                    .replaceAll("RuoYiConfig", "ProjectConfig")
+                    .replaceAll("ruoyiConfig", "projectConfig")
+                    .replaceAll("@ConfigurationProperties\\(prefix = \"ruoyi\"\\)", "@ConfigurationProperties\\(prefix = \"project\"\\)")
+                    .replaceAll("RuoYiApplication", "AdminApplication")
+                    .replaceAll("RuoYiServletInitializer", "AdminServletInitializer")
+                    // 泛型类尖括号内容去除
+                    .replaceAll("new HashSet\\<.*?\\>", "new HashSet\\<\\>")
+                    .replaceAll("new ArrayList\\<.*?\\>", "new ArrayList\\<\\>")
+                    .replaceAll("new HashMap\\<.*?\\>", "new HashMap\\<\\>")
+                    .replaceAll("new LinkedHashMap\\<.*?\\>", "new LinkedHashMap\\<\\>")
+                    .replaceAll("new ExcelUtil\\<.*?\\>", "new ExcelUtil\\<\\>")
+                    // 大括号格式化处理
+                    .replaceAll("\r\n\\{", " \\{")
+                    .replaceAll("\r\n\\s+\\{", " \\{")
+                    .replaceAll("}\r\n\\s+else", "} else")
+                    .replaceAll("}\r\n\\s+catch", "} catch")
+                    .replaceAll("}\r\n\\s+finally", "} finally")
+                    // 修正错误的括号替换
+                    .replaceAll("// last 2 bits should be zero \\{", " \\{ // last 2 bits should be zero")
+                    .replaceAll("// last 4 bits should be zero \\{", " \\{ // last 4 bits should be zero")
             ;
             // 替换logger
             if (content.contains("LoggerFactory.getLogger")) {
                 content = content
-                    .replaceAll("\r\npublic abstract class", "\r\n@Slf4j\r\npublic abstract class")
-                    .replaceAll("\r\npublic class", "\r\n@Slf4j\r\npublic class")
-                    .replaceAll("import org.slf4j.LoggerFactory;\r\n", "")
-                    .replaceAll("import org.slf4j.Logger;", "import lombok.extern.slf4j.Slf4j;");
+                        .replaceAll("\r\npublic abstract class", "\r\n@Slf4j\r\npublic abstract class")
+                        .replaceAll("\r\npublic class", "\r\n@Slf4j\r\npublic class")
+                        .replaceAll("import org.slf4j.LoggerFactory;\r\n", "")
+                        .replaceAll("import org.slf4j.Logger;", "import lombok.extern.slf4j.Slf4j;");
                 if (content.contains("Logger logger =")) {
                     content = content
-                        .replaceAll("    p.*? Logger logger =.*?;\r\n", "")
-                        .replaceAll(" logger\\.", " log\\.");
+                            .replaceAll("    p.*? Logger logger =.*?;\r\n", "")
+                            .replaceAll(" logger\\.", " log\\.");
                 } else if (content.contains("Logger LOGGER =")) {
                     content = content
-                        .replaceAll("    p.*? Logger LOGGER =.*?;\r\n", "")
-                        .replaceAll(" LOGGER\\.", " log\\.");
+                            .replaceAll("    p.*? Logger LOGGER =.*?;\r\n", "")
+                            .replaceAll(" LOGGER\\.", " log\\.");
                 } else if (content.contains("Logger sys_user_logger =")) {
                     content = content
-                        .replaceAll("    p.*? Logger sys_user_logger =.*?;\r\n", "")
-                        .replaceAll(" sys_user_logger\\.", " log\\.");
+                            .replaceAll("    p.*? Logger sys_user_logger =.*?;\r\n", "")
+                            .replaceAll(" sys_user_logger\\.", " log\\.");
                 } else if (content.contains("Logger log =")) {
                     content = content
-                        .replaceAll("    p.*? Logger log =.*?;\r\n", "");
+                            .replaceAll("    p.*? Logger log =.*?;\r\n", "");
                 }
             }
             // 类大括号之间的换行处理
             int firstPublic = content.indexOf("\r\npublic ");
             if (firstPublic > 0) {
-                int firstBracket = content.substring(firstPublic).indexOf("{\r\n") ;
+                int firstBracket = content.substring(firstPublic).indexOf("{\r\n");
                 if (firstBracket > 0) {
                     String beforeContent = content.substring(0, firstPublic + firstBracket + 3);
                     String afterContent = content.substring(firstPublic + firstBracket + 3);
@@ -617,7 +617,7 @@ public class ProjectModifier {
                 String importLine = content.contains("\r\nimport ") ? "" : "\r\n";
                 if (content.contains(noConstruct1) || content.contains(noConstruct2)) {
                     content = content.replace(noConstruct1, "")
-                                    .replace(noConstruct2, "");
+                            .replace(noConstruct2, "");
                     content = content
                             .replaceFirst(";\r\n", ";\r\n\r\nimport lombok.Data;\r\nimport lombok.NoArgsConstructor;" + importLine)
                             .replaceAll("\r\npublic class", "\r\n@Data\r\n@NoArgsConstructor\r\npublic class");
@@ -802,10 +802,10 @@ public class ProjectModifier {
             content = beforeImport + stringBuffer.toString() + afterImport;
         }
         return content
-            .replaceAll(PACKAGE_NAME, packageNameNew)
-            .replaceAll(ARTIFACT_ID, artifactIdNew)  // 非pom文件也要替换
-            .replaceAll(TITLE, titleNew)
-            .replaceAll("若依", "云测平台");
+                .replaceAll(PACKAGE_NAME, packageNameNew)
+                .replaceAll(ARTIFACT_ID, artifactIdNew)  // 非pom文件也要替换
+                .replaceAll(TITLE, titleNew)
+                .replaceAll("若依", "云测平台");
     }
 
     private static String buildNewFilePath(File file) {

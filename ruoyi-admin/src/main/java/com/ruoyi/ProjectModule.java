@@ -38,19 +38,19 @@ public class ProjectModule {
                 return content;
             }
             content = content
-                // 去除ruoyi相关名称
-                .replaceFirst("<artifactId>server-common</artifactId>\r\n" +
-                        "                <version>\\$\\{server.version}</version>\r\n" +
-                        "            </dependency>",
-                        "<artifactId>server-common</artifactId>\r\n" +
-                                "                <version>\\$\\{server.version}</version>\r\n" +
-                                "            </dependency>\r\n\r\n" +
-                                "            <!-- 群控模块 -->\r\n" +
-                                "            <dependency>\r\n" +
-                                "                <groupId>com.igg.cloudtest</groupId>\r\n" +
-                                "                <artifactId>server-cloudtest</artifactId>\r\n" +
-                                "                <version>\\$\\{server.version}</version>\r\n" +
-                                "            </dependency>")
+                    // 去除ruoyi相关名称
+                    .replaceFirst("<artifactId>server-common</artifactId>\r\n" +
+                                    "                <version>\\$\\{server.version}</version>\r\n" +
+                                    "            </dependency>",
+                            "<artifactId>server-common</artifactId>\r\n" +
+                                    "                <version>\\$\\{server.version}</version>\r\n" +
+                                    "            </dependency>\r\n\r\n" +
+                                    "            <!-- 群控模块 -->\r\n" +
+                                    "            <dependency>\r\n" +
+                                    "                <groupId>com.igg.cloudtest</groupId>\r\n" +
+                                    "                <artifactId>server-cloudtest</artifactId>\r\n" +
+                                    "                <version>\\$\\{server.version}</version>\r\n" +
+                                    "            </dependency>")
                     .replaceFirst("</modules>", "<module>server-cloudtest</module>\r\n    </modules>")
             ;
         } else if (filePath.equals(projectBaseDir + separator + "server-admin" + separator + "pom.xml")) {
@@ -58,13 +58,13 @@ public class ProjectModule {
                 return content;
             }
             content = content
-                .replaceFirst("</dependencies>",
-                    "    <dependency>\r\n" +
-                            "            <groupId>com.igg.cloudtest</groupId>\r\n" +
-                            "            <artifactId>server-cloudtest</artifactId>\r\n" +
-                            "        </dependency>\r\n\r\n" +
-                            "    </dependencies>"
-                )
+                    .replaceFirst("</dependencies>",
+                            "    <dependency>\r\n" +
+                                    "            <groupId>com.igg.cloudtest</groupId>\r\n" +
+                                    "            <artifactId>server-cloudtest</artifactId>\r\n" +
+                                    "        </dependency>\r\n\r\n" +
+                                    "    </dependencies>"
+                    )
             ;
         }
         return content;
